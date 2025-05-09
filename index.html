@@ -1,0 +1,3036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nibuy</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+<header>
+    <div id="home">
+    <a href="Projeto.html">
+      <img id="img1" src="img1.jpg" alt="imagem do site.">
+    </a>
+
+<a href="https://eduj007.github.io/Informations/" id="Contato">
+    <h1>Contato pessoal</h1>
+</a>
+
+<a href="https://eduj007.github.io/Contato/" id="informate">
+  <h1>Informações</h1>
+</a>
+
+
+ <h1 id="mudarcor"  onclick="mudarCor()">🌗</h1>
+</div>
+</header>  
+
+  <main>
+   <div id="selectsearch">
+<label for="categoriaFiltro"></label>
+<select id="categoriaFiltro">
+    <option value="todos">Categorias</option>
+    <option value="tecnologia">Tecnologia</option>
+    <option value="infantil">Infantil</option>
+    <option value="casaecozinha">Casa e Cozinha</option>
+    <option value="modaebeleza">Moda e Beleza</option>
+    <option value="calcados">Calçados</option>
+    <option value="acessorios">Acessórios</option>
+    <option value="belezaemaquiagem">Beleza e Maquiagem</option>
+    <option value="autocuidadoesaúde">Auto cuidado e saúde</option>
+    <option value="academiaefitness">Academia e Fitness</option>
+    <option value="esporteselazer">Esportes e Lazer</option>
+    <option value="viagemeaventura">Viagem e Aventura</option>
+    <option value="pets">Pets</option>
+    <option value="ferramentaseutilidades">Ferramentas e Utilidades</option>
+    <option value="educaçaoeentretenimento">Educação e Entretenimento</option>
+</select>
+
+<!-- Campo de Pesquisa -->
+<input oninput="filtrarProdutos()" type="search" id="searchProduto" placeholder="Nome do Produto...">
+
+<input id="valor" type="text" placeholder="Preço maximo R$..." oninput="filtrarProdutos()">
+</div>
+
+<div class="produtos-container">
+  <div id="listaProdutos">
+    <div class="produto modaebeleza">
+        <img src="https://down-cvs-br.img.susercontent.com/br-11134201-23020-s0xxlza8rfnv9f.webp" alt="Kit Short Praia">
+        <h3>Kit Short Praia Mauricinho Masculina + Chinelo Slide Coroa</h3>
+        <p>R$79,92</p>
+        <a href="https://s.shopee.com.br/5VGzm9BAhB" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto modaebeleza">
+        <img src="https://down-cvs-br.img.susercontent.com/0e97cdac6b327fb3832c68498e124494.webp" alt="Moletom Haikyuu">
+        <h3>Blusa Moletom Canguru Casaco Haikyuu Anime Oya Oya</h3>
+        <p>R$69,00</p>
+        <a href="https://s.shopee.com.br/9zjPRBqDQI" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto tecnologia">
+        <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-22110-152ixqjke9jvc4.webp" alt="Air Pro 6">
+        <h3>Air Pro 6 TWS Fones de Ouvido Sem Fio com Microfone</h3>
+        <p>R$18,90</p>
+        <a href="https://s.shopee.com.br/9Un8qYAPef" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto tecnologia">
+        <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rbmy-lnjpddlg7me657.webp" alt="Fone V8/V9">
+        <h3>Novo Fone de Ouvido Sem Fio v8/v9 Bluetooth 5.0 com Microfone</h3>
+        <p>R$20,90</p>
+        <a href="https://s.shopee.com.br/4fht5lzaS7" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-zl-br.img.susercontent.com/9a876b30fb362984dce450271d0927d3.webp" alt="Moletom Hunter X Hunter">
+        <h3>Blusa Moletom Canguru Hunter X Hunter Anime Gon</h3>
+        <p>R$69,00</p>
+        <a href="https://s.shopee.com.br/3VVxH89e8f" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto modaebeleza">
+        <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7r98o-ll7gg6byzesse7.webp" alt="Conjunto Camisa + Calção">
+        <h3>Conjunto 2 peças Camisa e Calção Masculino Moda Casual</h3>
+        <p>R$95,22</p>
+        <a href="https://s.shopee.com.br/5KxbShEBI0" target="_blank" rel="noopener noreferrer">Comprar</a>
+    </div>
+      
+    <div class="produto modaebeleza">
+        <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m6mwtl0aqx534e.webp" alt="Camiseta Jesus">
+        <h3>Camiseta Manga Curta Estampa Jesus is King</h3>
+        <p>R$25,94</p>
+        <a href="https://s.shopee.com.br/8AHoB1CxNt" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto modaebeleza">
+        <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m5n9e0znvsr4e4.webp" alt="Moletom Brooklyn">
+        <h3>Moletom BROOKLYN Estampado Acadêmico Unissex</h3>
+        <p>R$54,95</p>
+        <a href="https://s.shopee.com.br/6AWjnTYwDQ" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto tecnologia">
+        <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7r98o-ltgfsiq4j9i5b4.webp" alt="Fone S109">
+        <h3>S109 Fone de Ouvido Sem Fio Bluetooth 5.0 com Microfone</h3>
+        <p>R$11,90</p>
+        <a href="https://s.shopee.com.br/9zjSMYVUyU" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto esporteselazer">
+        <img src="https://down-zl-br.img.susercontent.com/fad48a0fbe9eaf8854d92d2b1776d735.webp" alt="Meias de Futebol">
+        <h3>Meias de Futebol Antiderrapantes Hexagonal Silicone</h3>
+        <p>R$16,96</p>
+        <a href="https://s.shopee.com.br/5AeCc9BNkJ" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto modaebeleza">
+        <img src="https://down-zl-br.img.susercontent.com/br-11134201-23020-m3ghgj5kpanv85.webp" alt="Camiseta Tokyo Ghoul">
+        <h3>Camiseta Unissex Tokyo Ghoul Algodão</h3>
+        <p>R$69,99</p>
+        <a href="https://s.shopee.com.br/9UnBmAorzW" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto tecnologia">
+        <img src="https://down-zl-br.img.susercontent.com/sg-11134201-22120-r9h2rjlgx1kv19.webp" alt="Airpods Pro2">
+        <h3>Airpods Pro2 USB-C Bluetooth TWS com Microfone</h3>
+        <p>R$19,50</p>
+        <a href="https://s.shopee.com.br/7pexnHvAf3" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto tecnologia">
+        <img src="https://down-bs-br.img.susercontent.com/sg-11134201-22120-zwv5b6yzg4kv3d.webp" alt="Lenovo LP40">
+        <h3>Lenovo LP40 TWS Fones Bluetooth IPX7 Esportivos</h3>
+        <p>R$30,90</p>
+        <a href="https://s.shopee.com.br/2VdRRY9SWW" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+    <div class="produto esporteselazer">
+        <img src="https://down-bs-br.img.susercontent.com/bb8129670363fb46f0080922a2194d5d.webp" alt="Meia Antiderrapante">
+        <h3>Meia Antiderrapante Unissex Estampa de Futebol</h3>
+        <p>R$16,99</p>
+        <a href="https://s.shopee.com.br/9AALNpbi3n" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      <div class="produto esporteselazer">
+        <img src="https://down-bs-br.img.susercontent.com/sg-11134201-22110-50qqe111j9jv74.webp" alt="Camisa">
+        <h3>Meias De Maré Masculinas E Femininas De Marca Meia-Alta Personalizadas Para Esportes Ao Ar Livre Absorventes De Suor Respirável</h3>
+        <p>R$11,98</p>
+        <a href="https://s.shopee.com.br/3fpOppP1Qp" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-bs-br.img.susercontent.com/cn-11134207-7qukw-lkako6aglb5yd5.webp" alt="Camisa">
+        <h3>Camisa de manga curta masculina Moda Marca Zíper Impresso POLO Equipe de camisa POLO Camisa de suor personalizada</h3>
+        <p>R$95,20</p>
+        <a href="https://s.shopee.com.br/w6TA6AAX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-bs-br.img.susercontent.com/ef3c3572d8941817b424ed7d3b4bf3bc.webp" alt="Camisa">
+        <h3>APPLE AirPods TWS Airs Pro fones de ouvido estéreo sem fio Bluetooth</h3>
+        <p>R$61,99</p>
+        <a href="https://s.shopee.com.br/3VVyddzBmO" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-bs-br.img.susercontent.com/d31f40d792169f3841c60745a27117a1.webp" alt="Camisa">
+        <h3>Fone De Ouvido Bluetooth Sem Fio Y30 TWS Para IOS/Android Com Microfone</h3>
+        <p>R$18,99</p>
+        <a href="https://s.shopee.com.br/5VH31O7Yfc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-bs-br.img.susercontent.com/cee01c2460a32a683cd812c47e28eddf.webp" alt="Camisa">
+        <h3>Camiseta Básica Unissex Shoto Todoroki My Hero Academina Anime</h3>
+        <p>R$39,90</p>
+        <a href="https://s.shopee.com.br/8fE4nG35fy" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-ltpo546ntsfdaa.webp" alt="Camisa">
+        <h3>Caixa de som bluetooh pendrive radio led luz bateria otima envio imediato</h3>
+        <p>R$22,90</p>
+        <a href="https://s.shopee.com.br/w6TUjFA5" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-loebidtge5k933.webp" alt="Camisa">
+        <h3>Vestido Midi Longo Fenda Lateral Argola Canelado Alça com Bojo</h3>
+        <p>R$47,90</p>
+        <a href="https://s.shopee.com.br/1VkuGLSJHl" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-bs-br.img.susercontent.com/ae889ab31919af44366a074897a86e77.webp" alt="Camisa">
+        <h3>JBL I13 Opções De Seis Cores Fone De Ouvido Sem Fio Com Bluetooth 5.0 TWS inpods</h3>
+        <p>R$19,90</p>
+        <a href="https://s.shopee.com.br/9KTlarM3lq" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto calcados">
+        <img src="https://down-bs-br.img.susercontent.com/br-11134207-7qukw-ljzpbs455c1249.webp" alt="Camisa">
+        <h3>Sandália de couro masculina</h3>
+        <p>R$59,99</p>
+        <a href="https://s.shopee.com.br/4VOVq2cqOr" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-bs-br.img.susercontent.com/br-11134207-7qukw-ljr9vf35r1r7f8.webp" alt="Camisa">
+        <h3>Camiseta algodão penteada 30.1 + bermuda estampa Urso Boné Dreew mais relogio digital</h3>
+        <p>R$62,93</p>
+        <a href="https://s.shopee.com.br/4fhw2OtpmQ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7qvdy-lifbndg3vca23a.webp" alt="Camisa">
+        <h3>T10 9D Fones De Ouvido Estéreo Sem Fio À Prova D'água Cancelamento Do Ruído De Comerciais Esportivos</h3>
+        <p>R$18,90</p>
+        <a href="https://s.shopee.com.br/1B83s1vVPr" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rbmy-lnjpddieaox4c2.webp" alt="Camisa">
+        <h3>Novo Fone De Ouvido original JBL Pro A2 Verdadeiro Bluetooth Macaron Sem Fio V5.3 super Longa Duração Da Bateria</h3>
+        <p>R$18,90</p>
+        <a href="https://s.shopee.com.br/3fpYKbd8gT" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxb8e1vf4g3a06.webp" alt="Camisa">
+        <h3>Camiseta Básica Algodão Unissex Manga Curta Verão Moda Anime Jujutsu Kaisen</h3>
+        <p>R$39,90</p>
+        <a href="https://s.shopee.com.br/3fpYKiX9JG" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto esporteselazer">
+        <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7qvdx-lfcdp6h3rjjb89.webp" alt="Camisa">
+        <h3>Conjunto De Tubos Curtos De Cores Sólidas Combinadas Meias Esportivas Masculinas E Femininas De Algodão</h3>
+        <p>R$6,99</p>
+        <a href="https://s.shopee.com.br/60DT74LPft" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto autocuidado">
+        <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rce0-m67yr0rrjmvrdd.webp" alt="Camisa">
+        <h3>Protetor Solar adcos base Tonificante stick mate Proteção Hidratante Antioxidante Sem Óleo FPS80 17g Cores</h3>
+        <p>R$22,38</p>
+        <a href="https://s.shopee.com.br/2LKAkSBNZI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m3fcgktshoag62.webp" alt="Camisa">
+        <h3>Kit Conjunto MIZ Camisa Gola Polo com Faixa e Bermuda Impermeável Refletiva Premium</h3>
+        <p>R$58,41</p>
+        <a href="https://s.shopee.com.br/VsWZAfV2P" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m1n6ugqk8tmwd3.webp" alt="Chinelo">
+        <h3>Chinelo Kenner Sandália Red Original Masculino Feminino</h3>
+        <p>R$94,90</p>
+        <a href="https://s.shopee.com.br/7zyXV1OWzC" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7qvde-lji29lm7gsie4b.webp" alt="Fone de Ouvido">
+        <h3>S10 TWS Mini Fone de Ouvido Bluetooth Sem Fio Estéreo à Prova d'Água com Microfone</h3>
+        <p>R$11,90</p>
+        <a href="https://s.shopee.com.br/20hKM5RLlM" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto modaebeleza">
+        <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m40qkbtzm4ad48.webp" alt="Chinelo">
+        <h3>Chinelo Feminino Plataforma Anabela Salto Muito Leve 100% em EVA</h3>
+        <p>R$49,90</p>
+        <a href="https://s.shopee.com.br/5faciu2ZXS" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto tecnologia">
+        <img src="https://down-cvs-br.img.susercontent.com/cn-11134207-7r98o-lw5k2zbyry2tb9.webp" alt="Fone de Ouvido">
+        <h3>Fones de Ouvido Y50 TWS 5.0 Bluetooth Sem Fio Estéreo Esportivo com Microfone</h3>
+        <p>R$17,99</p>
+        <a href="https://s.shopee.com.br/4AlowHvqbt" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto casaecozinha">
+        <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-ljnqtq2jdwv76a.webp" alt="Rede de Descanso">
+        <h3>Rede de Descanso Bucho de Boi 4,5m Reforçada - Suporta até 350kg</h3>
+        <p>R$139,99</p>
+        <a href="https://s.shopee.com.br/8Uuo6Jdjdk" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto autocuidadoesaúde">
+        <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7ras8-m3ukxesa0yvq28.webp" alt="Lipgloss">
+        <h3>Kiko 3D Hydra Lipgloss 6,5ml - Coloração Perolada, Longa Duração, Hidratação</h3>
+        <p>R$16,66</p>
+        <a href="https://s.shopee.com.br/40SOkAJfs7" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto autocuidadoesaúde">
+        <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lr6h29xz3xn187.webp" alt="Máscara Facial">
+        <h3>Máscara Facial + Ácido Hialurônico - Skin Care Completo 90g</h3>
+        <p>R$27,00</p>
+        <a href="https://s.shopee.com.br/3AtHklWoYF" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+      
+      <div class="produto infantil">
+        <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7r98o-lun9ev9h5s0uba.webp" alt="Pijama Infantil">
+        <h3>Pijama Infantil Meninos e Meninas Cartoon Cute Casual Homewear</h3>
+        <p>R$39,00</p>
+        <a href="https://s.shopee.com.br/8pXeVIXZiP" target="_blank" rel="noopener noreferrer">Comprar</a>
+      </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rdvw-lxcy8up9ah5s07.webp" alt="Camisa">
+    <h3>Sandália Feminina Confortavel Moleca 5469118    </h3>
+    <p>R$59,99</p>
+    <a href="https://s.shopee.com.br/9pQOVnSqBs" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lvvuv0vm27wye8.webp" alt="Camisa">
+    <h3>Cama Toca Iglu 3 em 1 para Cachorro e Gato Caminha Pet FRETE GRATIS</h3>
+    <p>R$53,99</p>
+    <a href="https://s.shopee.com.br/6pmmx0ZHc4" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98q-ll6r09hhup7afd.webp" alt="Camisa">
+    <h3>Sandália Papete Feminina Birken Com Enfeite Trançado De Strass Solado Alto Confortável</h3>
+    <p>R$63,90</p>
+    <a href="https://s.shopee.com.br/30a4OG1MmI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7qukw-lj5yyddmbzcgbc.webp" alt="Camisa">
+    <h3>Sandália Chinelo Kenner Rakka Ultra Force Original Masculino Feminino</h3>
+    <p>R$189,90</p>
+    <a href="https://s.shopee.com.br/2B0yktnRMS" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/cn-11134207-7ras8-m67y5hrlo7974c.webp" alt="Camisa">
+    <h3>Casaco De Algodão Espesso De Inverno Para Homens Novo Com Capuz</h3>
+    <p>R$160,00</p>
+    <a href="https://s.shopee.com.br/9AAj6F52JN" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m2fj9f5obzyua4.webp" alt="Camisa">
+    <h3>Kit Sortido 6 Peças de Roupas Infantil Menino Bebê Conjunto Infantil Menino</h3>
+    <p>R$59,90</p>
+    <a href="https://s.shopee.com.br/7fLvJeB6gt" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-lyo9zp09gx0l30.webp" alt="Camisa">
+    <h3>Conjunto kit camiseta e bermuda tectel estampa riscado mais RELOGIO DIGITAL TOP    </h3>
+    <p>R$62,33</p>
+    <a href="https://s.shopee.com.br/9zjq6RgUxX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7qvdv-ljxyf6pgw0xgf5.webp" alt="Camisa">
+    <h3>Fone De Ouvido Bluetooth Fones Com Fio inpods i12 Vem Caixa Protetora Para Desenhos Animados Compatível Andróide E ios</h3>
+    <p>R$30,90</p>
+    <a href="https://s.shopee.com.br/5puH8tPyLL" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m0x4o814fz28d2.webp" alt="Camisa">
+    <h3>Kit Frutal Sabonete Líquido + Hidratante para Corpo e Rosto - Beleza e Cuidado Completo    </h3>
+    <p>R$19,00</p>
+    <a href="https://s.shopee.com.br/6V9xwD3Pai" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m45rxytlupq97b.webp" alt="Camisa">
+    <h3>Kit Presente de Banho Feminino SPA com Copo Térmico Inox, Ideal para Aniversário e Natal</h3>
+    <p>R$79,98</p>
+    <a href="https://s.shopee.com.br/7zylj56psO" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m7mil6rp1xuce3.webp" alt="Camisa">
+    <h3>Kit Morte Súbita Contém Shampoo, Condicionador, Spray Reparação Total e Máscara Hidratante Lola</h3>
+    <p>R$124,99</p>
+    <a href="https://s.shopee.com.br/2qGfZjE4NV" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/361ba55a71682f87202c9a53dd1b15c1.webp" alt="Camisa">
+    <h3>Canguru Moletom Casaco Blusão Frio Xxxtentacion Rip Rapper Bad    </h3>
+    <p>R$69,00</p>
+    <a href="https://s.shopee.com.br/3AtVyPyoqw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134201-7qukw-leocde253gcg92.webp" alt="Camisa">
+    <h3>Teclado Gamer Semi-Mecânico Qwerty Português Led RGB Rainbow Ergonômico</h3>
+    <p>R$69,90</p>
+    <a href="https://s.shopee.com.br/1B8RaoLB8l" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-ljpqnrra6zyiec.webp" alt="Camisa">
+    <h3>máquina de cortar cabelo máquina de barbear barbeador eletrico masculino aparador de pelos Designe Elétrico Profissional</h3>
+    <p>R$15,90</p>
+    <a href="https://s.shopee.com.br/VsknkcVtf" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rcej-m6hpm332cvln85.webp" alt="Camisa">
+    <h3>Batom Mate CmaaDu-Hidratante,à prova d'água e de longa duração    </h3>
+    <p>R$4,13</p>
+    <a href="https://s.shopee.com.br/60DhLuoK8p" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7r98o-lw9n3ciwcfmr10.webp" alt="Camisa">
+    <h3>Macaron i12 inPods TWS Bluetooth Earphone Mini Headphone Wireless Earbuds Bluetooth Headset Auriculars Fone</h3>
+    <p>R$16,90</p>
+    <a href="https://s.shopee.com.br/1qO8OL2AN7" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lrrr9encsy78a1.webp" alt="Camisa">
+    <h3>Sandália Chinelo Kenner Rakka Original Masculino Lançamento</h3>
+    <p>R$179,90</p>
+    <a href="https://s.shopee.com.br/6pmoLbyi8N" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m0ejjwwjyv1c68.webp" alt="Camisa">
+    <h3>Hidratante Labial Carmed Crystal Pink Rose Gold Dentadura Beijo Banana Beijinho Rosa Glitter</h3>
+    <p>R$17,90</p>
+    <a href="https://s.shopee.com.br/4L5TN5CFWv" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m5ecver4zxw009.webp" alt="Camisa">
+    <h3>Hidratante Facial Garnier Toque Seco Efeito Matte 85g (Escolha o seu)    </h3>
+    <p>R$35,99</p>
+    <a href="https://s.shopee.com.br/7pfLXbM4By" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lz1bp88b7c4l78.webp" alt="Camisa">
+    <h3>bolsa feminina transversal pequena de ombro e alça de mão</h3>
+    <p>R$33,99</p>
+    <a href="https://s.shopee.com.br/10p1Pn761r" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m07nm3bgwmll5b.webp" alt="Camisa">
+    <h3>Touca/Gorro de Dormir de Cetim com Aba Faixa Larga Gigante Cabelo Anti Frizz Toca Head</h3>
+    <p>R$19,36</p>
+    <a href="https://s.shopee.com.br/gCCasPUtZ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto infantil">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m0athusqnc6feb.webp" alt="Camisa">
+    <h3>Kit 3 Bermuda Menino Moletom Infantil Short Com Bolso E Cordão De Ajuste Conforto E Qualidade</h3>
+    <p>R$49,90</p>
+    <a href="https://s.shopee.com.br/706G8oUYDa" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m0ygq2a5rw0na5.webp" alt="Camisa">
+    <h3>Kit Desmaia Cabelo Completo Forever Liss</h3>
+    <p>R$109,99</p>
+    <a href="https://s.shopee.com.br/3fpoAy5AhO" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-lzuvucojrbr52c.webp" alt="Camisa">
+    <h3>Kit 20 Esmalte Impala Cremoso Hipoalergenico Cor da Sua Moda esmalte Kit Manicure Completo</h3>
+    <p>R$28,49</p>
+    <a href="https://s.shopee.com.br/1qO9zk2sW2" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/9adf18d8c5c4e6a59bb5d77e8b83285c.webp" alt="Camisa">
+    <h3>Conjunto Feminino Canelado Cropped manga longa com argola e saia curta</h3>
+    <p>R$39,99</p>
+    <a href="https://s.shopee.com.br/7zynL95QEn" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rced-m6hram2znnveee.webp" alt="Camisa">
+    <h3>Escova De Shampoo De Cabelo De Silicone Macio Limpeza Caspa Massagem Seca/Molhada Couro Cabeludo Pente Anti-Coceira Home</h3>
+    <p>R$9,66</p>
+    <a href="https://s.shopee.com.br/7V2WkQxft3" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/095fcb68fdf6d86fd895aafbdde2ebd3.webp" alt="Camisa">
+    <h3>Rede De Dormir Descanso Jeans Mesclado Life Varias Cores Com Franja 4 Metros</h3>
+    <p>R$38,99</p>
+    <a href="https://s.shopee.com.br/7fLwx1oX1f" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto infantil">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd74-lw8kc001adera0.webp" alt="Camisa">
+    <h3>Stitch Large Capacity Children's Light mochila meninas luz mochila impermeável computador EOEC</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/8KbdkXXA1R" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134301-7rd3y-lw2nalg631wg91.webp" alt="Camisa">
+    <h3>Fones de ouvido TWS Bluetooth i12-Controle de toque,para todos os dispositivos</h3>
+    <p>R$6,76</p>
+    <a href="https://s.shopee.com.br/9pQRXSmZVO" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rdvc-lzkbrh6m0pon9e.webp" alt="Camisa">
+    <h3>Versão Coreana Do Novo Colar De Cinco Folhas De Brincos De Flores Lucky Flower Design Alloy Jewelry Set Trendy Female Gift</h3>
+    <p>R$9,79</p>
+    <a href="https://s.shopee.com.br/2Vdqo39i8x" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m0or648cgae8f7.webp" alt="Camisa">
+    <h3>Kit 2 Pares Chinelo Havaianas Farm Tropical Vibes Promoção</h3>
+    <p>R$59,90</p>
+    <a href="https://s.shopee.com.br/9zjrjvqhHs" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ltqzghur6ofde8.webp" alt="Camisa">
+    <h3>Forever Hair Crescimento Capilar Tratamento 30 Dias    </h3>
+    <p>R$27,99</p>
+    <a href="https://s.shopee.com.br/5Ky2BU0pcw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rd5m-m7l10m861308ae.webp" alt="Camisa">
+    <h3>Caixa De Som Bluetooth Portátil LED RGB USB Cartão SD Radio Fm Hi-Fi TWS 8W RMS    </h3>
+    <p>R$118,99</p>
+    <a href="https://s.shopee.com.br/9UncmRM0vw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lo729b9x0syx8e.webp" alt="Camisa">
+    <h3>Fone De Ouvido sem fio Bluetooth JB Tune T510bt TWS Stereo    </h3>
+    <p>R$42,89</p>
+    <a href="https://s.shopee.com.br/1B8UrcpFjw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rceg-m6hpn71pye4b4f.webp" alt="Camisa">
+    <h3>GF07 Mini Dispositivo Anti-Perda Para Rastreador GPS Com Operação Remota E Gravação    </h3>
+    <p>R$23,86</p>
+    <a href="https://s.shopee.com.br/5AeddLlUmq" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m54ghba5j0ky1e.webp" alt="Camisa">
+    <h3>Suporte de Controle Para Videogame Ps4 Ps5 Xbox Switch Melhor design Gamer    </h3>
+    <p>R$24,50</p>
+    <a href="https://s.shopee.com.br/3fppqpP9FK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+
+   <div class="produto academiaefitness">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rbll-llpdpz5hrn0r18.webp" alt="Camisa">
+    <h3>Kit 10 Camisetas Dry Fit Masculina - Casual - Treino - Academia - Esportes - Exercícios - Corrida</h3>
+    <p>R$127,90</p>
+    <a href="" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lto90pd82ygv3e.webp" alt="Camisa">
+    <h3>Lençol Queen 3 Peças 400 Fios Com Fronha Ponto Palito    </h3>
+    <p>R$39,50</p>
+    <a href="https://s.shopee.com.br/8zrMCtBa3U" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m4eqcxgtydoh34.webp" alt="Camisa">
+    <h3>Bolsa Térmica Marmita Lanche Bebida Grande Capacidade Piqueniques para Viagens ao Ar Livre Na Praia</h3>
+    <p>R$40,99</p>
+    <a href="https://s.shopee.com.br/LZNtEGwgk" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7qvfi-lkags79ukzb4a7.webp" alt="Camisa">
+    <h3>TWS Fone De Ouvido Bluetooth Sem Fio D520 5.3 Estéreo De Alta Potência Com Gancho    </h3>
+    <p>R$34,90</p>
+    <a href="https://s.shopee.com.br/20hbsMKwlB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto livroseeducação">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m0tcm02knee86b.webp" alt="Camisa">
+    <h3>Mochila Escolar Resistente Bem Espaçosa Faculdade Trabalho Viagem Cor Sortida</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/5AedfUubWX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lqc0bcui9tdvb3.webp" alt="Camisa">
+    <h3>Caixa De Som 2.1 Subwoofer Amplificador Bluetooth Tv Pc Aux Fm    </h3>
+    <p>R$192,50</p>
+    <a href="https://s.shopee.com.br/6fTRSMYro0" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7qukw-ljlhtnq2g0p6d2.webp" alt="Camisa">
+    <h3>Fone De Ouvido Headset Gamer Rgb LED Compatível Com Pc Computador Vídeogame Xbox PS4 PS5</h3>
+    <p>R$79,80</p>
+    <a href="https://s.shopee.com.br/50LDTOuO3Z" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-ltvcqlxnhpb958.webp" alt="Camisa">
+    <h3>Kit 4 Camisetas Masculinas Básicas Conforto Lisas Poliéster Premium</h3>
+    <p>R$59,99</p>
+    <a href="https://s.shopee.com.br/6AXArc5vdS" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7ra1g-m53af4hti3cbd5.webp" alt="Camisa">
+    <h3>Lovito Vestido boho liso sem costas com cadarço para mulheres LNL72152</h3>
+    <p>R$85,99</p>
+    <a href="https://s.shopee.com.br/4VOyUtNW6Z" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-23020-p0cstjhug7mv46.webp" alt="Camisa">
+    <h3>Vestido longo Feminino plus size Primavera Verão Estampa Vestido</h3>
+    <p>R$93,01</p>
+    <a href="https://s.shopee.com.br/60DmHjPp7i" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lyjjut18jq8lec.webp" alt="Camisa">
+    <h3>REDE CADEIRA DE BALANÇO    </h3>
+    <p>R$98,80</p>
+    <a href="https://s.shopee.com.br/5puM5cLbvK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/095fcb68fdf6d86fd895aafbdde2ebd3.webp" alt="Camisa">
+    <h3>Rede De Dormir Descanso Jeans Mesclado Life Varias Cores Com Franja 4 Metros</h3>
+    <p>R$38,99</p>
+    <a href="https://s.shopee.com.br/8Kbh4H4qAP" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ly3zs84qewon64.webp" alt="Camisa">
+    <h3>Shorts Academia Feminino 2em1 DryFit Bermuda Legging Dupla pra Caminhadas e Treinos com Bolso Oculto</h3>
+    <p>R$31,99</p>
+    <a href="https://s.shopee.com.br/8zrNrbeiJ8" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m1p1tcx61ju276.webp" alt="Camisa">
+    <h3>Kit 2 Pares Tênis Masculino/Feminino Conforto e Estilo – Leveza, Durabilidade e Preço Imperdivel!!!</h3>
+    <p>R$104,97</p>
+    <a href="https://s.shopee.com.br/4fiOhij9as" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rbng-lokznu4hquy200.webp" alt="Camisa">
+    <h3>Lovito Casual Bolsa Feminina Pequena de Ombro de Patchwork com Corrente LNA32135 (Off White/Preto)</h3>
+    <p>R$31,94</p>
+    <a href="https://s.shopee.com.br/3fprVyqArI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lzfdbwsj3cxt39.webp" alt="Camisa">
+    <h3>Vestido Feminino Varias Cores Ribana Premium</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/3q9HiM17gX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lrort9jyvtb8c6.webp" alt="Camisa">
+    <h3>polegadas Mochila Couro PU Para Notebook Zíper Dourado Trabalho Faculdade Usb/fone Pronta Entrega</h3>
+    <p>R$55,99</p>
+    <a href="https://s.shopee.com.br/6Kqch5ElxB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lz40sk2zixxdc9.webp" alt="Camisa">
+    <h3>Vestido Longo Liso Feminina Bicolor com forrto Casual Tecido Duna</h3>
+    <p>R$98,00</p>
+    <a href="https://s.shopee.com.br/9UneSyIhTm" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-cvs-br.img.susercontent.com/dc4d724c2fb63c5e0df2b2ed5203389b.webp" alt="Camisa">
+    <h3>Conjunto Academia Feminino Labellamafia Fitness Calça + Top Nadador Conjuntinho Academia</h3>
+    <p>R$44,90</p>
+    <a href="https://s.shopee.com.br/2Vdu8BtI5N" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto livroseeducação">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m7stgciag39wb8.webp" alt="Camisa">
+    <h3>120 Cores Marcadores Caneta Marcadora de Ponta Dupla    </h3>
+    <p>R$29,99</p>
+    <a href="https://s.shopee.com.br/AA3LGNTJlE" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lw2c35ptuhmd12.webp" alt="Camisa">
+    <h3>Conjunto Shorts Duplo e Top com Bojo Fitness Academia</h3>
+    <p>R$42,13</p>
+    <a href="https://s.shopee.com.br/2fxKKhECu1" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rcf6-m6hquxqri15g64.webp" alt="Camisa">
+    <h3>Stick de blush multi-funções-Cor natural de longa duração para maquiagem feminina</h3>
+    <p>R$16,65</p>
+    <a href="https://s.shopee.com.br/5puM6aJN9L" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rd59-lx87nvn7v5uo12.webp" alt="Camisa">
+    <h3>Lovito Biquíni Sexy com Amarração Frontal e Detalhes em Renda para Mulheres LNL36048 (Verde Claro/Rosa Choque/Azul)</h3>
+    <p>R$67,99</p>
+    <a href="https://s.shopee.com.br/6AXCVKe25i" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-22110-77wm0ndo2ljv5d.webp" alt="Camisa">
+    <h3>Tênis Respirável Masculino Para Verão/Desenvolvedor 72216    </h3>
+    <p>R$67,87</p>
+    <a href="https://s.shopee.com.br/8Uv7HjF7hK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-lj5nwfx1fv3p6d.webp" alt="Camisa">
+    <h3>Kit Banho Labotrat de Melancia (Auxilia no Clareamento da Pele) Rosto e Corpo Dia a Dia</h3>
+    <p>R$73,30</p>
+    <a href="https://s.shopee.com.br/9f74fyDtYp" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rd5a-lu121d9c6i1w76.webp" alt="Camisa">
+    <h3>Papete Infantil Patrulha Canina PAW Nuvem Slide Juvenil Unissex Chinelo Sandália Macio Lindas cores</h3>
+    <p>R$39,00</p>
+    <a href="https://s.shopee.com.br/9zjv4ogAWA" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lxidtme87kvq2c.webp" alt="Camisa">
+    <h3>Camisa Camiseta Masculina Basica Blusa Streetwear 100% algodão Todas 005    </h3>
+    <p>R$19,00</p>
+    <a href="https://s.shopee.com.br/2B13ktf2E0" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-cvs-br.img.susercontent.com/d340f97d6991816d2d64613b38a16491.webp" alt="Camisa">
+    <h3>Short Fitness Sem Costura Exercício Yoga Cintura Alta</h3>
+    <p>R$19,01</p>
+    <a href="https://s.shopee.com.br/1B8WZ74rke" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lyc98vev6hzp52.webp" alt="Camisa">
+    <h3>Kit Óleo e Sérum Capilar Bifásico Dove Bond Intense Repair 110ml + Leave-In Capilar Dove Bond Intense Repair Creme 50ml</h3>
+    <p>R$42,99</p>
+    <a href="https://s.shopee.com.br/1B8WZAleRR" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxa0egxmsv5rba.webp" alt="Camisa">
+    <h3>Vestido feminino floral xadrez longo para mulheres altas e baixas decote v forrado crepe viscolinho viscose veste P M,G</h3>
+    <p>R$65,00</p>
+    <a href="https://s.shopee.com.br/1VlMxsBvIp" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lyp42jth73tx50.webp" alt="Camisa">
+    <h3>Chinelo Feminino Birken Ortopedico Massageador Sandália Feminino Unissex Slide Leve e Confortável</h3>
+    <p>R$27,99</p>
+    <a href="https://s.shopee.com.br/AUgBgTKRiz" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lx64y5mx64ja24.webp" alt="Camisa">
+    <h3>Bolsa Térmica Grande e Portátil para Marmita com Alça Ideal para o Uso Diário    </h3>
+    <p>R$20,99</p>
+    <a href="https://s.shopee.com.br/AKMlUEttrp" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/mx-11134201-7qukw-lfbchoe0wpqb70.webp" alt="Camisa">
+    <h3>Conjunto feminino Sem Mangas Ruffled Cropped Boho Floral Estampa Color lisa Elastic Cintura Saia Longa Moda Duas Peças</h3>
+    <p>R$86,79</p>
+    <a href="https://s.shopee.com.br/7V2bWvTpkm" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7rdwx-m0ye4wp728fka4.webp" alt="Camisa">
+    <h3>Pillow Top Percal 400 Fios Macio Super King Queen Casal Envio Imediato</h3>
+    <p>R$97,50</p>
+    <a href="https://s.shopee.com.br/8AIIKFtfbu" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7rcd2-lteezke6ftdq48.webp" alt="Camisa">
+    <h3>Jogo Frigideiras Antiaderente Cerâmica Conjunto Grande Pequena Kit 2 Unidades</h3>
+    <p>R$89,99</p>
+    <a href="https://s.shopee.com.br/2LKVNhsb6b" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-lzglu2udl31182.webp" alt="Camisa">
+    <h3>Jogo de Lençol 4 Peças King/Queen Size/Casal Padrão/Solteiro Percal 200 Fios Lese Bordado Inglês</h3>
+    <p>R$83,90</p>
+    <a href="https://s.shopee.com.br/9KUFjl85sG" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-m3qdsum43k8oed.webp" alt="Camisa">
+    <h3>Kit 12 ou 5 Peças Utensílios De Cozinha Em Silicone De Varias Cores</h3>
+    <p>R$24,99</p>
+    <a href="https://s.shopee.com.br/wacv0Lej" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lukywmctyq1xa1.webp" alt="Camisa">
+    <h3>Jogo De Panelas Antiaderente 10 Kit Conjunto Peças Teflon Várias Cores</h3>
+    <p>R$189,90</p>
+    <a href="https://s.shopee.com.br/9f769GJnzo" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-m1g0s6nf4vqi7f.webp" alt="Camisa">
+    <h3>Edredom Dupla Face Fresco Estampa Sortida Variada Poliester</h3>
+    <p>R$43,90</p>
+    <a href="https://s.shopee.com.br/9zjwXvgUA2" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lwmxuhpomyra98.webp" alt="Camisa">
+    <h3>Kit 3 Potes de Vidro Com Tampa de Bambu Porta Mantimentos Organizador de Geladeira Marmita Forno Microondas e Freezer</h3>
+    <p>R$18,99</p>
+    <a href="https://s.shopee.com.br/7pfRy1nx3I" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-m70y9dl2a69zf3.webp" alt="Camisa">
+    <h3>Coberta Manta Microfibra Para Casal 1,80 x 2,00 Quentinhas Várias Cores</h3>
+    <p>R$24,49</p>
+    <a href="https://s.shopee.com.br/AUgD8yyaQ7" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lymhinm1pswl0e.webp" alt="Camisa">
+    <h3>Kit 5/12 Jogo de Cozinha Silicone, Utensílios Suporte para Cozinheiro Cabo de Madeira MasterChef</h3>
+    <p>R$18,88</p>
+    <a href="https://s.shopee.com.br/2qGm0xOv4r" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lm97oc7x2uie9f.webp" alt="Camisa">
+    <h3>Jogo Kit 03 Travessas Assadeira Filetada Oval Forma Vidro Temperado Marinex Transparente P,M e G</h3>
+    <p>R$27,90</p>
+    <a href="https://s.shopee.com.br/5Ky6zdDNmX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m009rwfitzmd5b.webp" alt="Camisa">
+    <h3>Kit 9 Potes de Marmita Fitness Tampa Com Trava Hermético Pote Retangular ou Quadrado Plástico Resistente Alta Vedação.</h3>
+    <p>R$31,99</p>
+    <a href="https://s.shopee.com.br/4q1qOmJJ7Y" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m00ah07u4tcl55.webp" alt="Camisa">
+    <h3>Kit de potes mantimentos 5 peças plástico porta mantimentos para cozinha</h3>
+    <p>R$26,00</p>
+    <a href="https://s.shopee.com.br/BG0qGQeqe" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rccc-ltp5w5566n0506.webp" alt="Camisa">
+    <h3>Coberta Manta Microfibra Para Casal Cores - Cobertas Quentinhas Ótimo Preço Barato    </h3>
+    <p>R$26,90</p>
+    <a href="https://s.shopee.com.br/3LD2c9hmij" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lw505j7cyhmd45.webp" alt="Camisa">
+    <h3>Limpador Pincel Esponja Maquiagem Elétrico USB Automático Lava Seca Armazena Bivolt    </h3>
+    <p>R$33,99</p>
+    <a href="https://s.shopee.com.br/AKMmxkcYXq" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+      <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-m170tullzgc36b.webp" alt="Camisa">
+    <h3>Kit 4 UNIDADES Travesseiros impermeável 50x70 Lavável Fibra Siliconada antialérgico Toque de pluma</h3>
+    <p>R$64,78</p>
+    <a href="https://s.shopee.com.br/VsrG3QhNf" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+      <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rdvu-m048xw5xje3l8c.webp" alt="Camisa">
+    <h3>Conjunto De Pincéis De Maquiagem Hello Kitty</h3>
+    <p>R$12,99</p>
+    <a href="https://s.shopee.com.br/6VA4PC5Qg5" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7qukw-ljwsh2x7o03u50.webp" alt="Camisa">
+    <h3>Bolsa De Cosmético De Couro PU Com Grande Capacidade Portátil Viagem Cosméticos Para Viagem</h3>
+    <p>R$19,00</p>
+    <a href="https://s.shopee.com.br/8Uv8mwZnTx" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/cn-11134207-7r98o-lp0m35uvsfdjd2.webp" alt="Camisa">
+    <h3>Vestido solto plus size de verão feminino com decote halter e ombros de fora</h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/7fM1nauWao" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lx1g0e5u5qdb20.webp" alt="Camisa">
+    <h3>Kit 16 Pçs Cortador De Unhas Pedicure Tesoura Prego Conjunto De Ferramentas Em Aço Inoxidável Com Bolsa Dobrável</h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/7APlCp5zYB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/cn-11134207-7r98o-lv0c99q5bsul2b.webp" alt="Camisa">
+    <h3>Kiko Lip Gloss 6.5ML /3D Hydra Lipgloss /Water Gloss Hidratante / Longa Duração Não Desbotante</h3>
+    <p>R$17,66</p>
+    <a href="https://s.shopee.com.br/4q1qQcqS6h" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rd5v-lwspefvxuuk266.webp" alt="Camisa">
+    <h3>Escova 5 em 1 Secador, Pente, Modelador, Aumenta volume Profissional</h3>
+    <p>R$79,99</p>
+    <a href="https://s.shopee.com.br/6AXE18wxZP" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7qukw-lk9v26r8f60h49.webp" alt="Camisa">
+    <h3>Cadeira Cadeirinha De Alimentaçã Refeição Para Bebê Assento Com Som - Portátil    </h3>
+    <p>R$89,99</p>
+    <a href="https://s.shopee.com.br/2fxLqpBr8a" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7qvg5-leo79x16r2sicd.webp" alt="Camisa">
+    <h3>Cobre Leito Com Fronhas Casal Padrão 3 Peças Dupla Face Matelado Cama Box</h3>
+    <p>R$44,90</p>
+    <a href="https://s.shopee.com.br/wag1FBV1" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lswu6kz61i4tca.webp" alt="Camisa">
+    <h3>Sandália Rasteira Amarrada Feminina Gysa</h3>
+    <p>R$62,91</p>
+    <a href="https://s.shopee.com.br/7APlDFXqiD" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lv4y77g6ksrh4e.webp" alt="Camisa">
+    <h3>Kit 5 Potes Pote Hermético Acrílico Organizador Tampa Trava Vedação de Silicone Organizador Temperos Armário de Cozinha</h3>
+    <p>R$57,99</p>
+    <a href="https://s.shopee.com.br/qVhfhFwFX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd4u-lx2xwefhcew667.webp" alt="Camisa">
+    <h3>Frigideira Antiaderente Cerâmica Não Gruda Não Vai Óleo Utensilios Domestico Cozinha</h3>
+    <p>R$37,49</p>
+    <a href="https://s.shopee.com.br/20hf3uegBO" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-22110-5zwa0ytipqjvb2.webp" alt="Camisa">
+    <h3>Seladora à Vácuo para Armazenar Alimentos Domésticos</h3>
+    <p>R$39,99</p>
+    <a href="https://s.shopee.com.br/706L1Aq43h" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto saúdeefitness">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m6bt1gifgl749f.webp" alt="Camisa">
+    <h3>Camisa Térmica Proteção Uv 50+ Segunda Pele Camiseta Blusa Malha Fria Unissex Academia Manga Longa</h3>
+    <p>R$27,00</p>
+    <a href="https://s.shopee.com.br/9AApbDAAHe" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lzfbshba7wox2c.webp" alt="Camisa">
+    <h3>Conjunto Feminino Varias Cores Lançamento Verão Short e Blusa    </h3>
+    <p>R$69,90</p>
+    <a href="https://s.shopee.com.br/60DnpUOCDi" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lxwx8tq5ogiad2.webp" alt="Camisa">
+    <h3>Kit Cobre Leito Colcha Queen 03 Peças Várias Cores</h3>
+    <p>R$84,30</p>
+    <a href="https://s.shopee.com.br/3fptt2TXvX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-ly43ux2obcpja4.webp" alt="Camisa">
+    <h3>Frigideira Antiaderente 3 em 1 com Divisórias</h3>
+    <p>R$38,69</p>
+    <a href="https://s.shopee.com.br/5fayGvuHKY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lx2t3q9zxj9b2f.webp" alt="Camisa">
+    <h3>Kit Papete Infantil menina Sandália e Bolsa 19 Ao 28</h3>
+    <p>R$24,90</p>
+    <a href="https://s.shopee.com.br/4q1rHVd1Zj" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rcde-lrytyovrlb7o72.webp" alt="Camisa">
+    <h3>Cooler Multifuncional 3 em 1 - Super Térmica com 2 Mesas Integradas - 32 Litros (Não tem banquinho)</h3>
+    <p>R$279,98</p>
+    <a href="https://s.shopee.com.br/AUgE2EwApq" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m7vm4e8dm9hwe3.webp" alt="Camisa">
+    <h3>Cores Marcadores Caneta Marcadora de Ponta Dupla Esboço Escrita Pintura Sublinhada</h3>
+    <p>R$25,99</p>
+    <a href="https://s.shopee.com.br/7pfV1gjzVs" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/cn-11134207-7qukw-liekpxf1u4xi20.webp" alt="Camisa">
+    <h3>Rolos De Cabelo De Seda Sem Calor Bandana Haste Espuma Modelador Ondulação Fita Anel De Cabelo Diy Estilo De Cabelo</h3>
+    <p>R$9,99</p>
+    <a href="https://s.shopee.com.br/6KqhF5rIbx" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7rbkm-lp7t83xr6lk534.webp" alt="Camisa">
+    <h3>Protetor Solar Facial L'Oréal Paris Solar Expertise Antioleosidade Fps60 Cor 1.0 Clara 40G</h3>
+    <p>R$24,99</p>
+    <a href="https://s.shopee.com.br/1B8b5hLkAw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-lyp4uwhj0y79ae.webp" alt="Camisa">
+    <h3>Kit 8 Peças de Talheres de Silicone para Bebês e Crianças</h3>
+    <p>R$33,99</p>
+    <a href="https://s.shopee.com.br/5fb0S5DkMC" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7rceu-ltm317xaji4149.webp" alt="Camisa">
+    <h3>Gel Semi-Permanente Para Sobrancelhas À Prova D'água Tattoo Tint Long-lasting Black Brown Dye Eyebrow Cream Cosmético</h3>
+    <p>R$3,59</p>
+    <a href="https://s.shopee.com.br/9pQZPpvSdO" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m503puans4vm12.webp" alt="Camisa">
+    <h3>Cortador Multifuncional Fatiador de Legumes Frutas Vegetais Picador Pescascador    </h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/9f79Dd6s3F" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lzo1rhz6mi6tdd.webp" alt="Camisa">
+    <h3>Kit 18 Pares de Meias Soquete Cano Curto Masculina Feminina Unissex varejo    </h3>
+    <p>R$10,99</p>
+    <a href="https://s.shopee.com.br/8UvBpYfjRB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lw918ihzz3xxc2.webp" alt="Camisa">
+    <h3>KIT 6 OU 7 ITENS BABABELL TUTTI FRUTTI BELL CORPUS KIT CAPILAR HIDRATAÇÃO MACIEZ</h3>
+    <p>R$54,00</p>
+    <a href="https://s.shopee.com.br/4fiTGvjp3M" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rdyv-lxu9mzzs60m721.webp" alt="Camisa">
+    <h3>Tênis DC Shoes Anvil TX LA - Preto+Branco - Em estoque ENVIO 24 HORAS</h3>
+    <p>R$35,70</p>
+    <a href="https://s.shopee.com.br/9KUIpatb7J" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7qvfg-lh4tyw5xdesv64.webp" alt="Camisa">
+    <h3>Air Bag Antiestático Escova De Cabelo Couro Cabeludo Massagem Pente Salão Cabeleireiro Ferramentas Estilo</h3>
+    <p>R$29,90</p>
+    <a href="https://s.shopee.com.br/6VA7T5sFOs" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rdw5-ly4sik99nn6wf4.webp" alt="Camisa">
+    <h3>Relógio smartwatch original x9 pro série 45mm gps nfc monitor de pressão arterial são paulo estoque disponível para envio imediato</h3>
+    <p>R$79,99</p>
+    <a href="https://s.shopee.com.br/3LD5heXN7Q" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rd5d-luxm9pvygsr7a2.webp" alt="Camisa">
+    <h3>Xiaomi Smartwatch Square Relógio Mulher Homem Discagem Por Toque Chamadas Música Smartclock Para Android IOS Fitness Tracker Esporte Smart-watch</h3>
+    <p>R$39,99</p>
+    <a href="https://s.shopee.com.br/40SmUyTeDc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-23010-vinj66uly8lv04.webp" alt="Camisa">
+    <h3>Kit 13 Pcs Pincéis De Maquiagem Profissionais Kabuki Contour</h3>
+    <p>R$7,50</p>
+    <a href="https://s.shopee.com.br/3VWVuDj6um" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lzs3ljipzlat96.webp" alt="Camisa">
+    <h3>Vestido Midi Tomara que Caia Tubinho Canelado - Cores do Verão Estilo Blogueira para Arrasar!</h3>
+    <p>R$18,97</p>
+    <a href="https://s.shopee.com.br/BG46FnhJK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/080cb3cb8a126bfe57681f3af5231541.webp" alt="Camisa">
+    <h3>Bolsa Feminina Média Shopbag Bordada Linea</h3>
+    <p>R$38,97</p>
+    <a href="https://s.shopee.com.br/1g4rtDYKuG" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lvkbra3yvdkf50.webp" alt="Camisa">
+    <h3>Kit Sérum Fortalecedor + Cera Hidratante Cutículas Anita Kit Tratamento</h3>
+    <p>R$20,10</p>
+    <a href="https://s.shopee.com.br/2LKYgX1jrm" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/78c787ca3aeacc8ba4f267e944e4f113.webp" alt="Camisa">
+    <h3>Kit c/ 10 Unidades Esmalte Impala Coleção A Cor da Sua Moda</h3>
+    <p>R$44,90</p>
+    <a href="https://s.shopee.com.br/5puQr5GNvd" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lqy6dubez66l2a.webp" alt="Camisa">
+    <h3>Organizador Prateleira Diamante Acrílico Porta Maquiagem Beleza linhas</h3>
+    <p>R$29,99</p>
+    <a href="https://s.shopee.com.br/3VWW4rKUQI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxwrg2qmpuwv60.webp" alt="Camisa">
+    <h3>Kit skin care limpeza de pele rosa mosqueta</h3>
+    <p>R$49,90</p>
+    <a href="https://s.shopee.com.br/7APoRmAt3R" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ltazymiiha746e.webp" alt="Camisa">
+    <h3>Buquê De Maquiagem Completo kit lindo presente mulher</h3>
+    <p>R$89,97</p>
+    <a href="https://s.shopee.com.br/3LD5tJfjhi" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rccy-m6hphnfxz1nl85.webp" alt="Camisa">
+    <h3>Relógio Fashion Flower Mulher Relógios Casual Faixa De Couro Conjunto De Jóias De Quartzo</h3>
+    <p>R$9,41</p>
+    <a href="https://s.shopee.com.br/1qOI6kWYvC" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7r98o-lwmnsjet29lv6f.webp" alt="Camisa">
+    <h3>Fone De Ouvido Bluetooth E6S TWS 5.0 Visor LED 9D À Prova D'água Stero Sem Fio    </h3>
+    <p>R$18,99</p>
+    <a href="https://s.shopee.com.br/5fb0fz19ym" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lvby8whpg17r00.webp" alt="Camisa">
+    <h3>mochila casual nova e leve para estudantes do ensino médio    </h3>
+    <p>R$43,90</p>
+    <a href="https://s.shopee.com.br/9f79RPVTZV" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rcdz-m6hpvvk2lglw94.webp" alt="Camisa">
+    <h3>Gecomomo Creme Blush Líquido 6 Cores Veludo Liso Mate Rosa</h3>
+    <p>R$7,91</p>
+    <a href="https://s.shopee.com.br/1LS1WPJvKI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rdxm-m0ocr8p5nbb6df.webp" alt="Camisa">
+    <h3>Lovito Vestido com estampa tribal boho e babados para mulheres LBL17603    </h3>
+    <p>R$63,20</p>
+    <a href="https://s.shopee.com.br/4VP3IXMBxm" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/19c0e06fa54a19924135ba982bd12bf4.webp" alt="Camisa">
+    <h3>Touca de Cetim Antifrizz REGULADOR - Cabelos Cacheados, Lisos, Crespos - CORES SORTIDAS E SURPRESA</h3>
+    <p>R$5,99</p>
+    <a href="https://s.shopee.com.br/whDS6uED" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/7c8c3ee302382afc1a602bb7b387b22b.webp" alt="Camisa">
+    <h3>(Somente Filtros) De Água Leves Para Fontes Cat Pet Suprimentos Animais Domésticos Absorção De Odores Casa</h3>
+    <p>R$18,72</p>
+    <a href="https://s.shopee.com.br/1qOMymjnFC" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/cn-11134207-7r98o-lzw3rp97n82qf8.webp" alt="Camisa">
+    <h3>DIO Addict Lip Glow Conjunto de batom de mudança de cor hidratação duradoura não é fácil de perder a cor 1.5g*2</h3>
+    <p>R$18,80</p>
+    <a href="https://s.shopee.com.br/706T8xL7VW" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m1r4tnh0ohwq0c.webp" alt="Camisa">
+    <h3>Bermuda Academia Com Bolso Feminina Ciclista Cós Alto</h3>
+    <p>R$37,99</p>
+    <a href="https://s.shopee.com.br/4AmKnOI54j" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd59-m7ibq0fb2sj4d9.webp" alt="Camisa">
+    <h3>Máquina Inteligente de Boxe Soco Música Bluetooth Anti Estresse</h3>
+    <p>R$98,99</p>
+    <a href="https://s.shopee.com.br/8fEk9y3JNc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7reoi-m1rlpql54yhq33.webp" alt="Camisa">
+    <h3>Kit com 15 Potes Plasticos</h3>
+    <p>R$35,90</p>
+    <a href="https://s.shopee.com.br/10pJ4J13w5" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-loymo1ru2ij9d9.webp" alt="Camisa">
+    <h3>Sérum Facial Melu By Ruby Rose Vegano 35ml Nutritivo</h3>
+    <p>R$15,39</p>
+    <a href="https://s.shopee.com.br/9KUR4E52bC" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rbld-lo70z1w80xoq05.webp" alt="Camisa">
+    <h3>Sandálias Exterior Vestir Chinelos De Casal De Praia Interior </h3>
+    <p>R$50,00</p>
+    <a href="https://s.shopee.com.br/4L5l7CA00v" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd61-m79nirl4xjdkcd.webp" alt="Camisa">
+    <h3>Saida Praia Saia Crochê Tricot com Cordão Lateral Fenda Festival    </h3>
+    <p>R$23,00</p>
+    <a href="https://s.shopee.com.br/AKMyGOeJYx" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ly3h7a2ljw8n63.webp" alt="Camisa">
+    <h3>Lençol 400 Fios Micropercal Tecido Leve e Macio Estampas Sortidas</h3>
+    <p>R$28,90</p>
+    <a href="https://s.shopee.com.br/6pn665PFKo" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rdyc-lzknqhtvaccnde.webp" alt="Camisa">
+    <h3>Kit Máscara Karseell 500g + 1 Shampoo 1l + 1 Condicionador Karseell 1l + Òleo Karseell 7ml</h3>
+    <p>R$54,99</p>
+    <a href="https://s.shopee.com.br/4VPBJsaVd9" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ltegax4vr8zcb0.webp" alt="Camisa">
+    <h3>Fone de Ouvido Sem fio Bluetooth Estéreo Alta Fidelidade Super Bass Qualcomm Chip HD Mic P9</h3>
+    <p>R$30,00</p>
+    <a href="https://s.shopee.com.br/1qOQ94POv5" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rbl7-lmxhpfuo0pwjb4.webp" alt="Camisa">
+    <h3>Jogo de Lençol 03 Peças 400 Fios Cama Casal Queen Micropercal Ponto Palito    </h3>
+    <p>R$32,90</p>
+    <a href="https://s.shopee.com.br/7V2mtYlRmi" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134201-23030-kedq4gmlyfov6f.webp" alt="Camisa">
+    <h3>Sandalia Papete Birken Glitter Feminina Dois em Um Confortavel Brilho Rasteirinha Regulador</h3>
+    <p>R$29,90</p>
+    <a href="https://s.shopee.com.br/2Ve6wR61oh" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxi39vzn451255.webp" alt="Camisa">
+    <h3>smartwatch 9 pro Carregamento sem fio relógio inteligente 2.02 inches Série 9 Bluetooth AI Inteligente Esportivo</h3>
+    <p>R$78,99</p>
+    <a href="https://s.shopee.com.br/2fxX8oyyTE" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/cn-11134207-7r98o-lw5hcv29pgrn60.webp" alt="Camisa">
+    <h3>Fone De Ouvido Para Jogos G9S Sem Fio Bluetooth Redmi Airdots Ruído Estéreo À Prova D'água Cancelando O Som HiFi Com Microfone</h3>
+    <p>R$35,90</p>
+    <a href="https://s.shopee.com.br/8zragXrgFM" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/b935a108739a501ff867be6c1980c308.webp" alt="Camisa">
+    <h3>A6S TWS Fone de Ouvido Bluetooth 5.0 Estéreo Sem Fio com Microfone e Caixa de Carga    </h3>
+    <p>R$13,99</p>
+    <a href="https://s.shopee.com.br/9f7HTqiitI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-23030-wmmbovvk5uov5a.webp" alt="Camisa">
+    <h3>Fones De Ouvido Bluetooth N21 Mini Touch Control Sport À Prova D'água Sem Fio , Estéreo , Com Caixa De Metal Para Carregamento</h3>
+    <p>R$38,90</p>
+    <a href="https://s.shopee.com.br/4AmKvvxZnI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7qvda-lk600lez9fu3cf.webp" alt="Camisa">
+    <h3>Caixa De Som Led Luminária Bluetooth Alto Falante Carregador Sem Fio Lâmpada Mesa RGB Alarme Relógio</h3>
+    <p>R$49,90</p>
+    <a href="https://s.shopee.com.br/6KqpW01kF1" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-lv0ya26nwfbx7f.webp" alt="Camisa">
+    <h3>Caixa De Som Bluetooth 5.0 Potente Bateria De Longa Duração A Prova D'água    </h3>
+    <p>R$55,99</p>
+    <a href="https://s.shopee.com.br/6pn7WbYdjD" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-22110-41ixcomg1fjvce.webp" alt="Camisa">
+    <h3>Camiseta Masculina De Manga Longa Estilo Moda Fina De Rua Fino Casual Blusa Branca Preta</h3>
+    <p>R$61,95</p>
+    <a href="https://s.shopee.com.br/40Sw9iiuRM" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7rcf2-m6hpzy1k6xxwa7.webp" alt="Camisa">
+    <h3>Meias De Futebol Profissionais Esportivo Antiderrapantes De silicone Respiráveis</h3>
+    <p>R$9,35</p>
+    <a href="https://s.shopee.com.br/7zz4vEVHMs" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/cn-11134207-7qukw-lie9nv6gsoe2bf.webp" alt="Camisa">
+    <h3>RelóGio 3 PeçAs Colar De Prata Hip Hop Kit Pulseira Cubana Corrente Masculina Bling JóIas Diamante Correntes</h3>
+    <p>R$71,99</p>
+    <a href="https://s.shopee.com.br/7KjOqKWUx3" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/cn-11134301-7r98o-lprmf52101md69.webp" alt="Camisa">
+    <h3>Fones De Ouvido Bluetooth 5.0 Sem Fio Estéreo Surround Atraso Para Jogos Ruído Cancelando Com Microfone</h3>
+    <p>R$20,36</p>
+    <a href="https://s.shopee.com.br/1qOSIQBkY9" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/cn-11134207-7qukw-lijn8o20r052d6.webp" alt="Camisa">
+    <h3>Smart Watch Homens Pressão Arterial Smartwatch À Prova D'água Mulheres Monitor De Frequência Cardíaca Fitness Tracker Sport Drop shipping</h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/9KUTEI4Pjz" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rd74-m70kidq9hff8a0.webp" alt="Camisa">
+    <h3>Relógio inteligente masculino à prova d'água com Bluetooth de freqüência cardíaca</h3>
+    <p>R$85,99</p>
+    <a href="https://s.shopee.com.br/8UvMEt8krB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7qukw-lj5nwfx1bned9c.webp" alt="Camisa">
+    <h3>Kit Banho Labotrat de Maracujá (Renovação Celular & Efeito Calmante) Rosto e Corpo Dia a Dia</h3>
+    <p>R$66,50</p>
+    <a href="https://s.shopee.com.br/8Kbw2gW7tv" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lzgcu2va4kld2f.webp" alt="Camisa">
+    <h3>KIT lili creme e perfume 350ml acetinado corpo e mãos hidratante lily lulli    </h3>
+    <p>R$29,15</p>
+    <a href="https://s.shopee.com.br/BGEJlPawT" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/b44c2938cf4b418ee69ada6904a219b3.webp" alt="Camisa">
+    <h3>kit 4 capas de almofada GRATIdÃO rosa e cinza</h3>
+    <p>R$34,90</p>
+    <a href="https://s.shopee.com.br/AUgQcrsEFA" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lwy87au2sc736b.webp" alt="Camisa">
+    <h3>Kit 6 Peças Conjunto de Faca Churrasco Carne Legumes Descascador Tesoura Profissional    </h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/20hsVKsbSe" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-22100-hp1ju81ddzive4.webp" alt="Camisa">
+    <h3>Kit Empreendedora de Sucesso - Revenda de Maquiagem com Necessaire 6 Itens Atacado base gloss</h3>
+    <p>R$34,99</p>
+    <a href="https://s.shopee.com.br/2qGzUwj0kr" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m4141ip7r0ld0c.webp" alt="Camisa">
+    <h3>Organizador de maquiagem Giratório 360º Acrílico Suporte de Cosméticos</h3>
+    <p>R$38,90</p>
+    <a href="https://s.shopee.com.br/5AevCdVY9N" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134201-23010-mem21oqfvqmv12.webp" alt="Camisa">
+    <h3>Kit chinelo Luiza Liz e necessaire bolsa de mão pequena kit dia a dia blogueira</h3>
+    <p>R$29,90</p>
+    <a href="https://s.shopee.com.br/4q24oN6KiY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98s-llmhhja0jwjl69.webp" alt="Camisa">
+    <h3>Kit 2 Tênis Masculino Sapatênis Básico Casual Com Carteira Cinto e Relógio- Miami</h3>
+    <p>R$109,90</p>
+    <a href="https://s.shopee.com.br/1B8mRk9tzr" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lp5t4mehp9j9d4.webp" alt="Camisa">
+    <h3>Marroquina Liss única Valyente: Profissional 1000ml | Liso Absurdo Alisa 100% Óleo De Argan</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/40Sxp4Pqgo" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rcbu-m6hr0oz88job14.webp" alt="Camisa">
+    <h3>Brilho labial em cápsula-Transparente,hidratante e de mudança de cor</h3>
+    <p>R$4,29</p>
+    <a href="https://s.shopee.com.br/1VlcqafL0z" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rfg6-m33njgb9op8bef.webp" alt="Camisa">
+    <h3>Kit Cuidados Morango: Hidratante, Esfoliante e Sabonete | Linha Bem Me Quero Frutos - Porán</h3>
+    <p>R$16,35</p>
+    <a href="https://s.shopee.com.br/4fiecUirUf" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lzyow9smvvi9ae.webp" alt="Camisa">
+    <h3>Panela Pressão 4,5 Litros Fechamento Externo Antiaderente</h3>
+    <p>R$69,00</p>
+    <a href="https://s.shopee.com.br/3VWhFXNoKy" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd5j-lvlm1xh52c5ob4.webp" alt="Camisa">
+    <h3>Estilo Havaiano Plumeria Colorful Flower Hairpin Grips Clipes Barrettes Acessórios Headwear</h3>
+    <p>R$2,85</p>
+    <a href="https://s.shopee.com.br/8Kbx0hpLA3" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m44t2xdv2at176.webp" alt="Camisa">
+    <h3>Conjunto Academia Fitness Short e Top Cintura Alta Estampas Variadas Moda Fitness</h3>
+    <p>R$36,99</p>
+    <a href="https://s.shopee.com.br/AKN1OYRJyl" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lks6mhidrqhi76.webp" alt="Camisa">
+    <h3>Tenis Meia Masculino Calce Fácil Ortopédico Sneaker slip on Sem Cadarço Esportivo Casual Academia</h3>
+    <p>R$28,00</p>
+    <a href="https://s.shopee.com.br/3AtqrU28se" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lydths7fv25120.webp" alt="Camisa">
+    <h3>Kit Leve 3 e Pague 2 : 3 Regata Masculina Regata Canelada Básica slin</h3>
+    <p>R$50,08</p>
+    <a href="https://s.shopee.com.br/6fTj25coRM" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rcc9-m6hr5o5g47f6ee.webp" alt="Camisa">
+    <h3>Paleta de Blush fosco, 6 cores, fácil de maquiagem, cor tridimensional Natural, à prova d'água, Blush Rouge</h3>
+    <p>R$16,85</p>
+    <a href="https://s.shopee.com.br/60E2ExFgtI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-lgzv1i1vyelxd3.webp" alt="Camisa">
+    <h3>Protetor De Sapato Calçado Silicone Capa Impermeável Para Sapato Tênis Antiderrapante Reutilizável</h3>
+    <p>R$15,99</p>
+    <a href="https://s.shopee.com.br/5VHleAelG4" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rfi7-m3p5b775a5hqae.webp" alt="Camisa">
+    <h3>Kit Jogo de Cozinha Silicone, Utensílios e Copo Suporte para Cozinheiro Cabo de Madeira MasterChef</h3>
+    <p>R$17,88</p>
+    <a href="https://s.shopee.com.br/4fieelB8oo" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lzt1zz7ywlr934.webp" alt="Camisa">
+    <h3>Kit Cobre Leito Casal Queen 6 Peças Tecido 100% Algodão Colcha Piquet De Luxo Estampado Queem Jogo De Cama Quenn</h3>
+    <p>R$131,90</p>
+    <a href="https://s.shopee.com.br/2LKjsXePHo" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7r98o-m012qomuqr8zd3.webp" alt="Camisa">
+    <h3>JBL Tune 720BT-Fones De Ouvido Intra-Auriculares Sem Fio , Bluetooth 5.3 , Até 36 Horas De Duração Da Bateria E Carregam</h3>
+    <p>R$86,80</p>
+    <a href="https://s.shopee.com.br/5VHleTlWSr" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m2ttlfzdmsr775.webp" alt="Camisa">
+    <h3>Moletom Premium Masculino Com Capuz Bolso Canguru Liso Feminina Blusa De Frio Casaco Flanelado</h3>
+    <p>R$47,14</p>
+    <a href="https://s.shopee.com.br/6Kqse6RUR6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134201-23030-3lz7e0zvgnov50.webp" alt="Camisa">
+    <h3>Sandália Babuche Adulto Menina Menino Macio E Leve</h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/6Kqsfq76EX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-lhkr1ftyf91394.webp" alt="Camisa">
+    <h3>Blusa De Moletom Racing Automobilismo Gp Moto Carro Corrida BMW Escolha O Seu</h3>
+    <p>R$69,02</p>
+    <a href="https://s.shopee.com.br/6VAIsIWOFU" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lrj45ypzj4el13.webp" alt="Camisa">
+    <h3>Fone De Ouvido para Jogos Bluetooth 5.Tws Stereo Ultra Baixa Latency Gaming Headset</h3>
+    <p>R$24,90</p>
+    <a href="https://s.shopee.com.br/6fTj4jTlHD" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rdy1-lz4kuoyo8lsy0a.webp" alt="Camisa">
+    <h3>Plumeria Laser Sereia Flor De Clip De Cabelo Barrettes Beach Hairpin Acessórios</h3>
+    <p>R$5,49</p>
+    <a href="https://s.shopee.com.br/8zrdrBOOwD" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rccv-lsa5ml6t8lc4ff.webp" alt="Camisa">
+    <h3>Cobertor Manta Casal Macio 2,00X1,80 Microfibra Liso Estampado Preço Baixo</h3>
+    <p>R$26,90</p>
+    <a href="https://s.shopee.com.br/BGFL18qkZ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd3t-lukd4x5qd6o50d.webp" alt="Camisa">
+    <h3>Relógio Inteligente W29 Pro Série 9 Dynamic Island Compass Armazena Arquivo de Música Fotográfica</h3>
+    <p>R$34,49</p>
+    <a href="https://s.shopee.com.br/4q24uOfgbw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rdw5-lxj6hp1opxt231.webp" alt="Camisa">
+    <h3>12 Pares de Meias Masculina Cano Alto Algodão Grossa Confortável Kit com 3, 6 ou 12 pares</h3>
+    <p>R$14,90</p>
+    <a href="https://s.shopee.com.br/5fbBu1E5kC" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lyc98vev6hzp52.webp" alt="Camisa">
+    <h3>Kit Óleo e Sérum Capilar Bifásico Dove Bond Intense Repair 110ml + Leave-In Capilar Dove Bond Intense Repair Creme 50ml</h3>
+    <p>R$42,99</p>
+    <a href="https://s.shopee.com.br/qVw9K5e5p" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/7b95b6cd68b2c230f14881e33584057b.webp" alt="Camisa">
+    <h3>Maquina de Barbear cortar cabelo Aparador Profissional barbeador acabamento Sem Fio Portátil</h3>
+    <p>R$19,00</p>
+    <a href="https://s.shopee.com.br/10pMLoYWnx" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/4bb1b947d23bc56d967ba856d2dbca36.webp" alt="Camisa">
+    <h3>Mini Caixa de Som Caixinha Banheiro Bluetooth Android E Ios BTS06</h3>
+    <p>R$25,99</p>
+    <a href="https://s.shopee.com.br/4L5oK88BwB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m0c2ny63g1nh19.webp" alt="Camisa">
+    <h3>CONJUNTO MASCULINO LUXUOSO BORDADO MASCULINO (CAMISA+CALCA)</h3>
+    <p>R$99,99</p>
+    <a href="https://s.shopee.com.br/1B8mYZQyzk" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lwsyyyvfmmkf3b.webp" alt="Camisa">
+    <h3>Fone De Ouvido Sem Fio Bluetooth 5.0 Estéreo Macaron Mini Fones Para Android Ios</h3>
+    <p>R$17,88</p>
+    <a href="https://s.shopee.com.br/60E2JdnNFB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lq56p87a94br8e.webp" alt="Camisa">
+    <h3>100 Adesivo de Unha 3D Pré Pronta Mão Pés Nail Art e Leve mais 20</h3>
+    <p>R$13,00</p>
+    <a href="https://s.shopee.com.br/2B1JkfTubA" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-lh97rju9a3nvaa.webp" alt="Camisa">
+    <h3>Capa Almofada Pompom Trabalhada Decoração</h3>
+    <p>R$49,90</p>
+    <a href="https://s.shopee.com.br/30aRzdESpM" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rdy7-m18g2bcajg5x1a.webp" alt="Camisa">
+    <h3>Balde De Silicone Para Fazer Gelo Rápido Forma De Gelo Cozinha Geladeira Compacto Multiuso</h3>
+    <p>R$34,99</p>
+    <a href="https://s.shopee.com.br/9f7Lvy0GQK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lolo8vvdxsg755.webp" alt="Camisa">
+    <h3>Kit Cozinha Mesa Posta Glamour Café da Manhã/Tarde Jarra Queijeira Manteigueira Açucareiro e Boleira</h3>
+    <p>R$69,03</p>
+    <a href="https://s.shopee.com.br/40SzBdODTt" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-lfv6fwbxzrd246.webp" alt="Camisa">
+    <h3>Panela de Pressão Antiaderente Fechamento Externo em Alumínio Teflon 4,5 Litros</h3>
+    <p>R$69,90</p>
+    <a href="https://s.shopee.com.br/4fifywlIJt" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m1wwau4xaadk0a.webp" alt="Camisa">
+    <h3>Kit 10 Potes de Vidro 370ml Hermético Marmita Fit com Tampa 4 Travas</h3>
+    <p>R$44,90</p>
+    <a href="https://s.shopee.com.br/8KbyLkMv8U" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7reno-m1zpf5fni336e5.webp" alt="Camisa">
+    <h3>Kit Corporal Completo Melancia 4 Prod. - Sabonetes, Hidratante, Esfoliante</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/706alMDBJZ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-22120-8ryymkmpwqkv5d.webp" alt="Camisa">
+    <h3>Suporte De Cadeira De Sentado Em Forma De Animal Sofá De Pelúcia Infantil COD</h3>
+    <p>R$34,89</p>
+    <a href="https://s.shopee.com.br/1g54PcZ21I" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m0ue2y6uq8vr72.webp" alt="Camisa">
+    <h3>Kit 3 Frigideiras Antiaderentes Enjoy Alegrete 16/18/20 Cinza Vermelho</h3>
+    <p>R$31,41</p>
+    <a href="https://s.shopee.com.br/6KqtyGXFVA" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rdya-lxglanmtniiy8c.webp" alt="Camisa">
+    <h3>Smart Watch com Tela Infinita e Duas Pulseiras Estilo e Tecnologia Masculino e Feminino</h3>
+    <p>R$48,66</p>
+    <a href="https://s.shopee.com.br/1g54Plx225" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m1xawcrw3zt4fe.webp" alt="Camisa">
+    <h3>Kit 10 petisqueira barquinha canoa petiscos churrasco festa frios para servir amendoim caldo branca</h3>
+    <p>R$21,90</p>
+    <a href="https://s.shopee.com.br/AKN2jnvZic" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/84cc4690d03616f8ad6f9144b5e28557.webp" alt="Camisa">
+    <h3>Organizador Multiuso Plasutil Geladeira Dispensa Cozinha Guarda e Conserva</h3>
+    <p>R$23,90</p>
+    <a href="https://s.shopee.com.br/8KbyMDOPBY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lxeafq89jh6nef.webp" alt="Camisa">
+    <h3>Monte Seu Kit Da Vonixx Restaurax Intense Prizm Lava Auto V Floc V Mol Blend 500ml    </h3>
+    <p>R$31,44</p>
+    <a href="https://s.shopee.com.br/3q9Z00h5CV" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-zl-br.img.susercontent.com/d871edd134ea16d07c1c2092622425f5.webp" alt="Camisa">
+    <h3>Rastreador Atividade Anti-Perda Bluetooth Sem Fio Para Animais De Estimação / Cachorros / Multicolorido</h3>
+    <p>R$15,79</p>
+    <a href="https://s.shopee.com.br/40SzCMwprF" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m68h7qr8wrbkfe.webp" alt="Camisa">
+    <h3>Kit Oleo Extraordinario Elseve 100ml + Leave in Cicatri Renov 50ml Reparação Total (Loreal)</h3>
+    <p>R$65,85</p>
+    <a href="https://s.shopee.com.br/9KUVYKPh1U" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-22100-ozllsjslg7iv5b.webp" alt="Camisa">
+    <h3>Caixa Térmica Unitermi Cooler Floripa Com Alça    </h3>
+    <p>R$73,24</p>
+    <a href="https://s.shopee.com.br/60E3aGWMpG" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/6f06b96ab5b4ab8a8c753eca06f9decc.webp" alt="Camisa">
+    <h3>Kit Cantinho do Café - Café, Açúcar e Biscoitos | 3 potes de Vidro 810ml com Tampa Rolha + Adesivos</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/60E3aNLyfR" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lxvzcifp98732a.webp" alt="Camisa">
+    <h3>Porta Condimentos Temperos Giratório Potes Vidro Tampa Dosadora Preto</h3>
+    <p>R$53,90</p>
+    <a href="https://s.shopee.com.br/1LSE1rkvWT" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m7thtzfn24k4f6.webp" alt="Camisa">
+    <h3>Bolsa Feminina KIT 4 PEÇAS ombro E Transversal Pequena de Lado tiracolo</h3>
+    <p>R$34,90</p>
+    <a href="https://s.shopee.com.br/9AB5O4wcY1" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m28qrcxxc4ee0e.webp" alt="Camisa">
+    <h3>Kit 4 Organizador de Geladeira 3,8 Litros Cesto Com Tampa Multiuso Alimentos Verduras e Vegetais</h3>
+    <p>R$63,90</p>
+    <a href="https://s.shopee.com.br/3fq8q1za7M" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-22120-h54ucahobxkva1.webp" alt="Camisa">
+    <h3>Tela Mosquiteira Magnetica Para Janela Com Imã Anti Mosquitos 180x150    </h3>
+    <p>R$29,99</p>
+    <a href="https://s.shopee.com.br/1g54SPmk9C" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m7wieaa3zz75d8.webp" alt="Camisa">
+    <h3>Lençol Colchão Cama Berço, Solteiro, Casal, Queen e King Matelado Impermeável com Elástico</h3>
+    <p>R$14,90</p>
+    <a href="https://s.shopee.com.br/AKN2mQ6AUa" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rfh8-m3v6lihexm6b12.webp" alt="Camisa">
+    <h3>Jogo de Panelas Elegance Antiaderente Teflon 9 Peças Tampa Vidro</h3>
+    <p>R$172,90</p>
+    <a href="https://s.shopee.com.br/7pfhnuypEH" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m4kqxhs647qtc9.webp" alt="Camisa">
+    <h3>KIT BABABLU 6 ITENS CHARMELLE ou BELL CORPUS CABELO CORPO E BANHO    </h3>
+    <p>R$55,00</p>
+    <a href="https://s.shopee.com.br/8pYEzp3RJ6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7reo4-m81brk56s52f2b.webp" alt="Camisa">
+    <h3>Rímel ondulado à prova d'água, não é fácil de borrar, preto grosso, de longa duração, à prova d'água, à prova de suor</h3>
+    <p>R$6,48</p>
+    <a href="https://s.shopee.com.br/3fq8qObr2I" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m34d7gzwxc05e0.webp" alt="Camisa">
+    <h3>Kit 15 Potes Para Cozinha    </h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/5KyMpVuhCV" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-lkckjmywuuy9c5.webp" alt="Camisa">
+    <h3>kit Porta mantimentos para arroz - feijão - alimentos potes organizadores - pote hermético cozinha</h3>
+    <p>R$95,00</p>
+    <a href="https://s.shopee.com.br/5fbDECNqXg" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ly40c7ux6hh3be.webp" alt="Camisa">
+    <h3>Jogo Lençol Casal kit 3 Peças Com Elastico Estampado    </h3>
+    <p>R$12,77</p>
+    <a href="https://s.shopee.com.br/8AIYCrgH34" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lyttz70zqg5dc8.webp" alt="Camisa">
+    <h3>Kit 50~100 Sacos para armazenar alimentos Reutilizável Congelador zip lock herméticos</h3>
+    <p>R$7,44</p>
+    <a href="https://s.shopee.com.br/50LWR73udx" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-23020-lw1269yg42mv72.webp" alt="Camisa">
+    <h3>Cafeteira De 2pçs Dobrável Para Aço Inoxidável Suporte De Chá De Café Sem Papel Reutilizável</h3>
+    <p>R$15,50</p>
+    <a href="https://s.shopee.com.br/8UvObbkZZx" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m1fyhdb606ui36.webp" alt="Camisa">
+    <h3>Galheteiro de Vidro 525ml com Bico Dosador Cortiça | Azeite / Vinagre / Óleo / Shoyu / Kit    </h3>
+    <p>R$24,90</p>
+    <a href="https://s.shopee.com.br/3fq8qn1MCu" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lsr2wvqapgysf6.webp" alt="Camisa">
+    <h3>Sandália Rasteira Amarrada Yasmin    </h3>
+    <p>R$80,75</p>
+    <a href="https://s.shopee.com.br/BGGgRMhN4" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lzkob7yxfvrp54.webp" alt="Camisa">
+    <h3>Moletom Familia do Grau 244 Estampado Premium Original Grau Corte Osascorte Bike Moto Blusa de Frio</h3>
+    <p>R$58,94</p>
+    <a href="https://s.shopee.com.br/5KyOTkeD3O" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/acbf773be7f01d9f31847eb4de4ca4ac.webp" alt="Camisa">
+    <h3>Blusa Moletom De Frio Canguru Algodão Unissex Rap Black Moda Style    </h3>
+    <p>R$69,00</p>
+    <a href="https://s.shopee.com.br/6AXVTOPTkH" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxlrbqkt7uye19.webp" alt="Camisa">
+    <h3>Kit 24 Pares de Meias Soquete Cano Curto Masculina Feminina Unissex    </h3>
+    <p>R$18,49</p>
+    <a href="https://s.shopee.com.br/qVz7iKU2E" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-cvs-br.img.susercontent.com/aba5342ab19ec9c7927310636c2e9a56.webp" alt="Camisa">
+    <h3>Protetor De Sapato Calçado Silicone Para Chuva Antiderrapante Capa Tênis Impermeável</h3>
+    <p>R$11,90</p>
+    <a href="https://s.shopee.com.br/Vt8jBxOnL" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lvsz37yg70tic5.webp" alt="Camisa">
+    <h3>Kit com 3 Camisetas Regatas Masculina Longline Dry com Capuz Lisa Sem Estampa Básica Secagem Rápida</h3>
+    <p>R$59,70</p>
+    <a href="https://s.shopee.com.br/60E5HNryHE" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m0szurmvwn8gae.webp" alt="Camisa">
+    <h3>Camiseta Masculina Feminina QUEIMA DE ESTOQUE Estampa e Cor Aleatoria Camisa 100% algodão</h3>
+    <p>R$20,88    </p>
+    <a href="https://s.shopee.com.br/50LY5sa61P" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lwixeu2vjhjm27.webp" alt="Camisa">
+    <h3>Camisa gola Polo Red B. Dry fit Monster Premium Lançamento</h3>
+    <p>R$65,01</p>
+    <a href="https://s.shopee.com.br/7AQ2fvHQsY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-luar5qdkbko5ac.webp" alt="Camisa">
+    <h3>Tênis Masculino Header Kicks Original Mais Vendido Promoção</h3>
+    <p>R$44,99</p>
+    <a href="https://s.shopee.com.br/6VALsmvcJT" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rbk0-lqqgjmiq5mao68.webp" alt="Camisa">
+    <h3>Smartwatch D20 relógio Colocar foto com tela hd y68 bluetooth com lembrete chamada monitor de frequência</h3>
+    <p>R$22,98</p>
+    <a href="https://s.shopee.com.br/7KjSsNUpXB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lzgoh83qs3lt58.webp" alt="Camisa">
+    <h3>Kit 3 Pares Meias Lupo Cano Medio Masculina Meia Atacado Original</h3>
+    <p>R$28,90</p>
+    <a href="https://s.shopee.com.br/7AQ2gB2AbQ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/ab95688ab1dc0336dfc72ae24845dfbd.webp" alt="Camisa">
+    <h3>Relógio à prova d'água inteligenteBluetooth Call Heart Rate Smartwatch    </h3>
+    <p>R$33,99</p>
+    <a href="https://s.shopee.com.br/9KUXHFAr1p" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m2i2j844q9jq06.webp" alt="Camisa">
+    <h3>Kit com 3 Pares de Meias Puma Modelo Cano Médio Lisa Básica Esportiva Calcanhar Verdadeiro Sport</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/4L5rK8jT5H" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/22866d325aa517dfbe8d9e3a1d21647e.webp" alt="Camisa">
+    <h3>Blusão Moletom Canguru Inverno Frio Anime Attack On Titan Escudo Flores Flora Rosa Unissex Estampa Nos Braços Lançamento</h3>
+    <p>R$69,00</p>
+    <a href="https://s.shopee.com.br/4L5rKGXRA2" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m22v3mtr7i6p86.webp" alt="Camisa">
+    <h3>Tenis Masculino Original Casual Skatista Nyc Shoes</h3>
+    <p>R$89,90</p>
+    <a href="https://s.shopee.com.br/wsANLW28" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-ln294i2qa7nn2f.webp" alt="Camisa">
+    <h3>Limpa Tênis Spray Premium Provita Limpeza Profunda 500ml</h3>
+    <p>R$19,90</p>
+    <a href="https://s.shopee.com.br/LZiZ5HtLg" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rccu-lsqx139y67ae3b.webp" alt="Camisa">
+    <h3>4 Pçs Moda Feminina Conjunto De Cuidados Com O Cabelo Shampoo Escova De + 200ML Garrafa Spray De Alta Pressão + De Óleo</h3>
+    <p>R$33,26</p>
+    <a href="https://s.shopee.com.br/706cdxImy3" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134201-22120-d3rubeue0jkv64.webp" alt="Camisa">
+    <h3>Camiseta Dry Fit Masculina: Conforto e Desempenho para Todas as Atividades!    </h3>
+    <p>R$16,70</p>
+    <a href="https://s.shopee.com.br/1LSFtbcg1Z" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m2cntm3ofzrq23.webp" alt="Camisa">
+    <h3>Camisa de Linho Manga curta Social Verão Fresca Gola Italiana Elegante em Visco-Linho</h3>
+    <p>R$54,90</p>
+    <a href="https://s.shopee.com.br/1B8phQ9kZh" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m4z6bcbqmn453d.webp" alt="Camisa">
+    <h3>Kit 3 Pares Meia Lupo Cano Médio Algodão Original Masculino Feminino</h3>
+    <p>R$29,90</p>
+    <a href="https://s.shopee.com.br/706ceF77Nm" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-22100-id8ki5i5vviv29.webp" alt="Camisa">
+    <h3>HelloKitty Cat Fone De Ouvido Bluetooth Para Mulheres 2021 Novo Sem Fio Redução De Ruído Fofo Desenho Animado Esportes</h3>
+    <p>R$19,80</p>
+    <a href="https://s.shopee.com.br/3q9asTr5fg" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rccw-m6hpqi0dsdxu04.webp" alt="Camisa">
+    <h3>Cola Forte Universal Para Sapatos De 1 Unidade-Adesivo À Prova D'água Reparos Rápidos De</h3>
+    <p>R$14,50</p>
+    <a href="https://s.shopee.com.br/50LYGhOhQf" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lul1ht5cqzj491.webp" alt="Camisa">
+    <h3>Fruteira de Mesa Média Premium Cesta Frutas Mesa 33cm Altura Aramado 2 Andares Organizador Multiuso</h3>
+    <p>R$48,90</p>
+    <a href="https://s.shopee.com.br/2B1MtbjrDA" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-luux0ntpwpk07a.webp" alt="Camisa">
+    <h3>Kit Tênis Masculino Leve + Meia + Relógio</h3>
+    <p>R$69,90</p>
+    <a href="https://s.shopee.com.br/2VeDIGuVUB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd43-lu5eplgzpjrkb3.webp" alt="Camisa">
+    <h3>Kit Completo Jogo Utensílios de Cozinha Luxo 19 Peças Com Tábua em Silicone Espátula Faca Tesoura</h3>
+    <p>R$69,00</p>
+    <a href="https://s.shopee.com.br/4L5rTiCNXi" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto esporteselazer">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lsu792ecpgzfbe.webp" alt="Camisa">
+    <h3>Tênis Masculino Esportivo Confortável Academia Corrida Caminhada    </h3>
+    <p>R$37,50</p>
+    <a href="https://s.shopee.com.br/7zz9qXvvZV" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lui6ym94kvol82.webp" alt="Camisa">
+    <h3>Cortador Multifuncional Fatiador De Verduras/frutas/legumes</h3>
+    <p>R$50,49</p>
+    <a href="https://s.shopee.com.br/60E5Tdt1JH" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lxi2tpfhp5tr55.webp" alt="Camisa">
+    <h3>smartwatch 9 pro Série Ultra 9 I9 T900 X8 Watch Bluetooth Rastreador De Chamadas Impermeável Relógio Original</h3>
+    <p>R$78,99</p>
+    <a href="https://s.shopee.com.br/50LYHuKnlY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lv92jllc2qvx0a.webp" alt="Camisa">
+    <h3>Organizador Ovo De Cozinha Conveniente Caixa De Ovos Gadgets Deslizante Duravel</h3>
+    <p>R$13,78</p>
+    <a href="https://s.shopee.com.br/3LDKIuCGMZ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134211-7r98o-lzhgcad3tqqq9f.webp" alt="Camisa">
+    <h3>Relógio Esportivo Sem Fio À Prova D'água Ultra Smart    </h3>
+    <p>R$39,99</p>
+    <a href="https://s.shopee.com.br/1B8pizs5pw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lwuc2tfb1nquc8.webp" alt="Camisa">
+    <h3>Chinelo Slide Adulto e Infantil Confortável Leve Pega a Visão Sorriso Carinha    </h3>
+    <p>R$47,14</p>
+    <a href="https://s.shopee.com.br/50LYI62gcc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98p-llchjf937ya3b1.webp" alt="Camisa">
+    <h3>Kit 2 Tênis Masculino Sapatênis Polo Fran Básico Casual Com Carteira Cinto e Relógio London</h3>
+    <p>R$75,90</p>
+    <a href="https://s.shopee.com.br/qVzKW7jHe" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/8cfc99e03d67c77efdc178d4123289f6.webp" alt="Camisa">
+    <h3>Cama De Gato Cachorro Casa De Estimação Interna Com Orelhas Longas Removíveis E Laváveis Ninho Dobrável</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/wtsmEAkm" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7repu-m81br8zf432vea.webp" alt="Camisa">
+    <h3>Paleta de Sombras 40 Cores, Matte e Cintilante, Alta Pigmentação e Longa Duração    </h3>
+    <p>R$15,66</p>
+    <a href="https://s.shopee.com.br/5Af02OrGuW" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m1u4vmkrv1fs45.webp" alt="Camisa">
+    <h3>Kit Palmilha Gel Silicone + Calcanheira Gel Anti Impacto Esporão Cancaneo Fascite Plantar Contra Dor</h3>
+    <p>R$19,90</p>
+    <a href="https://s.shopee.com.br/40T2eSYnIt" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134201-23010-mem21oqfvqmv12.webp" alt="Camisa">
+    <h3>Kit chinelo Luiza Liz e necessaire bolsa de mão pequena kit dia a dia blogueira    </h3>
+    <p>R$29,90</p>
+    <a href="https://s.shopee.com.br/2fxf45KFed" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lr6sbm7txy5g71.webp" alt="Camisa">
+    <h3>Espelho De Mesa Led Portátil Maquiagem Regulagem Camarim    </h3>
+    <p>R$35,99</p>
+    <a href="https://s.shopee.com.br/40T2ecqklc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/51915202430b9a1e409d17e6f55057fc.webp" alt="Camisa">
+    <h3>Kit 12 Pares de Meias Soquete Masculinas Cores Variadas</h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/7V2up9sbWy" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lvet5dh1pwep09.webp" alt="Camisa">
+    <h3>Marmita Elétrica Bivolt Para Casa Automovel Taxi Uber 12v 24v 110v 220v C/ 2 Cabos    </h3>
+    <p>R$67,98</p>
+    <a href="https://s.shopee.com.br/AA3g0ASUio" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134301-7r98o-lop81m85v24x5d.webp" alt="Camisa">
+    <h3>6 Conjunto de batom fosco Brilho labial fosco Veludo Brilho labial fosco à prova d'água Não é    </h3>
+    <p>R$22,75</p>
+    <a href="https://s.shopee.com.br/AA3g0FHfvq" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lqw4b1nyjsb1e8.webp" alt="Camisa">
+    <h3>Kit 10 Potes Vidro Hermético 1040ml Retangular 4 Travas Marmita Premium</h3>
+    <p>R$72,97</p>
+    <a href="https://s.shopee.com.br/9f7PPPzUHi" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-li1u0y8qr9ct0b.webp" alt="Camisa">
+    <h3>Campainha Com Câmera Vídeo Porteiro Sem Fio Wi-Fi HD Inteligente Smart Home Vê Pelo Celular Recarregável</h3>
+    <p>R$48,99</p>
+    <a href="https://s.shopee.com.br/7pflE7DeOI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rd6c-m79jiyiayigh75.webp" alt="Camisa">
+    <h3>Chinelo Sandalia Havaianas Banderinha Preto - Promoção!    </h3>
+    <p>R$19,90</p>
+    <a href="https://s.shopee.com.br/50LZqxwQGS" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m62wn3jaexf6d6.webp" alt="Camisa">
+    <h3>Boia infantil de natação colete flutuante de 1 a 6 anos    </h3>
+    <p>R$38,90    </p>
+    <a href="https://s.shopee.com.br/40T2fCcHQ6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7repd-m28gs3389mz9ec.webp" alt="Camisa">
+    <h3>Caixa De Som Go 3 Bluetooth Portátil À Prova D 'Água Com Bateria Esportiva</h3>
+    <p>R$43,79</p>
+    <a href="https://s.shopee.com.br/8pYIQAmes4" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m0ehkmzn6oox1c.webp" alt="Camisa">
+    <h3>Robô Varredora/Aspirador De Pó Automática 3 Em 1 Limpeza Doméstica Robótico Inteligente E Silencioso</h3>
+    <p>R$42,99</p>
+    <a href="https://s.shopee.com.br/9KUZ195TMw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ltzxh03an9lsf9.webp" alt="Camisa">
+    <h3>Mini Caixinha De Som Bluetooth Com Radio FM USB Luz LED RGB MP3 Caixa Colorida Sem Fio Portátil</h3>
+    <p>R$26,93</p>
+    <a href="https://s.shopee.com.br/5Af03ZJJb7" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/68e3c2677b2decbfcbec043e48965db2.webp" alt="Camisa">
+    <h3>Nebulizador ultrassônico portátil infantil Inalador de baixo ruído (Envio em 12 horas)</h3>
+    <p>R$34,99</p>
+    <a href="https://s.shopee.com.br/8UvS1oH48S" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7qukw-lf66s55e0yp667.webp" alt="Camisa">
+    <h3>Apple watch Série 9 + Airpods pro TWS Fone De Ouvido Bluetooth Sem Fio</h3>
+    <p>R$200,00</p>
+    <a href="https://s.shopee.com.br/706eFER8FQ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lrrmf32c35sd9a.webp" alt="Camisa">
+    <h3>Kit de mantimentos plástico 5 peças + Kit 10 peças Minnie    </h3>
+    <p>R$39,00</p>
+    <a href="https://s.shopee.com.br/1LSHUrh1ZD" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rd4k-lu5etfkbmlecf4.webp" alt="Camisa">
+    <h3>Kit facas de cozinha/Churrasco Profissional Antiaderente 6 Peças Preto/colorido</h3>
+    <p>R$16,90</p>
+    <a href="https://s.shopee.com.br/qW0u5o5kU" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/486033b620de95fddd8e658ff561c241.webp" alt="Camisa">
+    <h3>Secador de Cabelos Mondial Black Rose 2000W SC-37 220V Preto e Rosa</h3>
+    <p>R$169,90</p>
+    <a href="https://s.shopee.com.br/1B8rIlyPEq" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m1fzjl2ut8epd6.webp" alt="Camisa">
+    <h3>Kit 10 Potes de Tempero 200ml + Cartela de Temperos com 28 Adesivos Opcional    </h3>
+    <p>R$69,80</p>
+    <a href="https://s.shopee.com.br/6KqxSKhWM6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rd4i-m6sm7ltdbi4pdf.webp" alt="Camisa">
+    <h3>Caixa De Som Soundbar Subwoofer Grave Celular Tv PC Celular Usb P2</h3>
+    <p>R$69,98</p>
+    <a href="https://s.shopee.com.br/AA3g1UQ6GZ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m4rxof5a7v411a.webp" alt="Camisa">
+    <h3>Escova Elétrica de Limpeza 3 em 1 Sem Fio Limpador Multiuso Prático Com Mais Duas Cabeças de Escova</h3>
+    <p>R$27,58</p>
+    <a href="https://s.shopee.com.br/VtAVp7LRI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/b2b01e56f73bd73f6edb980ab44edda5.webp" alt="Camisa">
+    <h3>Vestido Longo Canelado com Manga Curta Feminino Longo com Fenda Gestante</h3>
+    <p>R$31,90</p>
+    <a href="https://s.shopee.com.br/1LSHVQbgZ9" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lnw4v9vyep5870.webp" alt="Camisa">
+    <h3>Palmilha Magnetica Pontos Acupuntura Ortopedica Ativa Circulação Alívio Dores Cansaço Pés</h3>
+    <p>R$10,87</p>
+    <a href="https://s.shopee.com.br/8pYIRGLBp2" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m5ourjxqhojp2c.webp" alt="Camisa">
+    <h3>Kit Petisqueira Redonda Para Frios Queijo Com Molheira Ramekin e Garfinhos para Petiscos    </h3>
+    <p>R$33,99</p>
+    <a href="https://s.shopee.com.br/6KqxSk2Hyx" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/0717fe00f09a2ef32de0e47501845889.webp" alt="Camisa">
+    <h3>Escova Secadora Alisador Elétrica Quente Cabelo Com 3 Em1 Hair Styler 110V</h3>
+    <p>R$48,99</p>
+    <a href="https://s.shopee.com.br/7fML3Lom2q" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134201-22120-o58xj4yv6elv48.webp" alt="Camisa">
+    <h3>Escova Eletrica de Limpeza 5 em 1 Sem Fio Limpador Multiuso Pratico Para Cozinha , Banheiro prático</h3>
+    <p>R$25,99</p>
+    <a href="https://s.shopee.com.br/LZkJzmzbn" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lxbar9h2501i8d.webp" alt="Camisa">
+    <h3>Kit 5 Potes +1 Jarra de Plástico + 5 Copos Alta Qualidade Vasilhas de Plástico</h3>
+    <p>R$37,42</p>
+    <a href="https://s.shopee.com.br/9zkFpu8Yar" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lw1wj80k8p8524.webp" alt="Camisa">
+    <h3>Frigideira Multifuncional Antiaderente 4 em 1 Ovos Hambúrguer Omelete Com Alça De Madeira</h3>
+    <p>R$39,99</p>
+    <a href="https://s.shopee.com.br/3VWnYUVrsn" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lryhe8rzatr8b1.webp" alt="Camisa">
+    <h3>Organizador de Cosméticos Acrílico Porta Algodão Cotonete tampa Bambu    </h3>
+    <p>R$18,99</p>
+    <a href="https://s.shopee.com.br/1qOZZkPjac" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-lj5tkik67fhxa0.webp" alt="Camisa">
+    <h3>Forma Assadeira Para Fritadeira Air Fryer Em Silicone Flexível Lavável    </h3>
+    <p>R$10,97</p>
+    <a href="https://s.shopee.com.br/9f7QuGb5Cj" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m314shpkk6px3e.webp" alt="Camisa">
+    <h3>Balança Bioimpedância Digital Profissional Suporta Até 140kg via Bluethooth</h3>
+    <p>R$37,97</p>
+    <a href="https://s.shopee.com.br/7V2wKVM4qQ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/e0062c03fa005941828ae833c58e2916.webp" alt="Camisa">
+    <h3>Bolsa De Silicone Para Armazenar Alimentos Reutilizável À Prova De Vazamento</h3>
+    <p>R$7,20</p>
+    <a href="https://s.shopee.com.br/AA3hVlGAXO" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134201-23010-n6yyvupcojmv9e.webp" alt="Camisa">
+    <h3>Caixa De Som Bluetooth Canhão Portátil Amplificada P2 USB Cartão SD Radio Fm Microfone    </h3>
+    <p>R$49,99</p>
+    <a href="https://s.shopee.com.br/6AXYkYaYog" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/1aa533b961267cc4efc656563530d18b.webp" alt="Camisa">
+    <h3>Kit 6 peças Edredom gueem Dupla Face Estampado + Jogo de lençol</h3>
+    <p>R$99,99</p>
+    <a href="https://s.shopee.com.br/BGLbeGZaS" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m2cfc1oc5oj503.webp" alt="Camisa">
+    <h3>Caixa De Som Portátil Bluetooth Rádio Fm Usb Sd Controle Remoto Microfone Torre    </h3>
+    <p>R$128,88</p>
+    <a href="https://s.shopee.com.br/4AmUN5UBzR" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/cn-11134207-7r98o-lqjz1bjk7gns6f.webp" alt="Camisa">
+    <h3>Bandeja individual para cílios individuais, conjunto misto de vison 120-160, extensão natural de 8-16mm, cílios postiços</h3>
+    <p>R$3,99</p>
+    <a href="https://s.shopee.com.br/30aWz5MCOF" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7qukw-lftnchfhaqme2b.webp" alt="Camisa">
+    <h3> Panela de Barro Capixaba P , M e G (1 Litro , 2 Litros , 5 Litros ) + 2 cumbucas</h3>
+    <p>R$157,00</p>
+    <a href="https://s.shopee.com.br/AA3hWU6rLw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-tx-br.img.susercontent.com/d1bed5023b23fdc4380d8e744bd2af2a.webp" alt="Camisa">
+    <h3>Tapete Dobrável Dupla Face À Prova D'água De 180x100cm Para Bebês Engatinhando    </h3>
+    <p>R$109,00</p>
+    <a href="https://s.shopee.com.br/6VAP9onvpK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m7k3xqhluz4a11.webp" alt="Camisa">
+    <h3>Kit 3 Garrafa Copo Agua Squeeze C/ Adesivos Lembretes beber Agua Tendencia NOVA</h3>
+    <p>R$27,90</p>
+    <a href="https://s.shopee.com.br/7AQ5x8Idm5" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto calcados">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lx9t6mfy080i9f.webp" alt="Camisa">
+    <h3>Chinelo Nuvem Masculino e Feminino Fly Feet o mais vendido</h3>
+    <p>R$32,90</p>
+    <a href="https://s.shopee.com.br/3AtxEB4ThI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m0oii1f1jzh98e.webp" alt="Camisa">
+    <h3>Mop Giratorio Cabo Inox limpeza Cesto Em Inox 14 Lt -Balde Esfregão 360 Universal Original    </h3>
+    <p>R$54,89</p>
+    <a href="https://s.shopee.com.br/8pYLWj3xCz" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m2l0xvrdd53n62.webp" alt="Camisa">
+    <h3>Peseira 260x60cm Manta Trança Tricot Cama King Madrid Tricô Trico    </h3>
+    <p>R$79,20</p>
+    <a href="https://s.shopee.com.br/6Kr0YRNSp5" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lw67dlkv78hh20.webp" alt="Camisa">
+    <h3>6 Peças/Conjunto A Melhor Forma Silicone P/ Fritadeira Air Fryer forno Micro-ondas C Alça cesto 80g Grossa + Resistente</h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/AKN9Juw8WQ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-zl-br.img.susercontent.com/8f84232cb5fbe201b96fbfd5720b10b2.webp" alt="Camisa">
+    <h3>Paleta de Maquiagem Rose Color Eyeshadow Paleta de Maquiagem Highlight 12 Cores    </h3>
+    <p>R$22,01</p>
+    <a href="https://s.shopee.com.br/2LKrnNvopc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-22100-hp1ju81ddzive4.webp" alt="Camisa">
+    <h3>Kit Empreendedora de Sucesso - Revenda de Maquiagem com Necessaire 6 Itens Atacado base gloss</h3>
+    <p>R$34,99</p>
+    <a href="https://s.shopee.com.br/6VAQlHZpRT" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-ltwjwwwq5uudff.webp" alt="Camisa">
+    <h3>Capa Para Colchão Impermeavel Matelado Com Elastico    </h3>
+    <p>R$22,80</p>
+    <a href="https://s.shopee.com.br/7fMO9XSd1g" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lxhs8y4ehlsic0.webp" alt="Camisa">
+    <h3>Vestido Longo feminino com Fenda Sensual alças Finas tecido canelado</h3>
+    <p>R$36,98</p>
+    <a href="https://s.shopee.com.br/1LSKbz6FW6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-tx-br.img.susercontent.com/cd1d99ed746d9b4bebbef0992759c6b4.webp" alt="Camisa">
+    <h3>0-5 Anos De Idade Pijama De Banho De Casa Confortável Com Cinto No Outono E Inverno    </h3>
+    <p>R$57,97</p>
+    <a href="https://s.shopee.com.br/8pYLXrfk4f" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rdyw-lyg1g0ndfksn64.webp" alt="Camisa">
+    <h3>Tripé Estabilizador de Mão kit 5 em 1 gimbal Microfone Celular Gravação De Vídeo    </h3>
+    <p>R$38,29</p>
+    <a href="https://s.shopee.com.br/7fMO9skTWE" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7renn-m8e1cxyvvvkhfe.webp" alt="Camisa">
+    <h3>Escova Elétrica de Limpeza Sem Fio Limpador Multiuso Prático Com Mais Duas Cabeças de Escova</h3>
+    <p>R$29,00</p>
+    <a href="https://s.shopee.com.br/qW41Q3jal" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <!-- cara eu me ferrei daqui para cima é para olhar todas as class e corrigir elas ;--;  -->
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98r-lm6s78mktmnq7a.webp" alt="Camisa">
+    <h3>Pano de prato estampado com bainha</h3>
+    <p>R$19,07    </p>
+    <a href="https://s.shopee.com.br/5fbJmSYUlw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rd5s-lupk67phfyer18.webp" alt="Camisa">
+    <h3>Cartoon Stuffed Dolls Pink Blue Anime Brinquedos Lilo E Stitch Stich Pelúcia Brinquedos Recheados Presentes De Natal Para Crianças XBVC</h3>
+    <p>R$32,00</p>
+    <a href="https://s.shopee.com.br/4L5wC7nsFZ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m1zp3leepjv512.webp" alt="Camisa">
+    <h3>Caixa Organizadora Premium de Guarda Roupa Armazenamento Multiuso Armário</h3>
+    <p>R$19,99</p>
+    <a href="https://s.shopee.com.br/6Kr0ZsR2ci" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rd4b-lvfgy4ws1m1oe5.webp" alt="Camisa">
+    <h3>Mini Máquina de Waffles Elétrica Portátil Casa Cozinha Fazer Waffle Panquecas Automático 110V</h3>
+    <p>R$44,99</p>
+    <a href="https://s.shopee.com.br/7zzEZGhPp2" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/6ebec15ce4cd60e239836e25907f1d63.webp" alt="Camisa">
+    <h3>Churrasqueira Elétrica Top Grill II 127V E 220V    </h3>
+    <p>R$109,20</p>
+    <a href="https://s.shopee.com.br/5pujzTG1Cj" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lo8epw1nrmbw14.webp" alt="Camisa">
+    <h3>Robô Varredora/Aspirador De Pó 1200PA Automática 3 Em 1 Limpeza Doméstica Robótico Inteligente E Silencioso</h3>
+    <p>R$54,99</p>
+    <a href="https://s.shopee.com.br/5fbKOxgbtw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lsg5v664rfok89.webp" alt="Camisa">
+    <h3>Paleta Trio Contorno Iluminador Blush Feels Mood - Ruby Rose</h3>
+    <p>R$21,90</p>
+    <a href="https://s.shopee.com.br/2fxipsCG2o" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rdyl-m1il4zy4es7109.webp" alt="Camisa">
+    <h3>Kit Completo Jogo de Cozinha Luxo 19 Peças Com Tábua em Silicone Espátula Faca Tesoura Utensílios</h3>
+    <p>R$36,98</p>
+    <a href="https://s.shopee.com.br/6AXbmk4fac" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lv205cqzejdp98.webp" alt="Camisa">
+    <h3>Lixeira com Sensor Automático Inteligente Abre Fácil em Toque Cesto Lixo Banheiro Cozinha Escritório 16 Litros</h3>
+    <p>R$84,99</p>
+    <a href="https://s.shopee.com.br/6fTsNoPSbb" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lqp8s8f2ez2bc0.webp" alt="Camisa">
+    <h3>Escova De Limpeza Ajustável Janela Banheiro e Cozinha Ferramenta 3 em 1 Recarregável    </h3>
+    <p>R$79,99    </p>
+    <a href="https://s.shopee.com.br/7KjZB9K5wP" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m4ysc6l7rsy8a6.webp" alt="Camisa">
+    <h3>Kit 6 Potes com Escorredor Organizador Geladeira Empilhável Para Frutas Frios e Alimentos Plástico Com Tampa e Travas</h3>
+    <p>R$66,43</p>
+    <a href="https://s.shopee.com.br/7zzFyjmGe5" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-lhxcnk8wxdel20.webp" alt="Camisa">
+    <h3>Luminária Anti- Mosquito Repelente Elétrico Lâmpada U.V Armadilha Para Insetos Direto Cabo USB</h3>
+    <p>R$21,80</p>
+    <a href="https://s.shopee.com.br/8zrnAfXJ2w" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-likgajz7hju8d6.webp" alt="Camisa">
+    <h3>Passadeira A Vapor Passar Roupa Voltagem 110V220V 200ml Elimina Ácaros Odores De Roupas Estofados Cortinas Ferro a Vapor</h3>
+    <p>R$68,90</p>
+    <a href="https://s.shopee.com.br/50LePSnIXh" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto calcados">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-22100-uy4xa35ffciv2a.webp" alt="Camisa">
+    <h3>Kit Ate 15 Pares Meia Cano Alto Algodão Unissex 36-42    </h3>
+    <p>R$14,99</p>
+    <a href="https://s.shopee.com.br/50LeQ0MMfn" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98q-llwl6al2iigm79.webp" alt="Camisa">
+    <h3>Kit 5 Panos de Prato Jacquard 45x70 Atoalhado Toalha Copa    </h3>
+    <p>R$45,90</p>
+    <a href="https://s.shopee.com.br/9f7TyoY4Zf" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-luf4nnppxug597.webp" alt="Camisa">
+    <h3>Kit de Banheiro Lixeira de Aço Inox Cesto De Lixo 3 5 Litros 100% Inox com Pedal + Escova Sanitária Inox com Suporte Limpeza Privada Sanitário Balde r</h3>
+    <p>R$28,80</p>
+    <a href="https://s.shopee.com.br/706io4Zmku" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m2g6ro3om4w66e.webp" alt="Camisa">
+    <h3>Espelho De Maquiagem Inteligente Quadrado Com Led de Brilho Ajustável Portátil e Dobrável</h3>
+    <p>R$59,98</p>
+    <a href="https://s.shopee.com.br/2qH9r9kKlL" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rbly-lmmj4yazpxnt28.webp" alt="Camisa">
+    <h3>Organizador De Acrílico Porta Cotonete Acrilico Maquiagem Maleta de Maquiagem Porta Pincel Bandeja</h3>
+    <p>R$32,90</p>
+    <a href="https://s.shopee.com.br/3VWqetqrtL" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rbmv-lqeq30bn11nu69.webp" alt="Camisa">
+    <h3>Rodo e Vassoura Silicone Limpador de Vidro Piso Com Gancho Secos e Molhados Uso Duplo Limpeza Mágica</h3>
+    <p>R$24,90</p>
+    <a href="https://s.shopee.com.br/50LeRqT6xl" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-m6k8yf05spyf59.webp" alt="Camisa">
+    <h3>Kit 3 Garrafa de Acrílico Plástico Sem BPA Resistente Geladeira Suco Leite Chá Quadrada Resistente1L</h3>
+    <p>R$44,90</p>
+    <a href="https://s.shopee.com.br/9pQuCuJT0c" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lr806o44b5es9c.webp" alt="Camisa">
+    <h3>Kit Para Manicure Com Mesa + Prateleira de Esmaltes + Carrinho Auxiliar com 3 Bandejas e Rodinhas MDF</h3>
+    <p>R$209,00</p>
+    <a href="https://s.shopee.com.br/6AXbqLSyxW" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-bs-br.img.susercontent.com/cn-11134207-7r98o-lprmegtc3cc56f.webp" alt="Camisa">
+    <h3>Fone De Ouvido Sem Fio Mini Bluetooth Mãos-Livres Estéreo À Prova D'água Com    </h3>
+    <p>R$8,42</p>
+    <a href="https://s.shopee.com.br/6Kr22qadAR" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134201-7r98o-luz2wywjkak6d7.webp" alt="Camisa">
+    <h3>Kit com 3 Óleos de Tratamento Coco, Super Óleos e Multibenefícios</h3>
+    <p>R$39,02</p>
+    <a href="https://s.shopee.com.br/3q9h4LmC1A" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7qukw-lkitlpe31ve9a0.webp" alt="Camisa">
+    <h3>Caixa De Conservação 6 divisorias De Alho Acrílico Transparente Para Geladeira Doméstica Organizadores De Multi-função</h3>
+    <p>R$14,00</p>
+    <a href="https://s.shopee.com.br/8UvWdCNUWc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto saudebemestar">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lodl5scpzzjdf7.webp" alt="Camisa">
+    <h3>3 Unidades Mini Umidificador Nano Atomização De Grande Capacidade Com Conexão Usb Ultrassônico De Ar 220ml Promoção</h3>
+    <p>R$14,99</p>
+    <a href="https://s.shopee.com.br/4AmXTXRywk" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rccm-lr7ety13o0rw47.webp" alt="Camisa">
+    <h3>Aspirador De Pó Usb Portátil Completo Linha Premium Carro E Casa 2000mAh</h3>
+    <p>R$31,98</p>
+    <a href="https://s.shopee.com.br/4VPPQGzMfe" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto pets">
+    <img src="https://down-cvs-br.img.susercontent.com/7c8c3ee302382afc1a602bb7b387b22b.webp" alt="Camisa">
+    <h3>Fonte Cat Pet Suprimentos Animais Domésticos Absorção De Odores Casa (Somente Filtros De Água Leves para fontes)</h3>
+    <p>R$18,72</p>
+    <a href="https://s.shopee.com.br/30ac3p1rb3" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lymd7qh5hq5126.webp" alt="Camisa">
+    <h3>Lixeira com Sensor Automático Inteligente Abre Fácil 16 litros</h3>
+    <p>R$89,89</p>
+    <a href="https://s.shopee.com.br/2qHBsilKex" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m8508odzwkq9c9.webp" alt="Camisa">
+    <h3>Kit Shampoo V-Floc Cera Tok Final Sintra Fast Intense Vonixx    </h3>
+    <p>R$139,99</p>
+    <a href="https://s.shopee.com.br/2B1V5lyfdy" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto viagemeaventura">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m1w7amozm50159.webp" alt="Camisa">
+    <h3>Mochila de Viagem Masculina e Feminina Impermeável Reforçada Executiva para Notebook (ROMANTIC CROWN)</h3>
+    <p>R$129,99</p>
+    <a href="https://s.shopee.com.br/2VeLUZ1l2l" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto ferramentaseutilidades">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7rfgp-m3s5wo8prnjb05.webp" alt="Camisa">
+    <h3>Papa Bolinhas Eletrico Tira Pelos de Roupas Removedor Aparador Sem Fio Recarregável    </h3>
+    <p>R$24,89</p>
+    <a href="" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-ll2907y15ur76b.webp" alt="Camisa">
+    <h3>Organizador de Mesa Porta Caneta Maquiagem Cosmeticos Gaveta Escritório Multiuso</h3>
+    <p>R$39,99</p>
+    <a href="https://s.shopee.com.br/5KyZZ9rfPb" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7qvdy-lgtkv8om3kmn11.webp" alt="Camisa">
+    <h3>Aspirador De Pó Sem Fio Portátil Limpeza Manual Uso Domestico USB    </h3>
+    <p>R$80,99</p>
+    <a href="https://s.shopee.com.br/x3DVHCeS" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto pets">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7qukw-ljunyzglyx46e8.webp" alt="Camisa">
+    <h3>Escova Removedor de Pêlos Para Animais De Estimação Multifuncional Roupas Tapete Remoção De Pó</h3>
+    <p>R$22,99</p>
+    <a href="https://s.shopee.com.br/2LKxzwDPok" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto ferramentaseutilidades">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-lnmxzuktskpb50.webp" alt="Camisa">
+    <h3>Suporte Tripé Para Mesa Com Mini Pedestal Ajustável 360° Ideal Para Gravação de Videos</h3>
+    <p>R$11,88</p>
+    <a href="https://s.shopee.com.br/6pnNMPvV9J" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m8cskdpkc44xe1.webp" alt="Camisa">
+    <h3>Kit com 15 Potes Plasticos</h3>
+    <p>R$35,90</p>
+    <a href="https://s.shopee.com.br/1Vlr0y6qiw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-ws-br.img.susercontent.com/br-11134207-7r98o-lyvfy4bnawqp42.webp" alt="Camisa">
+    <h3>Kit 2 Unidades Limpa Estofados Spray Zip 300ml My Place Carro e Sofá</h3>
+    <p>R$31,90</p>
+    <a href="https://s.shopee.com.br/1Vlr14mUXk" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m3yy1jbwemnpeb.webp" alt="Camisa">
+    <h3>Kit Frigideira Antiaderente Grande Cerâmica Não Gruda Não Vai Óleo Utensilio Domestico Cozinha Dieta</h3>
+    <p>R$39,99</p>
+    <a href="https://s.shopee.com.br/1Vlr1AFGnX" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/8043146889f081feaed97065c119a249.webp" alt="Camisa">
+    <h3>Projeção De Desenho De Mesa Infantil</h3>
+    <p>R$49,99</p>
+    <a href="https://s.shopee.com.br/7AQDlkc3SS" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lsf2ra3r2fwt16.webp" alt="Camisa">
+    <h3>Cesto De Roupa Suja Bambu Dobravel Organizador Forrado Banheiro 60cm Grande Cesto Retangular</h3>
+    <p>R$69,76</p>
+    <a href="https://s.shopee.com.br/1g5HEF42t9" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-ljx9kb3ci1pi92.webp" alt="Camisa">
+    <h3>Tênis da barbie Infantil Lançamento Menina Menino Calce Fácil 26ao33</h3>
+    <p>R$59,99</p>
+    <a href="https://s.shopee.com.br/1LSQq4GPG1" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lrx79d6zfl7180.webp" alt="Camisa">
+    <h3>Armário Carrinho Organizador Multiuso Com 4 Camadas Com Rodinhas Cozinha Banheiro Quarto Lavanderia</h3>
+    <p>R$36,69</p>
+    <a href="https://s.shopee.com.br/5VHzo87yYP" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-ws-br.img.susercontent.com/sg-11134201-7rdvm-m0ir9c1rd6kkf6.webp" alt="Camisa">
+    <h3>Jogo 6 Taça Diamante Copo Vidro Transparente Bico De Jaca 330ml </h3>
+    <p>R$29,90</p>
+    <a href="https://s.shopee.com.br/qWAGL1Y30" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto caixaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/8c704136202afb518a989d47661c9d97.webp" alt="Camisa">
+    <h3>Kit 10 Colmeia Organizadora de gavetas Premium (P) - Organizalux</h3>
+    <p>R$64,99</p>
+    <a href="https://s.shopee.com.br/8zrs14OQx7" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto caixaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7qukw-lfjfdmq9ichk98.webp" alt="Camisa">
+    <h3>Organizador De Armário Para Meias De Sutiã Roupa Íntima/Caixas Divisórias Dobrável (3/1 Pçs)</h3>
+    <p>R$15,03</p>
+    <a href="https://s.shopee.com.br/8zrs1C3fim" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m8jbqql92inld3.webp" alt="Camisa">
+    <h3>Conjunto Feminino Canelado Cropped manga longa com argola e saia curta    </h3>
+    <p>R$54,99</p>
+    <a href="https://s.shopee.com.br/AA3pPTHzuq" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m83rx9x497gx12.webp" alt="Camisa">
+    <h3>Garrafa de Água 2L/1L/700ML/500ML Treino Academia BPA Free com Garantia ENVIO EM 24HORAS</h3>
+    <p>R$12,98</p>
+    <a href="https://s.shopee.com.br/5Af9SOTjhM" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lypq55fxs8lxa8.webp" alt="Camisa">
+    <h3>KIT COMPLETO MASCARA + SHAMPOO + CONDICIONADOR KARSEELL ORIGINAL MACA POWER COLLAGEN ORIGINAL IMPORTADO Karseell</h3>
+    <p>R$49,90</p>
+    <a href="https://s.shopee.com.br/2LKy5JJlDc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ltf9t19vu4hk86.webp" alt="Camisa">
+    <h3>Garrafa Térmica Nórdica 1 Litro Café Chá Cabo de Madeira    </h3>
+    <p>R$49,97</p>
+    <a href="https://s.shopee.com.br/20i7gquzY6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lnccasftcj4cd7.webp" alt="Camisa">
+    <h3>Kit Conjunto 6pçs Jogo Tampas De Silicone Ajustável Potes Universal Reutilizável Bpa Free Stretch Fácil Cozinha</h3>
+    <p>R$14,99</p>
+    <a href="https://s.shopee.com.br/8UvbQuKYCt" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m68lu4w3b2ya52.webp" alt="Camisa">
+    <h3>Jogo De 6 Copos Vidro Bali Quadrado Luxo Transparente 320ml    </h3>
+    <p>R$26,69</p>
+    <a href="https://s.shopee.com.br/4L62TLTes6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/ff9798595fe07590713fd810f4166091.webp" alt="Camisa">
+    <h3>Organizador De Condimentos Cozinha Montado Na Parede Louça De Mesa Suprimentos De Armazenamento (KONG 2-Tier Spice Rack)</h3>
+    <p>R$45,00</p>
+    <a href="https://s.shopee.com.br/40TC4w80Zd" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lniog78hdpsc05.webp" alt="Camisa">
+    <h3>Multideia Kit 24 peças Talheres Colher Garfo Faca Luxo Linha Ouro</h3>
+    <p>R$69,90</p>
+    <a href="https://s.shopee.com.br/2qHEgtnciQ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m2387n4cm3fo30.webp" alt="Camisa">
+    <h3>Cesto De Roupa Suja Bambu 72 Litros Lavanderia Com Tampa e Alças Forrado Grande Organizador Banheiro</h3>
+    <p>R$69,99</p>
+    <a href="https://s.shopee.com.br/BGWi9oxVK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rbl1-lnueat47yqr9d5.webp" alt="Camisa">
+    <h3>Repelente Eletrônico Ultrassônico Mosca Pernilongos Baratas Morcegos repele e Espanta Ratos bivolt</h3>
+    <p>R$18,99</p>
+    <a href="https://s.shopee.com.br/5AfCfTSlGb" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lycomxmsjbc571.webp" alt="Camisa">
+    <h3>Termômetro De Testa Infravermelha Digital</h3>
+    <p>R$29,89</p>
+    <a href="https://s.shopee.com.br/9KUldJYmkW" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-22110-ev838hdy7yjva0.webp" alt="Camisa">
+    <h3>Processador De Alimentos Manual Cortador Ralador Picador Fatiador De Batata Legumes Repolho Vegetais Carne Frutas</h3>
+    <p>R$48,99</p>
+    <a href="https://s.shopee.com.br/8UveeBJ3l3" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-ll17cthcqcmqb6.webp" alt="Camisa">
+    <h3>Conjunto Cropped Short Feminino Crepe Duna Moda Feminina 3</h3>
+    <p>R$38,99</p>
+    <a href="https://s.shopee.com.br/7AQH3qq6cw" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m0iynoxp8alc2e.webp" alt="Camisa">
+    <h3>Kit Marmita Infantil com Talheres de Plástico e Garrafa de 400ml com Canudo Lancheira Escolar Creche</h3>
+    <p>R$28,99</p>
+    <a href="https://s.shopee.com.br/9pR2EqZCQV" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ln7ss61i9e6378.webp" alt="Camisa">
+    <h3>Porta Papel Toalha Triplo Suporte Preto Rolos Para Cozinha 3 em 1    </h3>
+    <p>R$19,01</p>
+    <a href="https://s.shopee.com.br/3VWyhPen5N" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m8bxndm1ca9d8a.webp" alt="Camisa">
+    <h3>Kit Cobre Leito Colcha King Bouti 3 Peças Dupla Face Estampada Porta Travesseiro Aba Americana</h3>
+    <p>R$102,90</p>
+    <a href="https://s.shopee.com.br/2fxrhzjbVa" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m1smogges1ii01.webp" alt="Camisa">
+    <h3>Kit 6 Peças Jogo Americano Redondo Sousplat Cozinha Jantar Descanso de Prato Sousplat Cozinha</h3>
+    <p>R$26,97</p>
+    <a href="https://s.shopee.com.br/3LDYVJIZjB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m8kvjqlhby1d22.webp" alt="Camisa">
+    <h3>Kit Pano de prato atacado estampado com bainha 100% algodão    </h3>
+    <p>R$19,97</p>
+    <a href="https://s.shopee.com.br/7zzO3xlafh" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m5mx68xg2k40a0.webp" alt="Camisa">
+    <h3>Aparelho de Jantar Rústico Marrom Tramontina Jogo de Pratos Rasos, Fundos e Sobremesa Opções de Kits</h3>
+    <p>R$89,90</p>
+    <a href="https://s.shopee.com.br/2fxriGPT8a" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd73-lwr6tzkkh45476.webp" alt="Camisa">
+    <h3>Kit Conjunto 6 Taças Diamond De Vidro de Agua Vinho Diamante Buffet Restaurante Luxo 330ml</h3>
+    <p>R$46,90</p>
+    <a href="https://s.shopee.com.br/3q9p6YuzRJ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lw79q8xkfvrm7e.webp" alt="Camisa">
+    <h3>Kit 30 Cabides De Madeira Premium Marfim Para Roupas Calça Gancho Cromado    </h3>
+    <p>R$34,99</p>
+    <a href="https://s.shopee.com.br/8pYV3w6mIa" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7qvcz-lhd8dpvbk90c5f.webp" alt="Camisa">
+    <h3>Tampa Prato Microondas Transparente Protetor Alimentos Comidas Multifuncional Plástico Alça Protege Evita Sujeiras</h3>
+    <p>R$24,99</p>
+    <a href="https://s.shopee.com.br/50LmUz1HPh" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lzp4mh2afb119c.webp" alt="Camisa">
+    <h3>Garrafa Térmica Cabo De Madeira Luxo Nórdica 1L Firenze Café Chá</h3>
+    <p>R$48,97</p>
+    <a href="https://s.shopee.com.br/AKNIr0SafN" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m1r45yk8aya08e.webp" alt="Camisa">
+    <h3>Aparelho de Jantar Magnólia Tramontina Jogo de Pratos Rasos, Fundos e Sobremesa com Opções de Kits</h3>
+    <p>R$89,90</p>
+    <a href="https://s.shopee.com.br/7V37TwrGsc" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto calcados">
+    <img src="https://down-tx-br.img.susercontent.com/64349bbd87a4eac9c12289906dc6c882.webp" alt="Camisa">
+    <h3>Sandalia Feminina Rasteirinha Regulagem Ajustável Tiras Confortável Flat Cores do Verão</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/6VAaII3u1q" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lvc7eqc5nys804.webp" alt="Camisa">
+    <h3>Kit Colcha Solteiro Infantil 1,70 x 2,30 Safari Baby 4 peças Decoração Quarto de Menina e Menino</h3>
+    <p>R$96,90</p>
+    <a href="https://s.shopee.com.br/3Au8KIi5eB" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lrhmexji9s10fc.webp" alt="Camisa">
+    <h3>Mini Ferro De Passar Roupas A Vapor Para Viagem | Elétrico Portátil Pequeno/Casa</h3>
+    <p>R$33,99</p>
+    <a href="https://s.shopee.com.br/5KycuMcI4X" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/br-11134201-7r98s-lmgz6kfaejord7.webp" alt="Camisa">
+    <h3>Garrafa Térmica Lilo e Stitch 420ml Água Café Chá Medidor de Temperatura    </h3>
+    <p>R$49,50</p>
+    <a href="https://s.shopee.com.br/6AXju0RtHe" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-tx-br.img.susercontent.com/sg-11134201-7reof-m22f7f77vifxe4.webp" alt="Camisa">
+    <h3>Vassoura Mágica 3 em 1: Esfregão Rodo Giratório para Limpeza Ágil 360°    </h3>
+    <p>R$40,00</p>
+    <a href="https://s.shopee.com.br/AKNIrtWhdK" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7repp-m8btql6w7cfbd0.webp" alt="Camisa">
+    <h3>Conjuntos de shorts geométricos casuais com botões listrados para mulheres LNL71291 Lovito </h3>
+    <p>R$77,69</p>
+    <a href="https://s.shopee.com.br/7fMXhGIO9h" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m1cwbfprtz4ye5.webp" alt="Camisa">
+    <h3>Kit 2 Conjunto Feminino Plus Size Curve Alcinha Moda Casual Verão    </h3>
+    <p>R$94,90</p>
+    <a href="https://s.shopee.com.br/AKNIsFb5GG" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lsh6t7u60hff56.webp" alt="Camisa">
+    <h3>Medidor de pressão arterial digital braço aparelho de pressao arterialprofissional esfigmomanômetro manômetro portátil</h3>
+    <p>R$58,99</p>
+    <a href="https://s.shopee.com.br/5fbTJk8pgi" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rdxh-m1d4hdogbyale7.webp" alt="Camisa">
+    <h3>Rhode Bálsamo labial colorido/brilho labial/Gel para cuidados com os lábios hidratante de longa duração</h3>
+    <p>R$15,88</p>
+    <a href="https://s.shopee.com.br/2fxrkJvpaP" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rbn7-lqeu1vzxvsrqba.webp" alt="Camisa">
+    <h3>Extratora Higienizadora Portátil Borrifa Esfrega e Extrai Sujeira Colchão Sofá W3 1450W Wap    </h3>
+    <p>R$719,99</p>
+    <a href="https://s.shopee.com.br/7V37VLe7tY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m0fz3mv7kjvk28.webp" alt="Camisa">
+    <h3>Lola Kit Rapunzel Linha de Crescimento - Shampoo + Máscara + Tonico + Milk    </h3>
+    <p>R$119,80</p>
+    <a href="https://s.shopee.com.br/9f7c5cgH5P" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto pets">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lywcblzr3l0lb9.webp" alt="Camisa">
+    <h3>Comedouro Bebedouro Gato e Cachorro Elevado Pet Mdf    </h3>
+    <p>R$14,90</p>
+    <a href="https://s.shopee.com.br/7zzPdzTqEA" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rd63-m6ug3wz252iaca.webp" alt="Camisa">
+    <h3>Suporte Multiuso para Sacola de Lixo – Organização Prática para Cozinha e Banheiro!    </h3>
+    <p>R$18,99</p>
+    <a href="https://s.shopee.com.br/5fbUrxRvj0" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-22100-m1bvwncdpxivcb.webp" alt="Camisa">
+    <h3>Descanso De Panela Suporte Tampas De Panelas Talheres E Acessórios Organizador Porta Tempero Cozinha</h3>
+    <p>R$16,90</p>
+    <a href="https://s.shopee.com.br/7V393eUOys" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxlgph8ehyfm1e.webp" alt="Camisa">
+    <h3>Kit carinho 4 canecas estampadas De Amor com 4 xícaras Coracao</h3>
+    <p>R$24,99</p>
+    <a href="https://s.shopee.com.br/6KrBfb1grY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98s-llsdynw24ncb3e.webp" alt="Camisa">
+    <h3>Modelador De Cachos Ferro Automático Sem Fio Com Bateria Recarregável Embutida Cerâmica </h3>
+    <p>R$50,99</p>
+    <a href="https://s.shopee.com.br/VtOjIHj3T" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7qukw-lk5fb4cc2hl6e9.webp" alt="Camisa">
+    <h3>Tábuas de Frios + Petisqueira de Madeira para Servir - KIT Mesa Posta    </h3>
+    <p>R$47,92</p>
+    <a href="https://s.shopee.com.br/9ABN3MGhOI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto viagemeaventura">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m40rotw61bk1ea.webp" alt="Camisa">
+    <h3>Bolsa De Cosmético De Couro PU Com Grande Capacidade Portátil Para Viagem</h3>
+    <p>R$29,02</p>
+    <a href="https://s.shopee.com.br/AA3uFMZFae" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7req2-m2wvqozdr9qeed.webp" alt="Camisa">
+    <h3>Sapateira Multiuso Para Calçados 7 Andares Organizador Desmontável</h3>
+    <p>R$60,00</p>
+    <a href="https://s.shopee.com.br/9zkU3DN2ur" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m27sald0uqme5e.webp" alt="Camisa">
+    <h3>Copo Térmico Inox Portátil 1200ml/1.2L Garrafa Térmica Inoxidável com Tampa e Canudo (ROMANTIC CROWN)</h3>
+    <p>R$49,99</p>
+    <a href="https://s.shopee.com.br/AKNKS37OJL" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lx1ne7z24s5212.webp" alt="Camisa">
+    <h3>Piscina inflável Retangular PVC Azul Familiar Resistente 120 cm a 305 cm Infantil e Adulto VG Plus</h3>
+    <p>R$122,76</p>
+    <a href="https://s.shopee.com.br/2qHJWNfumP" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto acessorios">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lsmu9rsy2gwdfb.webp" alt="Camisa">
+    <h3>Porta Joia Acrílico Luxo Com 3/1 Camadas Brinco Anel Compartimento    </h3>
+    <p>R$46,77</p>
+    <a href="https://s.shopee.com.br/10pfL8anJt" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rbk0-lkqzyoh2kvhib3.webp" alt="Camisa">
+    <h3>Kit Sandália Infantil Com Laço BB&Kids Com Bolsa Summer Fivela Menina Rosa/Pink Azul/Pink</h3>
+    <p>R$57,90</p>
+    <a href="https://s.shopee.com.br/gCowoHf6N" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/26eb395e4032dfc2a5703eeb30f6bce6.webp" alt="Camisa">
+    <h3>Faqueiro Jogo de Talheres Búzios 24 peças Faqueiro Tramontina Aço Inox Tramontina utensílios cozinha</h3>
+    <p>R$78,90</p>
+    <a href="https://s.shopee.com.br/1B95Xnw4TM" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lyf99fy6tvs551.webp" alt="Camisa">
+    <h3>Caixa De Som Extreme 3 Tamanho 23 CM ou 33 CM Bluetooth Rádio Pen-Drive 70W 120W</h3>
+    <p>R$109,90</p>
+    <a href="https://s.shopee.com.br/3LDa7tOzqj" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lu0sc1x6tkdc3a.webp" alt="Camisa">
+    <h3>Garrafa Térmica Inox Com Copo 500ml Água Café Chá Caneca Frio Quente Com duas Xicaras</h3>
+    <p>R$36,00</p>
+    <a href="https://s.shopee.com.br/40TGvB3JS6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxcjr1p925rz91.webp" alt="Camisa">
+    <h3>Blow Girl Gel Creme Aromatizante Beijável Para Saúde e Cuidado Vaginal Feminina 320ml Hot Flowers</h3>
+    <p>R$49,99</p>
+    <a href="https://s.shopee.com.br/4q2NunbeJY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m5o9xtbq0si8ff.webp" alt="Camisa">
+    <h3>Garrafa Copo Térmico Inox Anti-vazamento Café 510ml Premium 500A    </h3>
+    <p>R$40,99</p>
+    <a href="https://s.shopee.com.br/3fqQWm886q" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto belezaemaquiagem">
+    <img src="https://down-cvs-br.img.susercontent.com/sg-11134201-7rcep-m6hqi1ommskh90.webp" alt="Camisa">
+    <h3>9 Paleta de Sombra Colorida Sombra Perolada Brilhante Super Maquiagem de Olhos Brilhantes</h3>
+    <p>R$18,90</p>
+    <a href="https://s.shopee.com.br/6AXlVVQB9q" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxlejmh0i9w2bf.webp" alt="Camisa">
+    <h3>Organizadora Sapateira Cabideiro Arara Suporte Multiuso Para Sapato Tenis Roupa Closet Quarto Armários</h3>
+    <p>R$21,99</p>
+    <a href="https://s.shopee.com.br/10pfM7GcdD" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/c23cc61ca643b17dbccc32e927fb2a40.webp" alt="Camisa">
+    <h3>Jogo Americano De Tecido De Vime Redondo Para Mesa / Isolamento Coasters / Item De Mesa Antiderrapante</h3>
+    <p>R$11,13</p>
+    <a href="https://s.shopee.com.br/qWF9w5E31" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto autocuidadoesaúde">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lu969c1rem3k06.webp" alt="Camisa">
+    <h3>Kit Giovanna Baby Body Splash Classic Loção Hidratante Classic Sabonete Classic Desodorante Roll-On</h3>
+    <p>R$50,98</p>
+    <a href="https://s.shopee.com.br/3Au9wJGK02" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto academiaefitness">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m8kwbivxx2i985.webp" alt="Camisa">
+    <h3>Conjunto Academia Fitness Short e Top Cintura Alta Estampas Variadas Moda Fitness    </h3>
+    <p>R$36,99</p>
+    <a href="https://s.shopee.com.br/5fbUuzva5t" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rbm5-ln72c51kn5h4cd.webp" alt="Camisa">
+    <h3>Kit 24 Jogo De Talheres Aço Inoxidável 416 Dourados Adequado Para Festas    </h3>
+    <p>R$59,99</p>
+    <a href="https://s.shopee.com.br/10pfMc8Qlb" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lx1a5r3rv5w200.webp" alt="Camisa">
+    <h3>Kit 3 Legging Infantil Estampada Sortidas Muito Confortável</h3>
+    <p>R$39,90</p>
+    <a href="https://s.shopee.com.br/AUgkg9WJWb" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7rd3o-lwfl12jynzug5b.webp" alt="Camisa">
+    <h3>12pcs Escova Para Cabelos Encaracolados Conjunto De Pente De Rabo De Rato Curvo Natural Naturais Ferramentas Salões De</h3>
+    <p>R$29,91</p>
+    <a href="https://s.shopee.com.br/6AXlWHkO3K" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m5mycthbaeds6a.webp" alt="Camisa">
+    <h3>Panela Pipoqueira N°20 Alumínio com Tampa de Vidro 4 Litros(Pipoqueira de Aluminio)    </h3>
+    <p>R$54,99</p>
+    <a href="https://s.shopee.com.br/5fbUvSazyE" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-zl-br.img.susercontent.com/cn-11134207-7r98o-lx5b0v32i43p9e.webp" alt="Camisa">
+    <h3>Ipad mini 1 /2 /3 (16G /32G /64G) Dual Core 7.9inch WiFi Desbloquear Tablet iOS Uso 90 Novo</h3>
+    <p>R$182,00</p>
+    <a href="https://s.shopee.com.br/2LL2xROrVY" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxihn6ip6j0f95.webp" alt="Camisa">
+    <h3>Estojo Maleta Pintura Infantil Lápis Cores Giz Canetinhas e Diversos Tamanhos Desenhos Para Colorir</h3>
+    <p>R$19,00</p>
+    <a href="https://s.shopee.com.br/6KrBplxaER" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ls0pbp3gxbujc9.webp" alt="Camisa">
+    <h3>Caneca Xícara Personalizada Lilo e Stitch Disney Efeito 3D Porcelana 325ml Presente</h3>
+    <p>R$22,90</p>
+    <a href="https://s.shopee.com.br/LZyh5l8j8" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ltr6jqzfw0sf2e.webp" alt="Camisa">
+    <h3>Kit 2 Formas de Gelo Silicone com Tampa Rígida Flexível Fundo 14 Cubos Retangular Multiuso Lavável</h3>
+    <p>R$21,99</p>
+    <a href="https://s.shopee.com.br/6fU2Et5iom" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto educaçaoeentretenimento">
+    <img src="https://down-zl-br.img.susercontent.com/sg-11134201-7reo1-m8rkfy88xpqpb6.webp" alt="Camisa">
+    <h3>Kit Livro De Colorir Capa Dura 50 Páginas + Canetinhas Marca Texto 36/48/60/80    </h3>
+    <p>R$49,99</p>
+    <a href="https://s.shopee.com.br/8AJCMy4mSR" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m30l2g6r6ltx96.webp" alt="Camisa">
+    <h3>Kit Café Super Pratico Com Garrafa Térmica + Açucareiro Com Colher + Suporte para Filtro UNITERMI Varias Cores</h3>
+    <p>R$50,99</p>
+    <a href="https://s.shopee.com.br/8KccZdHG3N" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lzutmsoytj11d6.webp" alt="Camisa">
+    <h3>Conjunto Infantil de Frio Agasalho Menina Inverno Stitch</h3>
+    <p>R$74,99</p>
+    <a href="https://s.shopee.com.br/4L6ToMMM05" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto calcados">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m7thf5oe847655.webp" alt="Camisa">
+    <h3>Birken Sandália Conforto Feminina Modelo Sara Strass Brilhante Paris</h3>
+    <p>R$56,91</p>
+    <a href="https://s.shopee.com.br/qWbe12SMH" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto infantil">
+    <img src="https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m29mk9ojigkx95.webp" alt="Camisa">
+    <h3>Garrafinha Infantil Personalizada BUBA - Nome Gravado a Laser - 450ml Alumínio original</h3>
+    <p>R$29,90</p>
+    <a href="https://s.shopee.com.br/7pgLz0pUIi" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lnsjafi801ih7f.webp" alt="Camisa">
+    <h3>Pote Hermetico Slim Multiuso para Geladeira Armazenamento de Alimentos - Frutas Verduras Legumes</h3>
+    <p>R$31,25</p>
+    <a href="https://s.shopee.com.br/60ErMFrEXI" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lvrpveqq0jl8a0.webp" alt="Camisa">
+    <h3>Coberdrom Edredom Pele De Carneiro Casal Queen Sherpa DuplaFace</h3>
+    <p>R$89,90</p>
+    <a href="https://s.shopee.com.br/40TmydaTc8" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rd3y-m6tvmu38rojfbe.webp" alt="Camisa">
+    <h3>Mini Máquina de Donuts Elétrica 3 Furos - Cozimento Rápido 110V</h3>
+    <p>R$34,99</p>
+    <a href="https://s.shopee.com.br/1VmS07MjR6" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto casaecozinha">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7qvej-lk8llufdl7umc5.webp" alt="Camisa">
+    <h3>Varal Portátil Para Apartamento Secador De Roupas Prático e Retrátil Para Janela e Parede</h3>
+    <p>R$29,99</p>
+    <a href="https://s.shopee.com.br/BH4PjuEYj" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-m97untp67yma53.webp" alt="Camisa">
+    <h3>Vestido Longo Feminino Festa Casamento Madrinha Fenda na perna Manga 3/4 Elegante Evangelico Plus</h3>
+    <p>R$79,90</p>
+    <a href="https://s.shopee.com.br/1g5sCYW45Q" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto modaebeleza">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lwu623ldm2du71.webp" alt="Camisa">
+    <h3>Conjunto Jeans Cropped Top Short Manta Prata Brilho Cintura Alta Premium Sem Laicra</h3>
+    <p>R$99,90</p>
+    <a href="https://s.shopee.com.br/BH4Prr0CQ" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-bs-br.img.susercontent.com/br-11134207-7r98o-lpjhcqmkuiwfdd.webp" alt="Camisa">
+    <h3>Aspirador De Pó E Liquido Automotivo Portátil Turbo Potente 90w 12v Resistente Com Função Sopro</h3>
+    <p>R$127,43</p>
+    <a href="https://s.shopee.com.br/2fyPOWOGog" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+   <div class="produto tecnologia">
+    <img src="https://down-bs-br.img.susercontent.com/sg-11134201-7rfhu-m9eka9nfyu8h81.webp" alt="Camisa">
+    <h3>Liquidificador Mondial Turbo Power L-99 FB Preto - 127V    </h3>
+    <p>R$109,90</p>
+    <a href="https://s.shopee.com.br/6pnyMLHZGE" target="_blank" rel="noopener noreferrer"> Comprar </a>
+   </div>
+      
+
+
+
+ <!---Paginação aqui-->
+   <div class="pagination">
+    <a href="?page=1">1</a>
+    <a href="?page=2">2</a>
+    <a href="?page=3">3</a>
+    <a href="?page=4">4</a>
+    <a href="?page=5">5</a>
+</div>
+  </div>
+</div>
+  </main>
+
+
+  <footer>
+  
+    <div>
+    <a id="seta" href="#top">▲</a>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const categoriaFiltro = document.getElementById("categoriaFiltro");
+        const searchProduto = document.getElementById("searchProduto");
+        const valorFiltro = document.getElementById("valor");
+        const produtos = Array.from(document.querySelectorAll(".produto"));
+        const paginationContainer = document.querySelector(".pagination");
+        const produtosPorPagina = 28;
+    
+        let paginaAtual = 1;
+    
+        function aplicarFiltros() {
+            const categoriaSelecionada = categoriaFiltro.value.toLowerCase();
+            const pesquisa = searchProduto.value.toLowerCase();
+            const valorMaximo = parseFloat(valorFiltro.value.replace(",", ".")) || Infinity;
+    
+            return produtos.filter(produto => {
+                const categoriaProduto = produto.classList[1]?.toLowerCase() || "";
+                const tituloProduto = produto.querySelector("h3").innerText.toLowerCase();
+                const precoProduto = parseFloat(produto.querySelector("p").innerText.replace("R$", "").replace(",", ".")) || 0;
+    
+                const categoriaValida = categoriaSelecionada === "todos" || categoriaProduto === categoriaSelecionada;
+                const pesquisaValida = tituloProduto.includes(pesquisa);
+                const precoValido = precoProduto <= valorMaximo;
+    
+                return categoriaValida && pesquisaValida && precoValido;
+            });
+        }
+    
+        function renderizarProdutos() {
+            const produtosFiltrados = aplicarFiltros();
+            const totalPaginas = Math.ceil(produtosFiltrados.length / produtosPorPagina);
+    
+            if (paginaAtual > totalPaginas) paginaAtual = 1;
+    
+            produtos.forEach(produto => produto.style.display = "none");
+    
+            const inicio = (paginaAtual - 1) * produtosPorPagina;
+            const fim = inicio + produtosPorPagina;
+    
+            produtosFiltrados.slice(inicio, fim).forEach(produto => {
+                produto.style.display = "block";
+            });
+    
+            if (paginationContainer) {
+                paginationContainer.innerHTML = "";
+                for (let i = 1; i <= totalPaginas; i++) {
+                    const link = document.createElement("a");
+                    link.href = "#";
+                    link.textContent = i;
+                    link.style.margin = "5px";
+                    link.style.padding = "5px 10px";
+                    link.style.border = "1px solid #ccc";
+                    link.style.textDecoration = "none";
+    
+                    if (i === paginaAtual) {
+                        link.style.backgroundColor = "#FFFF00";
+                        link.style.color = "black";
+                    }
+    
+                    link.addEventListener("click", function () {
+                        paginaAtual = i;
+                        renderizarProdutos();
+                    });
+    
+                    paginationContainer.appendChild(link);
+                }
+            }
+        }
+    
+        categoriaFiltro.addEventListener("change", () => {
+            paginaAtual = 1;
+            renderizarProdutos();
+        });
+        searchProduto.addEventListener("input", () => {
+            paginaAtual = 1;
+            renderizarProdutos();
+        });
+        valorFiltro.addEventListener("input", () => {
+            paginaAtual = 1;
+            renderizarProdutos();
+        });
+    
+        renderizarProdutos();
+    });
+    </script>
+
+<script>
+  let corAtiva = false;
+
+function mudarCor() {
+  const h1s = document.querySelectorAll("h1"); // seleciona todos os h1
+
+  if (corAtiva) {
+    document.body.style.backgroundColor = "#708090";
+    h1s.forEach(h1 => h1.style.color = "yellow");
+  } else {
+    document.body.style.backgroundColor = "lightgray";
+    h1s.forEach(h1 => h1.style.color = "black");
+  }
+
+  corAtiva = !corAtiva;
+}
+</script>
+
+<script>
+
+</script>
