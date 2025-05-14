@@ -27,13 +27,30 @@ a {
     color:yellow;
     text-decoration:none;
 }
+#selectsearch {
+    margin-left:435px;
+    gap:10px;
+    border-radius:20px;
+    margin-top:150px;
+    padding:5px;
+    margin-bottom:30px;
+}
+#categoriaFiltro {
+    border-radius: 5px;
+    box-shadow: none; 
+    border:2px solid white;
+    width: 300px;   /* Largura maior */
+    height: 55px;   /* Altura maior */
+    padding: 10px;  /* Espaçamento interno */
+    font-size: 20px;
+}
 #imgsite {
    padding-left: 70px;
 }
 #img1 {
     width:90px;
     height:80px;
-    border-radius:30px;
+    border-radius:60px;
 }
 #img1:hover {
     transform:scale(1.05);
@@ -102,14 +119,6 @@ header {
 .produtos-container {
    margin-left:6%;
 }
-#selectsearch {
-    margin-left:435px;
-    gap:10px;
-    border-radius:20px;
-    margin-top:150px;
-    padding:5px;
-    margin-bottom:30px;
-}
 #searchProduto {
     border-radius: 5px;
     box-shadow: none; 
@@ -155,15 +164,6 @@ main {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom:1000px;
-}
-#categoriaFiltro {
-    border-radius: 5px;
-    box-shadow: none; 
-    border:2px solid white;
-    width: 300px;   /* Largura maior */
-    height: 55px;   /* Altura maior */
-    padding: 10px;  /* Espaçamento interno */
-    font-size: 20px;
 }
 .produto:hover {
         background-color: lightgray;  /* Apenas o produto em hover muda de cor */
@@ -270,7 +270,7 @@ footer {
     background: lightgray;
 }
 .pagination {
-    text-align: center;
+    margin-left:250px;
     margin-top: 10px;
     position: relative; /* Mantém a posição normal no fluxo da página */
     width: 100%;
