@@ -26,13 +26,13 @@ h1 {
     width: 100px;
     height: 100px;
     border-radius: 15px;
-    margin-left:px;
+    margin-left:-270px;
 }
 #img1:hover {
     transform: scale(1.05);
 }
 #Contato {
-    margin-left:-190px;
+       margin-left:-20%;
 }
 #Contato:hover,
 #informate:hover {
@@ -40,12 +40,10 @@ h1 {
     border-radius: 5px;
 }
 #Contato,#informate {
-  background-color:#70809000;
   border-radius:5px;
-  border: 2px solid black;
 }
 #informate {
-    margin-left: 300px;
+    margin-left:10%;
 }
 header {
     color: white;
@@ -60,7 +58,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px;
-    margin-left:-200px;
 }
 #home a {
     display: inline-block;
@@ -68,7 +65,6 @@ header {
     text-decoration: none;
     color: black;
 }
-
 #mudarcor {
     background-color: white;
     border-radius: 30px;
@@ -83,17 +79,14 @@ header {
     font-size:35px;
     font-family:35px;
 }
-
 #mudarcor:hover {
     transform: scale(1.05);
 }
-
 a {
     font-size: 38px;
     color: yellow;
     text-decoration: none;
 }
-
 #selectsearch {
     display: flex;
     flex-wrap: wrap;
@@ -106,7 +99,9 @@ a {
     max-width: 1000px;
     margin-top:200px;
 }
-
+main {
+     flex: 1;
+}
 #categoriaFiltro,
 #searchProduto,
 #valor {
@@ -118,14 +113,13 @@ a {
     padding: 10px;
     font-size: 20px;
 }
-
 .produtos-container {
     display: flex;
     justify-content: center;
     padding: 20px;
     flex-wrap: wrap;
+     flex: 1;
 }
-
 .produto {
     border-radius: 20px;
     justify-content: center;
@@ -139,19 +133,16 @@ a {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
 }
-
 .produto:hover {
     background-color: lightgray;
     transform: scale(1.05);
     border-radius: 15px;
 }
-
 .produto img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 20px;
 }
-
 .produto h3 {
     font-size: 25px;
     margin: 10px 0;
@@ -161,13 +152,11 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .produto p {
     font-size: 30px;
     font-weight: bold;
     color: blue;
 }
-
 .produto a {
     display: inline-block;
     background: #ffcc00;
@@ -178,11 +167,9 @@ a {
     font-weight: bold;
     margin-top: 10px;
 }
-
 .produto a:hover {
     background: #e6b800;
 }
-
 #seta {
     font-size: 30px;
     text-decoration: none;
@@ -195,19 +182,20 @@ a {
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-
 #seta:hover {
     transform: scale(1.05);
 }
-
 .pagination {
     margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    height:50px;
+    max-height:50px;
+    width:100%;
 }
-
 .pagination a {
     display: inline-block;
     padding: 8px 12px;
@@ -216,20 +204,19 @@ a {
     color: #333;
     border-radius: 5px;
 }
-
 .pagination a:hover {
     transform: scale(1.05);
 }
-
 footer {
     padding: 20px;
     color: white;
     font-size: 22px;
     text-align: center;
-    margin-top: 100px;
+    margin-top:100px;
     background-color: #444;
+    width: 100%;
+    box-sizing: border-box;
 }
-
 #listaProdutos {
     display: flex;
     flex-wrap: wrap;
@@ -237,7 +224,6 @@ footer {
     justify-content: center;
     padding-top: 30px;
 }
-
 /* ========== Media Query: Tablet ========== */
 @media (max-width: 1024px) {
     #home {
@@ -245,19 +231,18 @@ footer {
         justify-content: center;
     }
     #img1 {
-        margin-left:200px;
+        margin-left:-130px;
     }
     #Contato {
         margin-left: 50px;
     }
     #informate {
-        margin-left: 50px;
+        margin-left: 150px;
     }
     .produto {
         width: 45%;
     }
 }
-
 /* ========== Media Query: Celular ========== */
 @media (max-width: 768px) {
     #home {
