@@ -13,7 +13,7 @@ html, body {
     flex-direction: column;
 }
 body {
-    background-color: #708090;   /*#708090*/
+    background-color: rgb(29, 29, 29);   /*#708090*/
     font-family: Arial, sans-serif;
 }
 h1 {
@@ -285,7 +285,7 @@ footer {
         width: 70%;
     }
     .produto {
-        width: 39%;
+        width: 39%; /*39%*/
     }
     .pagination {
         flex-direction: row;
@@ -315,7 +315,7 @@ footer {
   }
 
   .produto {
-    width: 25%;
+    width: 10%; /*25%*/
   }
     #mudarcor {
        height:100px;
@@ -327,7 +327,7 @@ main {
 }
 @media (max-width: 600px) {     /* Serve para todos os celulares e alguns tablets pequenos */
     .produto {
-        width:41%;
+        width:41%; /*41%*/
     }
     #home {
     }
@@ -364,5 +364,10 @@ main {
     }
     main {
         margin-bottom:100px;
+    }
+}
+@media (max-width:500px) {
+    .produto {
+        width:41%; /*41%*/
     }
 }
