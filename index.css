@@ -296,6 +296,7 @@ footer {
         margin-bottom:50px;
     }
 }
+/* =========Para celular ===========*/
 @media (max-width: 480px) {   
   #home {
         flex-direction: row;
@@ -315,7 +316,7 @@ footer {
   }
 
   .produto {
-    width: 10%; /*25%*/
+    width: 100%; /*25%*/
   }
     #mudarcor {
        height:100px;
@@ -325,6 +326,7 @@ main {
     margin-bottom:100px;
 }
 }
+/* ==========Para todos os celulares e alguns tablets========== */
 @media (max-width: 600px) {     /* Serve para todos os celulares e alguns tablets pequenos */
     .produto {
         width:41%; /*41%*/
@@ -365,7 +367,8 @@ main {
     main {
         margin-bottom:100px;
     }
-}
+} 
+/* ========= 500px ========*/
 @media (max-width:500px) {
     .produto {
         width:41%; /*41%*/
