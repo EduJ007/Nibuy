@@ -13,7 +13,7 @@ html, body {
     flex-direction: column;
 }
 body {
-    background-color: #708090;
+    background-color: #708090;   /*#708090*/
     font-family: Arial, sans-serif;
 }
 h1 {
@@ -21,7 +21,6 @@ h1 {
     font-weight: 30px;
     color: yellow;
 }
-
 #img1 {
     width: 100px;
     height: 100px;
@@ -41,6 +40,7 @@ h1 {
 }
 #Contato,#informate {
   border-radius:5px;
+  margin-top:35px;
 }
 #informate {
     margin-left:10%;
@@ -50,12 +50,12 @@ header {
 }
 #home {
     display: flex;
-    align-items: center;
+    flex-direction: row; /* Lado a lado (padrão) */
+    gap: 20px; /* Espaço entre os textos */
     width: 100%;
     padding: 20px;
     color: rgb(221, 224, 203);
     box-sizing: border-box;
-    flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px;
 }
@@ -71,12 +71,12 @@ header {
     top: 40px;
     right: 20px;
     position: fixed;
-    height: 55px;
+    height: 50px;
     cursor: pointer;
     padding: 1px 5px;
     width: fit-content;
     display: inline-block;
-    font-size:35px;
+    font-size:32px;
     font-family:35px;
 }
 #mudarcor:hover {
@@ -134,9 +134,11 @@ main {
     margin: 10px;
 }
 .produto:hover {
-    background-color: lightgray;
+    background-color: lightgray ;
     transform: scale(1.05);
     border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    opacity: 0.9;
 }
 .produto img {
     max-width: 100%;
@@ -150,7 +152,7 @@ main {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow:ellipsis;
 }
 .produto p {
     font-size: 30px;
@@ -213,7 +215,6 @@ footer {
     font-size: 22px;
     text-align: center;
     margin-top:100px;
-    background-color: #444;
     width: 100%;
     box-sizing: border-box;
 }
@@ -224,6 +225,18 @@ footer {
     justify-content: center;
     padding-top: 30px;
 }
+
+@media (max-width:1500px) {
+    #img1 {
+        margin-left:-150px;
+    }
+    #Contato {
+        margin-left:-190px;
+    }
+    #informate {
+        margin-left:-70px;
+    }
+}
 /* ========== Media Query: Tablet ========== */
 @media (max-width: 1024px) {
     #home {
@@ -231,7 +244,7 @@ footer {
         justify-content: center;
     }
     #img1 {
-        margin-left:-130px;
+        margin-left:-120px;
     }
     #Contato {
         margin-left: 50px;
@@ -240,44 +253,116 @@ footer {
         margin-left: 150px;
     }
     .produto {
-        width: 45%;
-    }
+        width: 30%;
+    }      
 }
 /* ========== Media Query: Celular ========== */
 @media (max-width: 768px) {
     #home {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
     }
-
+    #informate {
+        margin-left:80px;
+    }
     #img1 {
-        width: 70px;
+        width:80px;
+        height:80px;
+        margin-left:-100px;
     }
-
     h1 {
         font-size: 24px;
     }
-
     #selectsearch {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-
     #categoriaFiltro,
     #searchProduto,
     #valor {
-        width: 90%;
+        width: 70%;
     }
-
     .produto {
-        width: 90%;
+        width: 39%;
     }
-
     .pagination {
         flex-direction: row;
         justify-content: center;
         gap: 5px;
+    }
+    main {
+        margin-bottom:50px;
+    }
+}
+@media (max-width: 480px) {   
+  #home {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+  }
+#img1 {
+  height:25px;   /*para celular.*/
+  height:50px;  
+  margin-left:-100px;
+}
+  #selectsearch {
+    flex-direction: column;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .produto {
+    width: 25%;
+  }
+    #mudarcor {
+       height:100px;
+       width:100px; 
+    }
+main {
+    margin-bottom:100px;
+}
+}
+@media (max-width: 600px) {     /* Serve para todos os celulares e alguns tablets pequenos */
+    .produto {
+        width:41%;
+    }
+    #home {
+    }
+    #img1{
+        width:70px;
+        height:70px;
+        margin-left:-50px;
+    }
+    #Contato,#informate {
+      margin-left:150px;
+      width:30%;
+      margin-top:10px;
+    }
+    #Contato {
+        margin-left:30px;
+    }
+    #informate {
+        margin-left:20px;
+    }
+    #mudarcor {
+        width:45px;
+        height:49px;
+        padding:1px;
+    }
+    .produto a{
+        width:100%;
+        padding:10px;
+        font-weight:10px;
+        font-size:32px;
+    }
+    #selectsearch {
+        width:90%;
+        
+    }
+    main {
+        margin-bottom:100px;
     }
 }
