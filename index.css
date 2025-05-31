@@ -316,7 +316,7 @@ footer {
   }
 
   .produto {
-    width: 25%; /*25%*/
+    width: 5%; /*25%*/
   }
     #mudarcor {
        height:100px;
@@ -371,6 +371,6 @@ main {
 /* ========= 500px ========*/
 @media (max-width:500px) {
     .produto {
-        width:5%; /*41%*/
+        width:41%; /*41%*/
     }
 }
