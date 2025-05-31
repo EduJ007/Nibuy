@@ -316,7 +316,7 @@ footer {
   }
 
   .produto {
-    width: 100%; /*25%*/
+    width: 25%; /*25%*/
   }
     #mudarcor {
        height:100px;
@@ -329,7 +329,7 @@ main {
 /* ==========Para todos os celulares e alguns tablets========== */
 @media (max-width: 600px) {     /* Serve para todos os celulares e alguns tablets pequenos */
     .produto {
-        width:41%; /*41%*/
+        width:5%; /*41%*/
     }
     #home {
     }
@@ -371,6 +371,6 @@ main {
 /* ========= 500px ========*/
 @media (max-width:500px) {
     .produto {
-        width:41%; /*41%*/
+        width:5%; /*41%*/
     }
 }
