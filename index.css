@@ -377,9 +377,3 @@ footer {
         margin-bottom:100px;
     }
 } 
-/* ========= 500px ========*/
-@media (max-width:500px) {
-    .produto {
-        width:41%; /*41%*/
-    }
-}
