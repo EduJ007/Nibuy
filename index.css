@@ -299,55 +299,60 @@ footer {
 /* =========Para celular ===========*/
 @media (max-width: 480px) {   
   #home {
-        flex-direction: row;
-        justify-content: center;
-        gap: 5px;
-  }
-#img1 {
-  height:25px;   /*para celular.*/
-  height:50px;  
-  margin-left:-100px;
-}
-  #selectsearch {
     flex-direction: column;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
   }
 
   .produto {
-    width: 5%; /*25%*/
+    width: 90%;
+    margin: 10px auto;
   }
-    #mudarcor {
-       height:100px;
-       width:100px; 
-    }
-main {
-    margin-bottom:100px;
-}
+
+  #selectsearch {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+
+  #categoriaFiltro,
+  #searchProduto,
+  #valor {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #Contato, #informate {
+    margin: 5px auto;
+    width: 90%;
+    text-align: center;
+  }
 }
 /* ==========Para todos os celulares e alguns tablets========== */
 @media (max-width: 600px) {     /* Serve para todos os celulares e alguns tablets pequenos */
     .produto {
-        width:5%; /*41%*/
+        width:41%; /*41%*/
     }
     #home {
     }
     #img1{
         width:70px;
         height:70px;
-        margin-left:-50px;
+        margin-left:-80px;
     }
     #Contato,#informate {
-      margin-left:150px;
+      margin-left:100px;
       width:30%;
       margin-top:10px;
     }
     #Contato {
-        margin-left:30px;
+        margin-left:10px;
     }
     #informate {
-        margin-left:20px;
+        margin-left:10px;
     }
     #mudarcor {
         width:45px;
