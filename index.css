@@ -12,13 +12,14 @@ html, body {
     flex-direction: column;
 }
 body {
- background-color:lightslategray;
+  background: linear-gradient(to bottom, #ffffff, #e8e8e8);
 }
 #logo  {
     margin-top:100px;
     text-align:center;
     font-size:150px;
     font-family:'Segoe UI', Tahoma, sans-serif;
+    color:blue;
 }
 body {
 

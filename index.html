@@ -3403,53 +3403,108 @@
 
   <script src="index.js"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const categoriaFiltro = document.getElementById("categoriaFiltro");
-        const searchProduto = document.getElementById("searchProduto");
-        const valorFiltro = document.getElementById("valor");
-        const produtos = Array.from(document.querySelectorAll(".produto"));
-        const paginationContainer = document.querySelector(".pagination");
-        const produtosPorPagina = 28;
-    
-        let paginaAtual = 1;
-    
-        function aplicarFiltros() {
-            const categoriaSelecionada = categoriaFiltro.value.toLowerCase();
-            const pesquisa = searchProduto.value.toLowerCase();
-            const valorMaximo = parseFloat(valorFiltro.value.replace(",", ".")) || Infinity;
-    
-            return produtos.filter(produto => {
-                const categoriaProduto = produto.classList[1]?.toLowerCase() || "";
-                const tituloProduto = produto.querySelector("h3").innerText.toLowerCase();
-                const precoProduto = parseFloat(produto.querySelector("p").innerText.replace("R$", "").replace(",", ".")) || 0;
-    
-                const categoriaValida = categoriaSelecionada === "todos" || categoriaProduto === categoriaSelecionada;
-                const pesquisaValida = tituloProduto.includes(pesquisa);
-                const precoValido = precoProduto <= valorMaximo;
-    
-                return categoriaValida && pesquisaValida && precoValido;
-            });
-        }
-    
-        function renderizarProdutos() {
-            const produtosFiltrados = aplicarFiltros();
-            const totalPaginas = Math.ceil(produtosFiltrados.length / produtosPorPagina);
-    
-            if (paginaAtual > totalPaginas) paginaAtual = 1;
-    
-            produtos.forEach(produto => produto.style.display = "none");
-    
-            const inicio = (paginaAtual - 1) * produtosPorPagina;
-            const fim = inicio + produtosPorPagina;
-    
-            produtosFiltrados.slice(inicio, fim).forEach(produto => {
-                produto.style.display = "block";
-            });
-    
-            if (paginationContainer) {
-                paginationContainer.innerHTML = "";
-                for (let i = 1; i <= totalPaginas; i++) {
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const categoriaFiltro = document.getElementById("categoriaFiltro");
+    const searchProduto = document.getElementById("searchProduto");
+    const valorFiltro = document.getElementById("valor");
+    const produtos = Array.from(document.querySelectorAll(".produto"));
+    const paginationContainer = document.querySelector(".pagination");
+    const produtosPorPagina = 28;
+
+    let paginaAtual = 1;
+
+    function aplicarFiltros() {
+      const categoriaSelecionada = categoriaFiltro.value.toLowerCase();
+      const pesquisa = searchProduto.value.toLowerCase();
+      const valorMaximo = parseFloat(valorFiltro.value.replace(",", ".")) || Infinity;
+
+      return produtos.filter(produto => {
+        const categoriaProduto = produto.classList[1]?.toLowerCase() || "";
+        const tituloProduto = produto.querySelector("h3").innerText.toLowerCase();
+        const precoProduto = parseFloat(produto.querySelector("p").innerText.replace("R$", "").replace(",", ".")) || 0;
+
+        const categoriaValida = categoriaSelecionada === "todos" || categoriaProduto === categoriaSelecionada;
+        const pesquisaValida = tituloProduto.includes(pesquisa);
+        const precoValido = precoProduto <= valorMaximo;
+
+        return categoriaValida && pesquisaValida && precoValido;
+      });
+    }
+
+    // aqui vai sua função renderizarProdutos completa
+    // e os eventListeners dos filtros
+
+    renderizarProdutos(); // chama ao carregar a página
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const categoriaFiltro = document.getElementById("categoriaFiltro");
+    const searchProduto = document.getElementById("searchProduto");
+    const valorFiltro = document.getElementById("valor");
+    const produtos = Array.from(document.querySelectorAll(".produto"));
+    const paginationContainer = document.querySelector(".pagination");
+    const produtosPorPagina = 28;
+
+    let paginaAtual = 1;
+
+    function aplicarFiltros() {
+        const categoriaSelecionada = categoriaFiltro.value.toLowerCase();
+        const pesquisa = searchProduto.value.toLowerCase();
+        const valorMaximo = parseFloat(valorFiltro.value.replace(",", ".")) || Infinity;
+
+        return produtos.filter(produto => {
+            const categoriaProduto = produto.classList[1]?.toLowerCase() || "";
+            const tituloProduto = produto.querySelector("h3").innerText.toLowerCase();
+            const precoProduto = parseFloat(produto.querySelector("p").innerText.replace("R$", "").replace(",", ".")) || 0;
+
+            const categoriaValida = categoriaSelecionada === "todos" || categoriaProduto === categoriaSelecionada;
+            const pesquisaValida = tituloProduto.includes(pesquisa);
+            const precoValido = precoProduto <= valorMaximo;
+
+            return categoriaValida && pesquisaValida && precoValido;
+        });
+    }
+
+    function renderizarProdutos() {
+        const produtosFiltrados = aplicarFiltros();
+        const totalPaginas = Math.ceil(produtosFiltrados.length / produtosPorPagina);
+
+        if (paginaAtual > totalPaginas) paginaAtual = 1;
+
+        produtos.forEach(produto => produto.style.display = "none");
+
+        const inicio = (paginaAtual - 1) * produtosPorPagina;
+        const fim = inicio + produtosPorPagina;
+
+        produtosFiltrados.slice(inicio, fim).forEach(produto => {
+            produto.style.display = "block";
+        });
+
+        // === PAGINAÇÃO COM SETAS ===
+        if (paginationContainer) {
+            paginationContainer.innerHTML = "";
+
+            if (totalPaginas > 1) {
+                // ◄ Página anterior
+                if (paginaAtual > 1) {
+                    const prev = document.createElement("a");
+                    prev.href = "#";
+                    prev.textContent = "◄";
+                    prev.addEventListener("click", function () {
+                        paginaAtual--;
+                        renderizarProdutos();
+                    });
+                    paginationContainer.appendChild(prev);
+                }
+
+                // Números de página (máximo 5 visíveis)
+                let inicioPag = Math.max(1, paginaAtual - 2);
+                let fimPag = Math.min(totalPaginas, paginaAtual + 2);
+
+                for (let i = inicioPag; i <= fimPag; i++) {
                     const link = document.createElement("a");
                     link.href = "#";
                     link.textContent = i;
@@ -3457,57 +3512,51 @@
                     link.style.padding = "5px 10px";
                     link.style.border = "1px solid #ccc";
                     link.style.textDecoration = "none";
-    
+
                     if (i === paginaAtual) {
                         link.style.backgroundColor = "#FFFF00";
                         link.style.color = "black";
                     }
-    
+
                     link.addEventListener("click", function () {
                         paginaAtual = i;
                         renderizarProdutos();
                     });
-    
+
                     paginationContainer.appendChild(link);
+                }
+
+                // ► Próxima página
+                if (paginaAtual < totalPaginas) {
+                    const next = document.createElement("a");
+                    next.href = "#";
+                    next.textContent = "►";
+                    next.addEventListener("click", function () {
+                        paginaAtual++;
+                        renderizarProdutos();
+                    });
+                    paginationContainer.appendChild(next);
                 }
             }
         }
-    
-        categoriaFiltro.addEventListener("change", () => {
-            paginaAtual = 1;
-            renderizarProdutos();
-        });
-        searchProduto.addEventListener("input", () => {
-            paginaAtual = 1;
-            renderizarProdutos();
-        });
-        valorFiltro.addEventListener("input", () => {
-            paginaAtual = 1;
-            renderizarProdutos();
-        });
-    
+    }
+
+    categoriaFiltro.addEventListener("change", () => {
+        paginaAtual = 1;
         renderizarProdutos();
     });
-    </script>
+    searchProduto.addEventListener("input", () => {
+        paginaAtual = 1;
+        renderizarProdutos();
+    });
+    valorFiltro.addEventListener("input", () => {
+        paginaAtual = 1;
+        renderizarProdutos();
+    });
 
-<script>
-  let corAtiva = false;
-
-function mudarCor() {
-  const h1s = document.querySelectorAll("h1"); // seleciona todos os h1
-  if (corAtiva) {
-    document.body.style.backgroundColor = "rgb(29, 29, 29)";
-    h1s.forEach(h1 => h1.style.color = "yellow");
-  } else {
-    document.body.style.backgroundColor = "lightgray";
-    h1s.forEach(h1 => h1.style.color = "black");
-  }
-
-  corAtiva = !corAtiva;
-}
+    renderizarProdutos();
+});
 </script>
 
-<script>
-
-</script>
+           
 </body>
