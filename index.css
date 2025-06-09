@@ -13,42 +13,61 @@ html, body {
 }
 body {
   background: linear-gradient(to bottom, #ffffff, #e8e8e8);
+  font:normal Arial;
 }
+header {
+  position: relative;
+  height: 80px; /* ou mais se precisar */
+}
+
+/* Centraliza a logo no topo */
 #logo-container {
-    text-align: center; /* centraliza tudo dentro */
-    width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#logo  {
-   margin-top: 100px; /* agora funciona */
-   font-size: 150px;
-   font-family: 'Segoe UI', Tahoma, sans-serif;
-   color: blue;
-   display: inline-block;
-   padding: 10px;
+
+/* Estilo da logo */
+#logo {
+  font-size: 200px;
+  color: blue;
+  margin: 0;
+  margin-top:100px;
 }
+
+/* Botão do modo escuro no topo direito */
 #mudarcor-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* empurra o botão para a direita */
-    padding-right: 20px;       /* dá o espaçamento da borda direita */
-    margin-top:1px;          /* espaçamento do topo */
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 #mudarcor {
-    background: lightslategray;
-    padding:10px;
-    border-radius: 10px;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top:-310px;
-    max-height:60px;
-    color:black;
-    border: 2px solid  black;
+  background: lightslategray;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid  black;
+  color:black;
 }
-#mudarcor:hover{
-     background:lightgray;
+
+/* Botão “Sobre o Site” no topo esquerdo */
+#sobre-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
+#sobre {
+  font-size: 20px;
+  color: black;
+  margin: 0;
+  background: lightslategray;
+  padding: 10px;
+  border: 2px solid  black;
+  border-radius:10px;
+}
+
 body {
 
     font-family: Arial, sans-serif;
@@ -74,11 +93,12 @@ a {
     padding: 5px;
     width: 100%;
     max-width: 1000px;
-    margin-top:200px;
+    margin-top:150px;
 }
 main {
      flex: 1;
-     margin-bottom:50px;
+     margin-bottom:30px;
+     margin-top:350px;
 }
 #categoriaFiltro,
 #searchProduto,
@@ -180,7 +200,7 @@ footer {
     color: white;
     font-size: 22px;
     text-align: center;
-    margin-top:100px;
+    margin-top:50px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -190,4 +210,20 @@ footer {
     gap: 35px;
     justify-content: center;
     padding-top: 30px;
+}
+@media (max-width:600px) {
+    #logo {
+        font-size:170px;
+    }
+}
+@media (max-width:500px) {
+    #logo {
+        font-size:140px;
+    }
+}
+@media (max-width:400px) {
+    #logo {
+        font-size:120px;
+    }
+    
 }
