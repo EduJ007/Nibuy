@@ -15,7 +15,7 @@
 </div>
 
 <div id="mudarcor-container">
-<h1 id="mudarcor" onclick="mudarcor">Escuro / Claro</h1>
+ <h1 id="mudarcor" onclick="mudarcor()">Escuro / Claro</h1>
 </div>
 
 <div id="sobre-container">
@@ -3572,7 +3572,20 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
-  
+  let corAtiva = false; // Estado inicial
+
+   function mudarcor() {
+   const h1 = document.querySelector("h1"); // escolhe todos os h1
+
+  if (corAtiva) {
+    document.body.style.background = "linear-gradient(to bottom, #ffffff, #e8e8e8)"; //fundo normal
+    if (h1) h1.style.color = "black"; // a cor normal ou seja a inicial
+  } else {
+    document.body.style.background = "linear-gradient(to bottom, #1c1c1c, #2e2e2e)"; // a nova cor ao apertar
+    if (h1) h1.style.color = "white"; // texto preto
+  }
+    corAtiva = !corAtiva; // inverte o estado
+}
 </script>
            
 </body>
