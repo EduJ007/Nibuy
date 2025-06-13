@@ -84,6 +84,9 @@ a {
     color: yellow;
     text-decoration: none;
 }
+#categoriaFiltro {
+    width:350px;
+}
 #selectsearch {
     display: flex;
     flex-wrap: wrap;
@@ -216,15 +219,52 @@ footer {
     #logo {
         font-size:170px;
     }
+
 }
 @media (max-width:500px) {
     #logo {
         font-size:140px;
+    }
+    .produto-container {
+        width:5%;
     }
 }
 @media (max-width:400px) {
     #logo {
         font-size:120px;
     }
-    
+    .produto-container {
+        width:5%;
+    } 
+}
+@media (max-width:525px) {
+    #listaProduto {
+        width:5%;
+    }
+}
+@media (max-width:400px) {
+    #listaProduto {
+        width:60%;
+
+    }
+    .produto {
+        width:130px;
+    }
+    .produto a {
+        width:100%;
+        font-size:20px;
+    }
+    .produto h3 {
+        font-size:20px;
+    }
+    .produto p {
+        font-size:20px;
+    }
+    #categoriaFiltro {
+        width:310px;
+    }
+    #searchProduto {
+        width:300px;
+    }
+
 }
