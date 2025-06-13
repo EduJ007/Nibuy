@@ -242,7 +242,7 @@ footer {
         width:5%;
     }
 }
-@media (max-width:400px) {
+@media (max-width:500px) {
     #listaProduto {
         width:60%;
 
@@ -267,7 +267,7 @@ footer {
         width:300px;
     }
 }
-@media (max-width:390px) {
+@media (max-width:400px) {
     #logo-container {
                 margin-top:100px;
     }
@@ -280,5 +280,13 @@ footer {
     }
     .produto a  {
    font-size:18px;
+    }
+}
+@media (max-width:350px) {
+    .produto {
+        width:100px;
+    }
+    .produto a {
+        font-size:14px;
     }
 }
