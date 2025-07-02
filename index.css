@@ -19,7 +19,6 @@ header {
   position: relative;
   height: 80px; /* ou mais se precisar */
 }
-
 /* Centraliza a logo no topo */
 #logo-container {
   position: absolute;
@@ -35,7 +34,11 @@ header {
   margin: 0;
   margin-top:100px;
 }
-
+#logo:hover {
+    transform:scale(1.02);
+    transition: 0.3s ease-in-out;
+    border-radius:15px;
+}
 /* Botão do modo escuro no topo direito */
 #mudarcor-container {
   position: absolute;
@@ -52,7 +55,21 @@ header {
   color:black; 
   
 }
-
+#mudarcor:hover {
+    background:lightgray;
+    transform:scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+#sobre-container:hover {
+    background:lightgray;
+    transform:scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+#sobre:hover {
+    background:lightgray;
+    transform:scale(1.02);
+    transition: 0.3s ease-in-out;
+}
 /* Botão “Sobre o Site” no topo esquerdo */
 #sobre-container {
   position: absolute;
@@ -102,7 +119,7 @@ a {
 main {
      flex: 1;
      margin-bottom:30px;
-     margin-top:350px;
+     margin-top:325px;
 }
 #categoriaFiltro,
 #searchProduto,
@@ -195,9 +212,16 @@ main {
     background-color: white;
     color: #333;
     border-radius: 5px;
+    max-height:50px;
 }
 .pagination a:hover {
     transform: scale(1.05);
+    background-color: lightgray;
+}
+.pagination a:hover {
+    background:lightgray;
+    transform:scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 footer {
     padding: 20px;
@@ -288,5 +312,8 @@ footer {
     }
     .produto a {
         font-size:14px;
+    }
+    .produto img {
+        width:100%;
     }
 }
