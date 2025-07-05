@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nibuy</title>
+    <title>𝑵𝒊𝒃𝒖𝒚</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="favicon-32.png" sizes="125x125" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
 <div id="logo-container">
-<a href="https://eduj007.github.io/Nibuy/"><h1 id="logo">Nibuy</h1></a>
+<a href="https://eduj007.github.io/Nibuy/"><h1 id="logo">𝑵𝒊𝒃𝒖𝒚</h1></a>
 </div>
 
 <div id="mudarcor-container">
@@ -3444,15 +3445,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     const link = document.createElement("a");
                     link.href = "#";
                     link.textContent = i;
-                    link.style.margin = "5px";
-                    link.style.padding = "5px 10px";
-                    link.style.border = "1px solid black #ccc";
-                    link.style.textDecoration = "none";
-
                     if (i === paginaAtual) {
-                        link.style.backgroundColor = "#FFFF00";
-                        link.style.color = "black";
-                    }
+                        link.classList.add("ativo");
+                     }
 
                     link.addEventListener("click", function () {
                         paginaAtual = i;

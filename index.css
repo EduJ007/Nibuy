@@ -1,4 +1,10 @@
-/* Tudo */
+:root {
+  --cor-primaria: #FF5722;
+  --cor-hover: #F4511E;
+  --cor-texto: #222222;
+  --cor-fundo: #FAFAFA;
+  --cor-secundaria: #212121;
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +18,12 @@ html, body {
     flex-direction: column;
 }
 body {
-  background: linear-gradient(to bottom, #ffffff, #e8e8e8);
-  font:normal Arial;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Roboto', sans-serif;
+}
+p,a,h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
 }
 header {
   position: relative;
@@ -30,7 +40,7 @@ header {
 /* Estilo da logo */
 #logo {
   font-size: 200px;
-  color: blueviolet;
+  color: var(--cor-secundaria);
   margin: 0 center;
   margin-top:100px;
 }
@@ -46,27 +56,24 @@ header {
   right: 10px;
 }
 #mudarcor {
-  background: lightslategray;
   padding: 10px;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
   border: 2px solid  black;
-  color:black; 
-  
 }
 #mudarcor:hover {
-    background:lightgray;
     transform:scale(1.02);
     transition: 0.3s ease-in-out;
 }
+#mudarcor:hover, #sobre:hover {
+    background: var(--cor-hover);
+}
 #sobre-container:hover {
-    background:lightgray;
     transform:scale(1.02);
     transition: 0.3s ease-in-out;
 }
 #sobre:hover {
-    background:lightgray;
     transform:scale(1.02);
     transition: 0.3s ease-in-out;
 }
@@ -76,11 +83,14 @@ header {
   top: 10px;
   left: 10px;
 }
+#sobre, #mudarcor {
+  background: var(--cor-primaria);
+  border: 2px solid var(--cor-secundaria);
+  color: white;
+}
 #sobre {
   font-size: 20px;
-  color: black;
   margin: 0;
-  background: lightslategray;
   padding: 10px;
   border: 2px solid  black;
   border-radius:10px;
@@ -123,7 +133,8 @@ main {
   height: 55px;
   padding: 10px;
   font-size: 18px;
-  border: 2px solid black;
+  border: 2px solid var(--cor-secundaria);
+  color: var(--cor-texto);
   border-radius: 5px;
   min-width: 0; /* evita travar o layout */
 }
@@ -136,6 +147,8 @@ main {
   border: 2px solid black;
   border-radius: 5px;
   max-width:60%;
+  border: 2px solid var(--cor-secundaria);
+  color: var(--cor-texto);
 }
 .produtos-container {
     display: flex;
@@ -183,22 +196,22 @@ main {
 .produto p {
     font-size: 30px;
     font-weight: bold;
-    color: blue;
+    color: var(--cor-primaria);
 }
 .produto h4 {
     font-size:20px;
     margin-bottom:15px;
     color:yellow;
-    font-weight: bold;
-    -webkit-text-stroke: 0.5px black;
+    color: var(--cor-primaria);
+  -webkit-text-stroke: 0.5px var(--cor-secundaria);
 }
 .produto a {
     display: inline-block;
-    background: #ffcc00;
+    background: var(--cor-primaria);
+    color: white;
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
-    color: #000;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -207,37 +220,45 @@ main {
     background: #e6b800;
 }
 .pagination {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    height:50px;
-    max-height:50px;
-    width:100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
 }
+
 .pagination a {
-    display: inline-block;
-    padding: 8px 12px;
-    text-decoration: none;
-    background-color: white;
-    color: #333;
-    border-radius: 5px;
-    max-height:55px;
-    border: 2px solid  black;
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: white;
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  min-width: 44px;
+  text-align: center;
 }
+
 .pagination a:hover {
-    transform: scale(1.05);
-    background-color: lightgray;
+  background-color: var(--cor-hover);
+  color: white;
+  transform: scale(1.05);
 }
-.pagination a:hover {
-    background:lightgray;
-    transform:scale(1.05);
-    transition: 0.3s ease-in-out;
+
+/* Página atual */
+.pagination .ativo {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: 2px solid var(--cor-primaria);
+  pointer-events: none;
 }
 footer {
     padding: 20px;
+    background-color: var(--cor-secundaria);
     color: white;
     font-size: 22px;
     text-align: center;
