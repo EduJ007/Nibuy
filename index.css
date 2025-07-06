@@ -2,6 +2,7 @@
   --cor-primaria: #FF5722;
   --cor-hover: #F4511E;
   --cor-texto: #222222;
+  --cor-texto2: #1A237E;
   --cor-fundo: #FAFAFA;
   --cor-secundaria: #212121;
 }
@@ -43,6 +44,7 @@ header {
   color: var(--cor-secundaria);
   margin: 0 center;
   margin-top:100px;
+  font-style: italic;
 }
 #logo:hover {
     transform:scale(1.02);
@@ -196,7 +198,7 @@ main {
 .produto p {
     font-size: 30px;
     font-weight: bold;
-    color: var(--cor-primaria);
+    color: blue;
 }
 .produto h4 {
     font-size:20px;
