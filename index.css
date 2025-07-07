@@ -47,9 +47,8 @@ header {
   font-style: italic;
 }
 #logo:hover {
-    transform:scale(1.02);
-    transition: 0.3s ease-in-out;
-    border-radius:15px;
+   transform: scale(1.03);
+   text-shadow: 0 0 10px rgba(255,87,34,0.5);
 }
 /* Botão do modo escuro no topo direito */
 #mudarcor-container {
@@ -174,7 +173,7 @@ main {
     border: 2px solid  black;
 }
 .produto:hover {
-    background-color: lightgray ;
+    background:white;
     transform: scale(1.05);
     border-radius: 15px;
     transition: 0.3s ease-in-out;
@@ -194,6 +193,7 @@ main {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow:ellipsis;
+    color:black;
 }
 .produto p {
     font-size: 30px;
@@ -249,6 +249,7 @@ main {
   background-color: var(--cor-hover);
   color: white;
   transform: scale(1.05);
+
 }
 
 /* Página atual */
