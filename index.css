@@ -47,8 +47,9 @@ header {
   font-style: italic;
 }
 #logo:hover {
-   transform: scale(1.03);
-   text-shadow: 0 0 10px rgba(255,87,34,0.5);
+    transform: scale(1.05);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
 }
 /* Botão do modo escuro no topo direito */
 #mudarcor-container {
@@ -177,7 +178,6 @@ main {
     transform: scale(1.05);
     border-radius: 15px;
     transition: 0.3s ease-in-out;
-    opacity: 0.9;
 }
 .produto img {
     max-width: 100%;
