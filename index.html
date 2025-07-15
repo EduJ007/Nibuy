@@ -6594,6 +6594,8 @@
     renderizarProdutos();
 });
   </script>
+
+
 <script>
    let corAtiva = false; // Estado inicial
 
@@ -6610,5 +6612,47 @@
     corAtiva = !corAtiva; // inverte o estado
 }
   </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const avaliacoes = document.querySelectorAll("h4");
+
+  avaliacoes.forEach(h4 => {
+    const texto = h4.textContent.trim();
+
+    // Captura só o número final: 4.8, 3.9 etc.
+    const match = texto.match(/(\d+(\.\d+)?)/);
+
+    if (!match) return; // se não achar número, ignora
+
+    const nota = parseFloat(match[1]);
+    const cheias = Math.floor(nota);
+    const decimal = nota - cheias;
+    const meia = decimal >= 0.25 && decimal < 0.75;
+    const vazias = 5 - cheias - (meia ? 1 : 0);
+
+    const estrelas = [];
+
+    for (let i = 0; i < cheias; i++) {
+      estrelas.push('<i class="fas fa-star"></i>');
+    }
+
+    if (meia) {
+      estrelas.push('<i class="fas fa-star-half-alt"></i>');
+    }
+
+    for (let i = 0; i < vazias; i++) {
+      estrelas.push('<i class="far fa-star"></i>');
+    }
+
+    // Aplica nova estrutura com classe e estrelas
+    h4.classList.add("avaliacao");
+    h4.innerHTML = estrelas.join('') + ` <span class="nota">${nota.toFixed(1)}</span>`;
+  });
+});
+</script>
+
+
+
 </body>
 </html>

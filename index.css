@@ -208,17 +208,13 @@ main {
   align-items: center;
   gap: 4px;
   padding: 10px;
-   -webkit-text-stroke: 0.8px black;
+   -webkit-text-stroke: 0.5px black;
+   color:gold;
 }
 
 .produto h4 i {
   color: gold;
-}
 
-.produto h4 .nota {
-  color: yellow;
-  -webkit-text-stroke: 0.5px black;
-  font-weight: bold;
 }
 .produto a {
     display: inline-block;
