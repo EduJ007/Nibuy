@@ -92,29 +92,32 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  overflow: hidden;
   position: relative;
+  max-width: 100%;
 }
 
 .carrossel {
   display: flex;
   gap: 20px;
-  overflow: hidden;
-  max-width: 1500px; /* aumentei pra caber 5 cards */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  max-width: 1400px;
+  padding: 10px 0;
 }
 
 .card-produto {
-  width: 280px;
+  flex: 0 0 calc((100% - 80px) / 5); /* 5 produtos com 20px de gap entre eles */
+  max-width: 250px;
   background: white;
   border: 2px solid #000;
   border-radius: 20px;
   padding: 15px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-  flex-shrink: 0;
 }
 
 .card-produto img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
 }
 
@@ -123,10 +126,10 @@ header {
   margin: 10px 0;
   color: black;
   display: -webkit-box;
-    -webkit-line-clamp: 3; /* isso é normal ksksk */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow:ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-produto p {
@@ -161,6 +164,7 @@ header {
   border-radius: 10px;
   transition: background 0.2s;
 }
+
 #anterior:hover, #proximo:hover {
   background-color: #1a4ed8;
 }
