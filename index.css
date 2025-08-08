@@ -140,7 +140,7 @@ header {
 
 .card-produto h4 {
   font-size: 16px;
-  color: #F4511E;
+  color: black;
 }
 
 .card-produto a {
@@ -350,19 +350,18 @@ main {
     color: blue;
 }
 .produto h4 {
-  font-size: 20px;
   margin-bottom: 15px;
-  color: var(--cor-primaria);
   display: flex;
   align-items: center;
   gap: 4px;
   justify-content:center;
-   -webkit-text-stroke: 0.7px black;
-   color:#F4511E;
+  font-size: 20px;
+  color: black;
 }
 
 .produto h4 i {
-  color: #F4511E;
+ font-size: 16px;
+  color: black;
 
 }
 .produto a {

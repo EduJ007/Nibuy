@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Função para gerar estrelas SVG
+  function gerarEstrelaSVG(tipo) {
+    const cores = {
+      cheia: '#FFD700', // dourado
+      meia: '#FFD700',
+      vazia: '#ddd'     // cinza claro
+    };
+
+    if (tipo === 'cheia') {
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="${cores.cheia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
+    } 
+    if (tipo === 'meia') {
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+        <defs>
+          <linearGradient id="meia">
+            <stop offset="50%" stop-color="${cores.meia}"/>
+            <stop offset="50%" stop-color="${cores.vazia}"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#meia)" d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/>
+      </svg>`;
+    }
+    // vazia
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="${cores.vazia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
+  }
+
+  // Elementos do DOM
   const categoriaFiltro = document.getElementById("categoriaFiltro");
   const searchInput = document.getElementById("searchProduto");
   const searchInputTop = document.getElementById("searchproduto2");
@@ -23,18 +50,24 @@ document.addEventListener('DOMContentLoaded', () => {
     return parseFloat(match[1].replace(/\./g,'').replace(',', '.'));
   };
 
-  // Normaliza nota (h4) para "★★★★★ 4.8" quando houver número
+  // Substitui notas por estrelas SVG
   document.querySelectorAll('.produto h4').forEach(h4 => {
     const match = h4.textContent.match(/[\d]+(?:[.,]\d+)?/);
     if (!match) return;
     const nota = parseFloat(match[0].replace(',', '.'));
-    let estrelas = '☆☆☆☆☆';
-    if (nota >= 4.5) estrelas = '★★★★★';
-    else if (nota >= 3.5) estrelas = '★★★★☆';
-    else if (nota >= 2.5) estrelas = '★★★☆☆';
-    else if (nota >= 1.5) estrelas = '★★☆☆☆';
-    else if (nota >= 1.0) estrelas = '★☆☆☆☆';
-    h4.textContent = `${estrelas} ${nota.toFixed(1)}`;
+    const estrelas = [];
+    
+    for (let i = 1; i <= 5; i++) {
+      if (nota >= i) {
+        estrelas.push(gerarEstrelaSVG('cheia'));
+      } else if (nota >= i - 0.5) {
+        estrelas.push(gerarEstrelaSVG('meia'));
+      } else {
+        estrelas.push(gerarEstrelaSVG('vazia'));
+      }
+    }
+
+    h4.innerHTML = `${estrelas.join('')} <span style="margin-left:4px;">${nota.toFixed(1)}</span>`;
   });
 
   function aplicarFiltros() {
@@ -135,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = p.elemento.querySelector('img')?.src || '';
       const nome = p.elemento.querySelector('h3')?.textContent || '';
       const preco = p.elemento.querySelector('p')?.textContent || '';
-      const nota = p.elemento.querySelector('h4')?.textContent || '';
+      const nota = p.elemento.querySelector('h4')?.innerHTML || ''; // Usa innerHTML para manter as estrelas SVG
       const link = p.elemento.querySelector('a')?.href || '#';
 
       const card = document.createElement('div');
@@ -158,6 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // render inicial
   renderizarProdutos();
 });
+
+// Código para a busca superior
 const inputBusca2 = document.getElementById('searchproduto2');
 const btnBusca2 = document.getElementById('btnBuscar');
 
@@ -201,7 +236,7 @@ function mostrarResultados(termo) {
 
             const imgSrc = produto.querySelector('img')?.src || '';
             const nomeProd = produto.querySelector('h3')?.textContent || '';
-            const nota = produto.querySelector('h4')?.textContent || '';
+            const nota = produto.querySelector('h4')?.innerHTML || ''; // Usa innerHTML para manter as estrelas SVG
             const preco = produto.querySelector('p')?.textContent || '';
             const link = produto.querySelector('a')?.href || '#';
 
@@ -214,10 +249,10 @@ function mostrarResultados(termo) {
             item.style.borderBottom = '1px solid #eee';
 
             item.innerHTML = `
-                <img src="${imgSrc}" style="width:50px;height:50px;object-fit:cover;margin-right:8px;">
+                <img src="${imgSrc}" style="width:50px;height:50px;object-fit:cover;margin-right:8px; border-radius:5px;">
                 <div style="flex:1;">
                     <strong>${nomeProd}</strong><br>
-                    <small>⭐ ${nota} | ${preco}</small>
+                    <small>${nota} | ${preco}</small>
                 </div>
             `;
 
