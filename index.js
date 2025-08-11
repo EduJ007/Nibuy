@@ -296,3 +296,12 @@ btnBusca2.addEventListener('click', () => {
         produto.style.display = nome.includes(termo) ? '' : 'none';
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const settingsIcon = document.getElementById('settings-icon');
+
+  if (settingsIcon) {
+    settingsIcon.addEventListener('click', () => {
+      alert('Abrir menu de configurações aqui - Rolagem infinita / Tema escuro / Tema claro / Automático');
+    });
+  }
+});

@@ -73,6 +73,37 @@ header {
   width: 500px;
   border-radius: 0;
 }
+#login-icon {
+  position: static; /* remove o absolute */
+  margin-left: auto; /* empurra pro canto direito */
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s;
+  background-color: #ff6600;
+  border-radius:30px;
+  padding:10px;
+  max-height:50px;
+}
+#settings-icon {
+  position: static;
+  margin-left: 10px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  background-color: #444; /* cor base */
+  border-radius: 30px;
+  padding: 10px;
+  max-height: 50px;
+  transition: background-color 0.3s;
+}
+
+#settings-icon:hover {
+  background-color: #333;
+}
+#login-icon:hover {
+  background-color: #e05500;
+}
 /* Teste */
 #destaques {
   text-align: center;
