@@ -349,6 +349,27 @@ function updateCartUI() {
   cartBadge.textContent = cart.length;
 }
 
-// Simulação de adicionar produto
-// addToCart("Produto 1", "R$ 50,00");
-// addToCart("Produto 2", "R$ 120,00");
+document.addEventListener("DOMContentLoaded", () => {
+  const loginIconLink = document.getElementById("login-icon");
+  const user = localStorage.getItem("nibuyUser");
+
+  if (user) {
+    // Troca o título e o ícone
+    loginIconLink.title = `Olá, ${user} (Sair)`;
+    loginIconLink.innerHTML = `<span style="font-size:14px;">Olá, ${user}</span>`;
+    loginIconLink.style.display = "flex";
+    loginIconLink.style.alignItems = "center";
+
+    // Ao clicar, faz logout
+    loginIconLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (confirm("Deseja sair da conta?")) {
+        localStorage.removeItem("nibuyUser");
+        location.reload();
+      }
+    });
+  } else {
+    // Se não estiver logado, mantém o link para login
+    loginIconLink.href = "https://eduj007.github.io/Login/";
+  }
+});
