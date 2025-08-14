@@ -276,7 +276,7 @@ header {
   margin: 10px 0;
   color: black;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -369,13 +369,10 @@ header {
   font-size: 14px;
   margin: 0;
   color: black;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .resultado-info p {
-  font-size: 13px;
+  font-size: 1px;
   margin: 2px 0;
   color: #333;
 }
@@ -472,17 +469,17 @@ main {
     border: 2px solid  black;
 }
 .produto h3 {
-    font-size: 25px;
+   font-size: 22px;
     margin: 10px 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* isso é normal ksksk */
-    -webkit-box-orient: vertical;
+    color: black;
     overflow: hidden;
-    text-overflow:ellipsis;
-    color:black;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* número de linhas que quer mostrar */
+    -webkit-box-orient: vertical;
 }
 .produto p {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     color: blue;
 }
@@ -492,8 +489,9 @@ main {
   align-items: center;
   gap: 4px;
   justify-content: center;
-  font-size: 22px; /* Base */
+  font-size: 20px; /* Base */
   color: black;
+  margin-top:10px;
 }
 
 .produto h4 svg {
@@ -708,7 +706,7 @@ footer {
     max-width: 450px;
   }
   .produto {
-    width:125px;
+    width:145px;
   }
   .produto a {
     font-size:18px;
@@ -717,7 +715,7 @@ footer {
     font-size:20px;
   }
   .produto h4 {
-    font-size:12.5px;
+    font-size:15px;
   }
 }
 @media (max-width:552px) {
@@ -749,7 +747,7 @@ footer {
     width:95px;
   }
   .produto h4 {
-    font-size:8px;
+    font-size:13px;
   }
   .produto p {
     font-size:18px;
@@ -769,15 +767,47 @@ footer {
 @media (max-width:442px) {
   .search-wrapper {
     margin-left:10px;
-    width:200px;
+    width:250px;
   }
   #cart-icon {
-    margin-left:30px;
+    margin-left:80px;
+    font-size:25px;
+    width:40px;
+    height:40px;
   }
   #topbar a {
-    font-size:9.5px;
+    font-size:12px;
+  }
+  .produto h4 {
+    font-size:12px;
+  }
+  .produto a {
+    font-size:18px;
   }
   #settings-icon {
-    margin-left:30px;
+    margin-left:90px;
+    font-size:20px;
+    width:40px;
+    height:40px;
+    padding:10px;
   }
+  .produto {
+    width: 125px;
+  }
+   #login-icon {
+    margin-left:0px;
+    font-size:20px;
+    width:40px;
+    height:40px;
+    padding:10px;
+   }
+   main {
+    max-width:1000px;
+   }
+   #nibuy {
+    margin-left:0px;
+    font-size:25px;
+    width:40px;
+    height:40px;
+   }
 }

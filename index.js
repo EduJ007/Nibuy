@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Função para gerar estrelas SVG
+  // Função para gerar estrelas SVG com sombra
   function gerarEstrelaSVG(tipo) {
     const cores = {
       cheia: '#FFD700', // dourado
       meia: '#FFD700',
-      vazia: '#ddd'     // cinza claro
+      vazia: 'white'     // cinza claro
     };
 
+    const sombra = 'stroke:black; stroke-width:1px;';
+
     if (tipo === 'cheia') {
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="${cores.cheia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="${sombra}" fill="${cores.cheia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
     } 
     if (tipo === 'meia') {
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="${sombra}" viewBox="0 0 16 16">
         <defs>
           <linearGradient id="meia">
             <stop offset="50%" stop-color="${cores.meia}"/>
@@ -21,10 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <path fill="url(#meia)" d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/>
       </svg>`;
     }
-    // vazia
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="${cores.vazia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="${sombra}" fill="${cores.vazia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
   }
-
   // Elementos do DOM
   const categoriaFiltro = document.getElementById("categoriaFiltro");
   const searchInput = document.getElementById("searchProduto");
