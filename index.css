@@ -32,7 +32,7 @@ p, a, h1, h2, h3, h4 {
   transform: scale(1.05);
 }
 #nibuy {
-  margin-left:450px;
+  margin-left:300px;
 }
 header {
   border-radius: 15px;
@@ -81,10 +81,10 @@ header {
   border: 2px solid black;
   border-radius: 30px;
   overflow: hidden;
-  width: 500px;
+  width: 800px;
   flex-shrink: 0;
   height: 50px;
-  margin-left:25px;
+  margin-left:50px;
 }
 #cart-icon {
   margin-left: 10px;
