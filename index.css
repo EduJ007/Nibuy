@@ -38,6 +38,28 @@ header {
   border-radius: 15px;
   margin-bottom: 50px;
 }
+.social-nibuy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.social-nibuy img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1); /* deixa branco */
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+.social-nibuy img:hover {
+  transform: scale(1.1);
+  filter: brightness(1); /* volta à cor original */
+}
+
 #topbar {
   background-color: var(--cor-secundaria);
   font-size: 5px;
