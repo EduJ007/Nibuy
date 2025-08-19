@@ -596,16 +596,17 @@ footer {
     padding-top: 30px;
 }
 @media (max-width:1658px) {
-   #nibuy {
-    margin-left:350px;
-   }
+  
+  #nibuy {
+    margin-left:0px;
+  }
    main {
     max-width:1300px;
    }
 }
 @media (max-width:1414px) {
   #nibuy {
-    margin-left:250px;
+    margin-left:0px;
   }
   main {
     max-width:1000px;
@@ -613,25 +614,28 @@ footer {
 }
 @media (max-width:1278px) {
   #nibuy {
-    margin-left:200px;
+    margin-left:0px;
   }
 }
 @media (max-width:1148px) {
   #nibuy {
-    margin-left:120px;
+    margin-left:0px;
   }
 }
 @media (max-width:1062px) {
   #nibuy {
-    margin-left:60px;
+    margin-left:0px;
   }
   main {
     max-width:800px;
   }
+  .search-wrapper {
+ width:500px;
+  }
 }
 @media (max-width:998px) {
   #nibuy {
-    margin-left:10px;
+    margin-left:0px;
   }
   .search-wrapper {
     width:400px;
@@ -678,6 +682,9 @@ footer {
     gap:5px;
   }
   #topbar a {
+    font-size:12px;
+  }
+  #topbar span {
     font-size:12px;
   }
   #nibuy2 {
