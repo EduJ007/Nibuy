@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const sombra = 'stroke:black; stroke-width:1px;';
 
     if (tipo === 'cheia') {
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="${sombra}" fill="${cores.cheia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" style="${sombra}" fill="${cores.cheia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
     } 
     if (tipo === 'meia') {
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="${sombra}" viewBox="0 0 16 16">
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" style="${sombra}" viewBox="0 0 16 16">
         <defs>
           <linearGradient id="meia">
             <stop offset="50%" stop-color="${cores.meia}"/>
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <path fill="url(#meia)" d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/>
       </svg>`;
     }
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="${sombra}" fill="${cores.vazia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" style="${sombra}" fill="${cores.vazia}" viewBox="0 0 16 16"><path d="M3.612 15.443 4.8 10.71l-4.192-3.356 5.271-.455L8 2.223l2.121 4.676 5.27.455-4.19 3.356 1.188 4.733L8 12.347l-4.388 3.096z"/></svg>`;
   }
   // Elementos do DOM
   const categoriaFiltro = document.getElementById("categoriaFiltro");
@@ -228,7 +228,23 @@ function mostrarResultados(termo) {
 
     const produtos = document.querySelectorAll('.produto');
     let encontrados = 0;
+    function posicionarResultados() {
+    const rectInput = inputBusca2.getBoundingClientRect();
+    const rectBtn = btnBusca2.getBoundingClientRect();
 
+    const larguraTotal = (rectBtn.right - rectInput.left); 
+    // da borda esquerda do input até a direita da lupa
+
+    containerResultados.style.position = 'absolute';
+    containerResultados.style.top = `${rectInput.bottom + window.scrollY}px`;
+    containerResultados.style.left = `${rectInput.left + window.scrollX}px`;
+    containerResultados.style.width = `${larguraTotal}px`; // agora acompanha até a lupa
+    containerResultados.style.background = '#fff';
+    containerResultados.style.border = '1px solid #ccc';
+    containerResultados.style.zIndex = '9999';
+    containerResultados.style.maxHeight = '800px';
+    containerResultados.style.overflowY = 'auto';
+}
     produtos.forEach(produto => {
         const nome = produto.querySelector('h3')?.textContent.toLowerCase() || '';
         if (nome.includes(termo)) {
@@ -247,15 +263,24 @@ function mostrarResultados(termo) {
             item.style.padding = '8px';
             item.style.cursor = 'pointer';
             item.style.borderBottom = '1px solid #eee';
+            item.style.width = '500px';
 
-            item.innerHTML = `
-                <img src="${imgSrc}" style="width:50px;height:50px;object-fit:cover;margin-right:8px; border-radius:5px;">
-                <div style="flex:1;">
-                    <strong>${nomeProd}</strong><br>
-                    <small>${nota} | ${preco}</small>
-                </div>
-            `;
-
+            // Trecho restaurado (antigo)
+            item.innerHTML =  `
+    <img src="${imgSrc}" 
+         style="width:50px;height:50px;object-fit:cover;margin-right:8px; border-radius:5px;">
+    <div style="flex:1; display:flex; flex-direction:column;">
+        <strong style="
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* aqui você escolhe: 1, 2, 3 linhas */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+        ">${nomeProd}</strong>
+        <small style="color:#333; font-size:15px;">${nota} | ${preco}</small>
+    </div>
+`;
             item.addEventListener('click', () => {
                 window.location.href = link;
             });
@@ -266,7 +291,6 @@ function mostrarResultados(termo) {
 
     containerResultados.style.display = encontrados > 0 ? 'block' : 'none';
 }
-
 // Evento de digitação
 inputBusca2.addEventListener('input', () => {
     posicionarResultados();

@@ -365,8 +365,11 @@ header {
   cursor: pointer;
   border-bottom: 1px solid #eee;
   transition: background 0.2s;
+  width:700px;
 }
-
+.item-resultado {
+  width:500px;
+}
 .resultado-item:hover {
   background-color: #f1f1f1;
 }
@@ -378,7 +381,6 @@ header {
   border-radius: 15px;
   border: 1px solid #000;
 }
-
 .resultado-info {
   display: flex;
   flex-direction: column;
@@ -389,15 +391,33 @@ header {
 
 .resultado-info h4 {
   font-size: 14px;
-  margin: 0;
+  margin: 0 0 4px 0;
   color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* aqui você escolhe: 1, 2, 3 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.resultado-info p {
-  font-size: 1px;
-  margin: 2px 0;
-  color: #333;
+.nota-preco {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre estrelas e preço */
 }
+
+.nota-preco .nota svg {
+  width: 14px;
+  height: 14px;
+}
+
+.nota-preco .preco {
+  font-size: 13px;
+  color: #333;
+  font-weight: bold;
+}
+
 /* Centraliza a logo no topo */
 body {
 
@@ -600,16 +620,10 @@ footer {
   #nibuy {
     margin-left:0px;
   }
-   main {
-    max-width:1300px;
-   }
 }
 @media (max-width:1414px) {
   #nibuy {
     margin-left:0px;
-  }
-  main {
-    max-width:1000px;
   }
 }
 @media (max-width:1278px) {
@@ -626,9 +640,6 @@ footer {
   #nibuy {
     margin-left:0px;
   }
-  main {
-    max-width:800px;
-  }
   .search-wrapper {
  width:500px;
   }
@@ -640,16 +651,21 @@ footer {
   .search-wrapper {
     width:400px;
   }
-  main {
-    max-width:700px;
-  }
 }
 @media (max-width:852px) {
   .search-wrapper {
     width:300px;
   }
-  main {
-    max-width:600px;
+}
+@media (max-width:826px) {
+  .produto {
+    width: 170px;
+  }
+  .produto a {
+    font-size:25px;
+  }
+  .produto h4 {
+    font-size:18px;
   }
 }
 @media (max-width:752px) {
@@ -666,6 +682,17 @@ footer {
     font-size:18px;
   }
 }
+@media (max-width:728px) {
+  .produto {
+    width:150px;
+  }
+  .produto a {
+    font-size:20px;
+  }
+  .produto h4 {
+    font-size:15px;
+  }
+}
 @media (max-width:700px) {
   .search-wrapper {
     margin-left:10px;
@@ -673,8 +700,16 @@ footer {
   #nibuy {
     margin-left:0px;
   }
-  main {
-    max-width:500px;
+}
+@media (max-width:676px) {
+  .produto {
+    width:120px;
+  }
+  .produto a {
+    font-size:15px;
+  }
+  .produto h4 {
+    font-size:12px;
   }
 }
 @media (max-width:672px) {
@@ -731,9 +766,6 @@ footer {
   #nibuy {
     margin-left:25px;
   }
-    main {
-    max-width: 450px;
-  }
   .produto {
     width:145px;
   }
@@ -763,26 +795,20 @@ footer {
 }
 @media (max-width:510px) {
   #topbar {
-    gap:0px;
+    gap:5px;
     margin-left:0px;
   }
   .search-wrapper {
-    width:250px;
+    width:290px;
   }
-  main {
-    max-width: 350px;
+  #topbar a {
+    font-size:10px;
   }
-  .produto {
-    width:95px;
-  }
-  .produto h4 {
-    font-size:13px;
+  #topbar span {
+    font-size:10px;
   }
   .produto p {
     font-size:18px;
-  }
-  .produto a {
-    font-size:10px;
   }
   .produto h3 {
     font-size:15px;
@@ -792,11 +818,31 @@ footer {
   #topbar a {
     font-size:10px;
   }
+  #topbar{
+    margin-left:0px;
+    gap:10px;
+  }
+  .search-wrapper {
+    width:260px;
+  }
+}
+@media (max-width:458px) {
+   .search-wrapper {
+    width:240px;
+   }
+   .produto {
+    width:140px;
+   }
+}
+@media (max-width:450px) {
+  .produto {
+    width:130px;
+  }
 }
 @media (max-width:442px) {
   .search-wrapper {
     margin-left:10px;
-    width:250px;
+    width:220px;
   }
   #cart-icon {
     margin-left:80px;
@@ -820,9 +866,6 @@ footer {
     height:40px;
     padding:10px;
   }
-  .produto {
-    width: 125px;
-  }
    #login-icon {
     margin-left:0px;
     font-size:20px;
@@ -830,13 +873,24 @@ footer {
     height:40px;
     padding:10px;
    }
-   main {
-    max-width:1000px;
-   }
    #nibuy {
     margin-left:0px;
     font-size:25px;
     width:40px;
     height:40px;
    }
+}
+@media (max-width:430px) {
+  .produto {
+    width:100px;
+  }
+  .produto a {
+    font-size:10px;
+  }
+  .produto h4 {
+    font-size:8px;
+  }
+  .search-wrapper {
+    width:220px;
+  }
 }
