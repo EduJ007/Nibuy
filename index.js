@@ -203,18 +203,22 @@ document.body.appendChild(containerResultados);
 
 // Posiciona o container abaixo do input
 function posicionarResultados() {
-    const rect = inputBusca2.getBoundingClientRect();
+    const rectInput = inputBusca2.getBoundingClientRect();
+    const rectBtn = btnBusca2.getBoundingClientRect();
+
+    // da borda esquerda do input até a direita da lupa
+    const larguraTotal = rectBtn.right - rectInput.left;
+
     containerResultados.style.position = 'absolute';
-    containerResultados.style.top = `${rect.bottom + window.scrollY}px`;
-    containerResultados.style.left = `${rect.left + window.scrollX}px`;
-    containerResultados.style.width = `${rect.width}px`;
+    containerResultados.style.top = `${rectInput.bottom + window.scrollY}px`;
+    containerResultados.style.left = `${rectInput.left + window.scrollX}px`;
+    containerResultados.style.width = `${larguraTotal}px`; // ocupa até a lupa
     containerResultados.style.background = '#fff';
     containerResultados.style.border = '1px solid #ccc';
     containerResultados.style.zIndex = '9999';
     containerResultados.style.maxHeight = '300px';
     containerResultados.style.overflowY = 'auto';
 }
-
 // Função para exibir resultados
 function mostrarResultados(termo) {
     containerResultados.innerHTML = '';
@@ -263,8 +267,6 @@ function mostrarResultados(termo) {
             item.style.padding = '8px';
             item.style.cursor = 'pointer';
             item.style.borderBottom = '1px solid #eee';
-            item.style.width = '500px';
-
             // Trecho restaurado (antigo)
             item.innerHTML =  `
     <img src="${imgSrc}" 
@@ -298,16 +300,29 @@ inputBusca2.addEventListener('input', () => {
 });
 
 // Evento Enter para filtrar no main
+// Evento Enter para filtrar no main
 inputBusca2.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         e.preventDefault();
         containerResultados.style.display = 'none';
         const termo = inputBusca2.value.toLowerCase();
 
+        let primeiroVisivel = null;
+
         document.querySelectorAll('.produto').forEach(produto => {
             const nome = produto.querySelector('h3')?.textContent.toLowerCase() || '';
-            produto.style.display = nome.includes(termo) ? '' : 'none';
+            const visivel = nome.includes(termo);
+            produto.style.display = visivel ? '' : 'none';
+
+            if (visivel && !primeiroVisivel) {
+                primeiroVisivel = produto;
+            }
         });
+
+        // Desce até o primeiro produto visível
+        if (primeiroVisivel) {
+            primeiroVisivel.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
     }
 });
 
@@ -315,10 +330,23 @@ inputBusca2.addEventListener('keydown', (e) => {
 btnBusca2.addEventListener('click', () => {
     const termo = inputBusca2.value.toLowerCase();
     containerResultados.style.display = 'none';
+
+    let primeiroVisivel = null;
+
     document.querySelectorAll('.produto').forEach(produto => {
         const nome = produto.querySelector('h3')?.textContent.toLowerCase() || '';
-        produto.style.display = nome.includes(termo) ? '' : 'none';
+        const visivel = nome.includes(termo);
+        produto.style.display = visivel ? '' : 'none';
+
+        if (visivel && !primeiroVisivel) {
+            primeiroVisivel = produto;
+        }
     });
+
+    // Desce até o primeiro produto visível
+    if (primeiroVisivel) {
+        primeiroVisivel.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
 });
 document.addEventListener('DOMContentLoaded', () => {
   const settingsIcon = document.getElementById('settings-icon');
