@@ -852,7 +852,7 @@ footer {
 @media (max-width:488px) {
   #topbar a {
     font-size:10px;
-    max-width:80px;
+    max-width:100px;
   }
   #topbar{
     margin-left:0px;
@@ -881,7 +881,7 @@ footer {
 @media (max-width:442px) {
   .search-wrapper {
     margin-left:10px;
-    width:220px;
+    width:250px;
   }
   #cart-icon {
     margin-left:80px;
