@@ -155,7 +155,34 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     if (searchInputTop && searchInput) { searchInput.value = searchInputTop.value; searchInput.dispatchEvent(new Event('input')); }
   });
+// teste ///
+const generoFiltro = document.getElementById("generoFiltro");
 
+function aplicarFiltros() {
+  const categoria = (categoriaFiltro?.value || 'todos').toLowerCase();
+  const genero = (generoFiltro?.value || 'todos').toLowerCase();
+  const pesquisa = (searchInput?.value || '').toLowerCase();
+  const valorMax = (valorFiltro && valorFiltro.value.trim() !== '') ?
+    parseFloat(valorFiltro.value.replace(',', '.')) : Infinity;
+
+  return produtos.filter(prod => {
+    const cat = getCategoria(prod).toLowerCase();
+    const titulo = (prod.querySelector('h3')?.textContent || '').toLowerCase();
+    const precoTxt = prod.querySelector('p')?.textContent || '';
+    const preco = parsePreco(precoTxt);
+
+    const generoOk = genero === 'todos' || prod.classList.contains(genero);
+    const catOk = categoria === 'todos' || cat === categoria;
+    const pesquisaOk = titulo.includes(pesquisa);
+    const precoOk = preco <= valorMax;
+
+    return generoOk && catOk && pesquisaOk && precoOk;
+  });
+}
+
+// evento
+generoFiltro?.addEventListener('change', () => { paginaAtual = 1; renderizarProdutos(); });
+//fim do teste//
   // carrossel dos mais avaliados (top 30)
   const carrossel = document.getElementById('carrosselProdutos');
   if (carrossel) {
