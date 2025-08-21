@@ -158,7 +158,6 @@ header {
   justify-content: center;
   position: relative;
 }
-
 #cart-icon:hover {
   background-color: #218838;
 }
@@ -751,12 +750,6 @@ footer {
   #topbar {
     gap:5px;
   }
-  #topbar a {
-    font-size:12px;
-  }
-  #topbar span {
-    font-size:12px;
-  }
   #nibuy2 {
     font-size:22px;
   }
@@ -828,19 +821,18 @@ footer {
     margin-left: 20px;
   }
 }
-@media (max-width:510px) {
+@media (max-width:512px) {
   #topbar {
-    gap:5px;
-    margin-left:0px;
+
   }
   .search-wrapper {
     width:290px;
   }
   #topbar a {
-    font-size:10px;
+    font-size:12px;
   }
   #topbar span {
-    font-size:10px;
+    font-size:12px;
   }
   .produto p {
     font-size:18px;
@@ -852,7 +844,6 @@ footer {
 @media (max-width:488px) {
   #topbar a {
     font-size:10px;
-    max-width:100px;
   }
   #topbar{
     margin-left:0px;
