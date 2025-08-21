@@ -829,7 +829,7 @@ footer {
     width:290px;
   }
   #topbar a {
-    font-size:12px;
+    font-size:15px;
   }
   #topbar span {
     font-size:12px;
@@ -843,7 +843,7 @@ footer {
 }
 @media (max-width:488px) {
   #topbar a {
-    font-size:10px;
+    font-size:15px;
   }
   #topbar{
     margin-left:0px;
@@ -881,7 +881,7 @@ footer {
     height:40px;
   }
   #topbar a {
-    font-size:12px;
+    font-size:13px;
   }
   .produto h4 {
     font-size:12px;
