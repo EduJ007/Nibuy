@@ -67,7 +67,7 @@ p, a, h1, h2, h3, h4 {
   transform: scale(1.05);
 }
 #nibuy {
-  margin-left:300px;
+  margin-left:400px;
 }
 header {
   border-radius: 15px;
@@ -89,37 +89,78 @@ header {
   transition: transform 0.2s ease, filter 0.2s ease;
   cursor: pointer;
 }
-
-.social-nibuy img:hover {
-  transform: scale(1.1);
-  filter: brightness(1); /* volta à cor original */
-}
-
 #topbar {
-  background-color: var(--cor-secundaria);
-  font-size: 5px;
   display: flex;
-  justify-content:flex-start;
-  gap: 10px;
-  padding: 5px 20px;
-  
-}
-#topbar a:last-child {
-  border-right: none; /* remove a linha do último item */
-  margin-right: 0;
-  padding-right: 0;
-}
-#topbar a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.2s;
-  font-size:15px;
-  border-right: 1px solid white;
-  padding: 0 20px 0 5px;
+  justify-content: space-between; /* separa esquerda e direita */
+  align-items: center;            /* alinha tudo na mesma linha */
+  background-color: #1e2a38;
+  padding: 6px 20px;
+  font-size: 14px;
 }
 
-#topbar a:hover {
-  color: #ff6600;
+/* Lado esquerdo */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.topbar-left a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 0px;
+  font-size:15px;
+}
+.topbar-left a:hover {
+   color: #ff5722;
+   border-radius:15px;
+}
+
+/* Social icons */
+.social-nibuy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color:white;
+}
+
+.social-nibuy img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  color:white;
+}
+.social-nibuy img:hover {
+  filter: brightness(0) saturate(100%);
+}
+
+/* Lado direito */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-right a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topbar-right img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+.topbar-right a:hover {
+  color: #ff5722; /* texto em laranja */
+}
+
+.topbar-right a:hover img {
+ filter: brightness(0) saturate(100%);
 }
 #ideia1 {
   display: flex;
@@ -136,7 +177,7 @@ header {
   align-items: center;
   background: white;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   width: 800px;
   flex-shrink: 0;
@@ -147,7 +188,7 @@ header {
   display: flex;
   align-items: center;
   border: 2px solid #000;
-  border-radius: 8px;
+  border-radius: 15px;
   overflow: hidden;
   background: #fff;
   width: 600px; /* ajusta se quiser maior/menor */
