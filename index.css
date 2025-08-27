@@ -806,7 +806,7 @@ footer {
 }
 @media (max-width:752px) {
   .search-wrapper {
-    width:250px;
+    width:300px;
   }
   .produto {
     width:170px;
@@ -941,8 +941,6 @@ footer {
      width:400px;
      margin-left:0px;
    }
-  .search-wrapper {
-  }
   #topbar a {
     font-size:15px;
   }
