@@ -79,18 +79,16 @@ header {
   gap: 12px;
   font-size: 16px;
   font-weight: 500;
-  color: white;
 }
 
 .social-nibuy img {
   width: 25px;
   height: 25px;
-  filter: brightness(0) invert(1); /* deixa branco */
   transition: transform 0.2s ease, filter 0.2s ease;
   cursor: pointer;
 }
 #topbar {
-  display: flex;
+    display: flex;
   justify-content: space-between; /* separa esquerda e direita */
   align-items: center;            /* alinha tudo na mesma linha */
   background-color: #1e2a38;
@@ -106,14 +104,58 @@ header {
 }
 
 .topbar-left a {
-  color: #fff;
+    color: white;
   text-decoration: none;
   margin-right: 0px;
   font-size:15px;
 }
 .topbar-left a:hover {
-   color: #ff5722;
+   color: black;
    border-radius:15px;
+}
+
+.icones-destaques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+  position:center;
+  justify-content:center;
+  align-items:center;
+}
+
+.icone-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  border-radius:50px;
+  background-color:white;
+  padding:8px;
+  border: 2px solid black;
+  cursor:pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.icone-item:hover {
+  transform:scale(1.05);
+}
+.icone-item {
+  display: flex;
+  flex-direction: column; /* ícone em cima, texto embaixo */
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  justify-items: center; /* centraliza cada item no grid */
+  margin: 20px auto;
+  max-width: 900px; /* largura máxima pro bloco não esticar demais */
+}
+.icone-item span {
+  font-size: 16px;
+  color: black;
 }
 
 /* Social icons */
@@ -121,15 +163,15 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
-  color:white;
 }
+.social-nibuy span {
+ color:white;
+}   
 
 .social-nibuy img {
   width: 25px;
   height: 25px;
-  filter: brightness(0) invert(1);
   cursor: pointer;
-  color:white;
 }
 .social-nibuy img:hover {
   filter: brightness(0) saturate(100%);
@@ -153,7 +195,6 @@ header {
 .topbar-right img {
   width: 25px;
   height: 25px;
-  filter: brightness(0) invert(1);
 }
 .topbar-right a:hover {
   color: #ff5722; /* texto em laranja */
@@ -875,19 +916,32 @@ footer {
   #nibuy {
     margin-left:0px;
   }
+  #nibuy img {
+    height:10px;
+    width:10px;
+  }
   #cart-icon {
     margin-left:90px;
   }
   #login-icon {
     margin-left: 20px;
   }
+  #topbar {
+    display:none;
+  }
 }
 @media (max-width:512px) {
-  #topbar {
-
-  }
+   #nibuy {
+    display:none;
+   }
+   #nibuy2 {
+    display:none;
+   }
+   .search-wrapper {
+     width:400px;
+     margin-left:0px;
+   }
   .search-wrapper {
-    width:290px;
   }
   #topbar a {
     font-size:15px;
@@ -910,19 +964,17 @@ footer {
     margin-left:0px;
     gap:10px;
   }
-  .search-wrapper {
-    width:260px;
-  }
+
   #topbar img {
     width:20px;
   }
 }
 @media (max-width:458px) {
-   .search-wrapper {
-    width:240px;
-   }
    .produto {
     width:140px;
+   }
+   .search-wrapper {
+    width:300px;
    }
 }
 @media (max-width:450px) {
@@ -931,10 +983,6 @@ footer {
   }
 }
 @media (max-width:442px) {
-  .search-wrapper {
-    margin-left:10px;
-    width:250px;
-  }
   #cart-icon {
     margin-left:80px;
     font-size:25px;
@@ -980,8 +1028,5 @@ footer {
   }
   .produto h4 {
     font-size:8px;
-  }
-  .search-wrapper {
-    width:220px;
   }
 }
