@@ -1,0 +1,1038 @@
+:root {
+  --cor-primaria: #3F91FF;
+  --cor-hover: #236BFF;
+  --cor-texto: #333333;
+  --cor-texto2: #1A237E;
+  --cor-fundo: #F5F5F5;
+  --cor-secundaria: #1E2A38;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.filtros {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Label padrão */
+.filtros label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+/* ===== DROPDOWN DE IDIOMA ===== */
+.dropdown-lang {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.lang-selector span {
+  font-size: 12px;
+}
+
+.lang-selector:hover {
+  filter: grayscale(100%) brightness(70%);
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s;
+  font-size: 10px;
+}
+/* Select estilizado */
+.filtros select {
+  padding: 8px 12px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filtros select:hover {
+  background: #f5f5f5;
+}
+
+.filtros select:focus {
+  outline: none;
+  border-color: #222;
+  background: #fafafa;
+}
+body {
+  background-color: #f1f5ff;;
+  color: var(--cor-texto);
+  font-family: 'Roboto', sans-serif;
+}
+p, a, h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+#nibuy:hover, #nibuy2:hover {
+  cursor: pointer;
+  display: inline-block;
+  transform: scale(1.05);
+}
+#nibuy {
+  margin-left:400px;
+}
+header {
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+.social-nibuy {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  border-right: none;
+  margin-right: 0;
+  gap: 0; 
+}
+.social-nibuy {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço só entre "Siga a gente" e os ícones */
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: none; /* controla espaço ENTRE os ícones */
+}
+
+.social-icons img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.social-nibuy a {
+  border-right: none;  /* remove do último */
+  margin-right: 0;     /* tira espaço extra */
+  margin: 0;
+  padding: 0;
+}
+.social-nibuy a:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+.social-nibuy img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+  border-right: none;
+  margin-right: 0;
+  margin: 0;
+  padding: 0;
+}
+.social-nibuy {
+  display: flex;
+  align-items: center;
+  gap: 0; /* zera espaço automático */
+}
+
+#topbar {
+    display: flex;
+  justify-content: space-between; /* separa esquerda e direita */
+  align-items: center;            /* alinha tudo na mesma linha */
+  background-color: #1e2a38;
+    padding: 6px 20px;
+  font-size: 14px;
+}
+.topbar-icon span {
+  font-size:12px;
+}
+/* Remove bordas dos ícones */
+.social-nibuy a {
+  border-right: none !important;
+  margin-right: 0;
+  padding-right: 0;
+  margin-left:0;
+}
+/* Lado esquerdo */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.topbar-left a:nth-child(1),
+.topbar-left a:nth-child(2) {
+  border-right: 1px solid white;
+  padding-right: 15px;  /* encosta mais */  /* só um respiro pequeno */
+}
+
+/* Remove borda dos outros */
+.topbar-left a:nth-child(n+3) {
+  border-right: none;
+  padding-right: none;
+  margin-right: none;
+}
+.topbar-left a {
+  margin-right: 0px;
+  gap: 5px;
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+}
+.topbar-left span {
+  font-size:13px;
+}
+.topbar-left a:last-child {
+  border-right: none;  /* remove do último */
+  margin-right: 0;     /* tira espaço extra */
+}
+.topbar-left a:hover {
+   filter: grayscale(100%) brightness(70%);
+}
+
+.icones-destaques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+  position:center;
+  justify-content:center;
+  align-items:center;
+}
+
+.icone-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  border-radius:15px;
+  background-color:white;
+  padding:8px;
+  border: 2px solid black;
+  cursor:pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.icone-item img:hover {
+  transform:scale(1.05);
+}
+.icone-item {
+  display: flex;
+  flex-direction: column; /* ícone em cima, texto embaixo */
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  justify-items: center; /* centraliza cada item no grid */
+  margin: 20px auto;
+  max-width: 900px; /* largura máxima pro bloco não esticar demais */
+}
+.icone-item span {
+  font-size: 16px;
+  color: black;
+}
+
+/* Social icons */
+.social-nibuy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.social-nibuy span {
+ color:white;
+}   
+
+.social-nibuy img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.social-nibuy img:hover {
+  filter: grayscale(100%) brightness(70%);
+}
+
+/* Lado direito */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-right a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+.topbar-right img {
+  width: 20px;
+  height: 20px;
+}
+.topbar-right a:hover {
+  filter: grayscale(100%) brightness(70%);
+}
+
+.topbar-right a:hover img {
+ filter: grayscale(100%) brightness(70%);
+}
+#ideia1 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 5px;
+  background-color: var(--cor-secundaria);
+  color: white;
+  flex-wrap: wrap;
+  
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 800px;
+  flex-shrink: 0;
+  height: 50px;
+  margin-left:50px;
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  width: 600px; /* ajusta se quiser maior/menor */
+}
+
+.search-wrapper input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-wrapper button {
+  background: #ff5722; /* cor Shopee */
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.search-wrapper button img {
+  width: 20px;
+  height: 50px;
+  filter: brightness(0) invert(1); /* deixa a lupa branca */
+}
+
+.search-wrapper button:hover {
+  background: #e64a19;
+  transform: scale(1.05);
+}
+.icones-direita {
+  margin-left:25px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#settings-icon {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  margin-left:30px;
+  width:50px;
+  height:50px;
+}
+#settings-icon:hover {
+  background-color:rgba(161, 153, 153, 0.205);
+}
+
+/* Teste */
+#destaques {
+  text-align: center;
+  padding: 40px 20px;
+  justify-content:center;
+}
+#destaques h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #212121;
+}
+#destaques img {
+  border: 2px solid #000;
+}
+.carrossel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+    overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+.carrossel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  max-width: 1800px;
+  padding: 10px 0;
+}
+
+.card-produto {
+  flex: 0 0 calc((100% - 80px) / 5); /* 5 produtos com 20px de gap entre eles */
+  max-width: 250px;
+  background: white;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-produto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-produto h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: black;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-produto p {
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+}
+
+.card-produto h4 {
+  font-size: 16px;
+  color: black;
+}
+
+.card-produto a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#anterior, #proximo {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+#anterior:hover, #proximo:hover {
+  background-color: #1a4ed8;
+}
+/* Fim do Teste */
+
+.resultados-busca {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 1310px;
+  width: 500px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.resultado-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+  width:700px;
+}
+.item-resultado {
+  width:500px;
+}
+.resultado-item:hover {
+  background-color: #f1f1f1;
+}
+
+.resultado-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+.resultado-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.resultado-info h4 {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+  color: black;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* aqui você escolhe: 1, 2, 3 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nota-preco {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre estrelas e preço */
+}
+
+.nota-preco .nota svg {
+  width: 14px;
+  height: 14px;
+}
+
+.nota-preco .preco {
+  font-size: 13px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Centraliza a logo no topo */
+body {
+
+    font-family: Arial, sans-serif;
+
+}
+h1 {
+  font-size: 30px;
+  font-weight: 30px;
+  color: white;
+}
+a {
+  font-size: 30px;
+  text-decoration: none;
+}
+main {
+  flex: 1;
+  margin-top: 400px;
+  background: #ffffff;
+  max-width: 1700px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+}
+#selectsearch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  text-align:center;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 5px;
+}
+/* Os dois primeiros lado a lado */
+#categoriaFiltro,
+#searchProduto {
+  flex: 1 1 45%; /* usa porcentagem menor pra caber no celular */
+  height: 55px;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid var(--cor-secundaria);
+  color: var(--cor-texto);
+  border-radius: 5px;
+  min-width: 0; /* evita travar o layout */
+}
+/* O terceiro embaixo */
+#valor {
+  flex: 1 1 40%;
+  height: 55px;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 5px;
+  max-width:60%;
+  border: 2px solid var(--cor-secundaria);
+  color: var(--cor-texto);
+}
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.produto {
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    transition: transform 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border: 2px solid  black;
+}
+.produto:hover {
+    background:white;
+    transform: scale(1.05);
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+.produto img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    border: 2px solid  black;
+}
+.produto h3 {
+   font-size: 22px;
+    margin: 10px 0;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* número de linhas que quer mostrar */
+    -webkit-box-orient: vertical;
+}
+.produto p {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+.produto h4 {
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  font-size: 20px; /* Base */
+  color: black;
+  margin-top:10px;
+}
+
+.produto h4 svg {
+  width: 1em !important;  /* Força seguir o tamanho do texto */
+  height: 1em !important;
+}
+.produto h4 i {
+ font-size: 16px;
+  color: black;
+
+}
+
+.produto a {
+    display: inline-block;
+    background: var(--cor-primaria);
+    color:  white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.produto a:hover {
+    background: #e6b800;
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: white;
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  min-width: 44px;
+  text-align: center;
+}
+
+.pagination a:hover {
+  background-color: var(--cor-hover);
+  color: white;
+  transform: scale(1.05);
+
+}
+
+/* Página atual */
+.pagination .ativo {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: 2px solid var(--cor-primaria);
+  pointer-events: none;
+}
+footer {
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin-top:50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#listaProdutos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    padding-top: 30px;
+}
+@media (max-width:1658px) {
+  
+  #nibuy {
+    margin-left:0px;
+  }
+}
+@media (max-width:1414px) {
+  #nibuy {
+    margin-left:0px;
+  }
+}
+@media (max-width:1278px) {
+  #nibuy {
+    margin-left:0px;
+  }
+}
+@media (max-width:1148px) {
+  #nibuy {
+    margin-left:0px;
+  }
+}
+@media (max-width:1062px) {
+  #nibuy {
+    margin-left:0px;
+  }
+  .search-wrapper {
+ width:500px;
+  }
+}
+@media (max-width:998px) {
+  #nibuy {
+    margin-left:0px;
+  }
+  .search-wrapper {
+    width:400px;
+  }
+}
+@media (max-width:852px) {
+  .search-wrapper {
+    width:300px;
+  }
+}
+@media (max-width:826px) {
+  .produto {
+    width: 170px;
+  }
+  .produto a {
+    font-size:25px;
+  }
+  .produto h4 {
+    font-size:18px;
+  }
+}
+@media (max-width:752px) {
+  .search-wrapper {
+    width:300px;
+  }
+  .produto {
+    width:170px;
+  }
+  .produto a {
+    font-size:25px;
+  }
+  .produto h4 {
+    font-size:18px;
+  }
+}
+@media (max-width:728px) {
+  .produto {
+    width:150px;
+  }
+  .produto a {
+    font-size:20px;
+  }
+  .produto h4 {
+    font-size:15px;
+  }
+}
+@media (max-width:700px) {
+  .search-wrapper {
+    margin-left:10px;
+  }
+  #nibuy {
+    margin-left:0px;
+  }
+}
+@media (max-width:676px) {
+  .produto {
+    width:120px;
+  }
+  .produto a {
+    font-size:15px;
+  }
+  .produto h4 {
+    font-size:12px;
+  }
+}
+@media (max-width:672px) {
+  #topbar {
+    gap:5px;
+  }
+  #nibuy2 {
+    font-size:22px;
+  }
+  #nibuy {
+    margin-left:0px;
+  }
+  #cart-icon {
+    margin-left:0px;
+    width:50px;
+    font-size:12px;
+  }
+  .cart-badge {
+    font-size:10px;
+  }
+  #ideia {
+    margin-left:0px;
+    gap:0px;
+  }
+  #login-icon {
+    margin-right:0px;
+    font-size:25px;
+  }
+  #settings-icon {
+    font-size:28px;
+    margin-left:0px;
+  }
+}
+@media (max-width:628px){
+  .search-wrapper {
+    width:300px;
+    margin-left:40px;
+  }
+  #login-icon {
+    margin-left:70px;
+  }
+  #settings-icon {
+    margin-left:90px;
+  }
+  #cart-icon {
+    margin-left:120px;
+  }
+  #nibuy {
+    margin-left:25px;
+  }
+  .produto {
+    width:145px;
+  }
+  .produto a {
+    font-size:18px;
+  }
+  .produto p {
+    font-size:20px;
+  }
+  .produto h4 {
+    font-size:15px;
+  }
+}
+@media (max-width:552px) {
+  .search-wrapper  {
+    margin-left:20px;
+  }
+  #nibuy {
+    margin-left:0px;
+  }
+  #nibuy img {
+    height:10px;
+    width:10px;
+  }
+  #cart-icon {
+    margin-left:90px;
+  }
+  #login-icon {
+    margin-left: 20px;
+  }
+  #topbar {
+    display:none;
+  }
+}
+@media (max-width:512px) {
+   #nibuy {
+   }
+   #nibuy2 {
+   }
+   .search-wrapper {
+     width:300px;
+     margin-left:0px;
+   }
+  #topbar a {
+    font-size:15px;
+  }
+  #topbar span {
+    font-size:12px;
+  }
+  .produto p {
+    font-size:18px;
+  }
+  .produto h3 {
+    font-size:15px;
+  }
+}
+@media (max-width:488px) {
+  #topbar a {
+    font-size:15px;
+  }
+  #topbar{
+    margin-left:0px;
+    gap:10px;
+  }
+ #nibuy {
+  display:none;
+ }
+ #nibuy2 {
+  display:none;
+ }
+  #topbar img {
+    width:20px;
+  }
+}
+@media (max-width:458px) {
+   .produto {
+    width:140px;
+   }
+   .search-wrapper {
+    width:300px;
+   }
+}
+@media (max-width:450px) {
+  .produto {
+    width:130px;
+  }
+}
+@media (max-width:442px) {
+  #cart-icon {
+    margin-left:80px;
+    font-size:25px;
+    width:40px;
+    height:40px;
+  }
+  #topbar a {
+    font-size:13px;
+  }
+  .produto h4 {
+    font-size:12px;
+  }
+  .produto a {
+    font-size:18px;
+  }
+  #settings-icon {
+    margin-left:90px;
+    font-size:20px;
+    width:40px;
+    height:40px;
+    padding:10px;
+  }
+   #login-icon {
+    margin-left:0px;
+    font-size:20px;
+    width:40px;
+    height:40px;
+    padding:10px;
+   }
+   #nibuy {
+    margin-left:0px;
+    font-size:25px;
+    width:40px;
+    height:40px;
+   }
+}
+@media (max-width:430px) {
+  .produto {
+    width:100px;
+  }
+  .produto a {
+    font-size:10px;
+  }
+  .produto h4 {
+    font-size:8px;
+  }
+}
