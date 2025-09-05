@@ -17,23 +17,25 @@
 <div id="topbar">
   <div class="topbar-left">
     <a href="https://eduj007.github.io/Seja-vendedor/"><span>Seja Vendedor</span></a>
-    <a href="https://eduj007.github.io/Contato/"><span>Trabalhe Conosco</span></a>
-    <div class="social-nibuy">
-      <span class="social-text">Siga a gente</span>
-      <div class="social-icons">
-        <a href="#"><img src="icons/instragam icon.svg" alt="Instagram"></a>
-        <a href="#"><img src="icons/zap icon.svg" alt="WhatsApp"></a>
-        <a href="#"><img src="icons/tiktok icon.svg" alt="TikTok"></a>
-      </div>
-    </div>
+    <a href="https://eduj007.github.io/Trabalhe-Conosco/"><span>Trabalhe Conosco</span></a>
+    <a href="https://eduj007.github.io/Quem-somos/"><span>Quem Somos</span></a>
   </div>
   
   <div class="topbar-right">
-    <a href="#" class="topbar-icon" title="Notificações">
-      <img src="icons/sinhinho.svg" alt="Notificações">
-      <span>Novidades</span>
-    </a>
-    <a href="#" class="topbar-icon" title="Ajuda">
+
+   <a href="#" id="novidades-btn" class="topbar-icon" title="Novidades">
+  <img src="icons/sinhinho.svg" alt="Notificações">
+  <span>Novidades</span>
+</a>
+
+<div id="novidades-dropdown" class="novidades-dropdown">
+  <h4>Novidades do Nibuy</h4>
+  <ul>
+    <li>Melhoramos a busca de produtos com sugestões em tempo real.</li>
+    <li>Agora você pode filtrar por Masculino, Feminino ou Unissex.</li>
+  </ul>
+</div>
+    <a href="https://eduj007.github.io/Ajuda/" class="topbar-icon" title="Ajuda">
       <img src="icons/ajuda.svg" alt="Ajuda">
       <span>Ajuda</span>
     </a>
@@ -6372,9 +6374,9 @@
 </div>
 </div>
 </main>
+
 <footer>
-
-
+<p>© 2025 Nibuy - Todos os direitos reservados</p>
 </footer>
 <script type="module">
   // Importa Firebase
@@ -6393,6 +6395,27 @@
 
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+</script>
+
+<script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const novidadesBtn = document.getElementById("novidades-btn");
+  const novidadesDropdown = document.getElementById("novidades-dropdown");
+
+  novidadesBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    novidadesDropdown.style.display = 
+      novidadesDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  // Fechar ao clicar fora
+  document.addEventListener("click", (e) => {
+    if (!novidadesBtn.contains(e.target) && !novidadesDropdown.contains(e.target)) {
+      novidadesDropdown.style.display = "none";
+    }
+  });
+});
+
 </script>
 
 <script src="index.js"></script>
