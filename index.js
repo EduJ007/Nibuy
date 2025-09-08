@@ -374,239 +374,26 @@ btnBusca2.addEventListener('click', () => {
     if (primeiroVisivel) {
         primeiroVisivel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-});
-document.addEventListener('DOMContentLoaded', () => {
-  const settingsIcon = document.getElementById('settings-icon');
 
-  if (settingsIcon) {
-    settingsIcon.addEventListener('click', () => {
-      alert('Abrir menu de configurações aqui - Rolagem infinita / Tema escuro / Tema claro / Automático');
-    });
-  }
-});
-let cart = [];
-const cartIcon = document.getElementById("cart-icon");
-const cartDropdown = document.getElementById("cart-dropdown");
-const cartItemsList = document.getElementById("cart-items");
-const cartBadge = document.querySelector(".cart-badge");
-const emptyCartMsg = document.querySelector(".empty-cart");
+    // render inicial
+  renderizarProdutos();
 
-// Abre/fecha o dropdown
-cartIcon.addEventListener("click", (e) => {
-  e.preventDefault();
-  cartDropdown.classList.toggle("show");
-});
+  // === MENU DOS 3 PONTINHOS ===
+  const settingsIcon = document.getElementById("settings-icon");
+  const settingsMenu = document.getElementById("settings-menu");
 
-// Fecha se clicar fora
-document.addEventListener("click", (e) => {
-  if (!cartDropdown.contains(e.target) && !cartIcon.contains(e.target)) {
-    cartDropdown.classList.remove("show");
-  }
-});
-
-// Função para adicionar item
-function addToCart(nome, preco) {
-  cart.push({ nome, preco });
-  updateCartUI();
-}
-
-// Atualiza o carrinho
-function updateCartUI() {
-  cartItemsList.innerHTML = "";
-
-  if (cart.length === 0) {
-    emptyCartMsg.style.display = "block";
-  } else {
-    emptyCartMsg.style.display = "none";
-    cart.forEach(item => {
-      let li = document.createElement("li");
-      li.textContent = `${item.nome} - ${item.preco}`;
-      cartItemsList.appendChild(li);
-    });
-  }
-
-  cartBadge.textContent = cart.length;
-}
-// ===== SISTEMA DE TRADUÇÃO =====
-const translations = {
-  pt: {
-    sobre: "Sobre o Nibuy",
-    contato: "Contato",
-    siga: "Siga a gente",
-    notificacoes: "Notificações",
-    ajuda: "Ajuda",
-    searchPlaceholder: "Nome do Produto..."
-  },
-  en: {
-    sobre: "About Nibuy",
-    contato: "Contact",
-    siga: "Follow us",
-    notificacoes: "Notifications",
-    ajuda: "Help",
-    searchPlaceholder: "Product name..."
-  }
-};
-
-function applyTranslations(lang) {
-  const t = translations[lang];
-  
-  console.log('Aplicando traduções para:', lang);
-  
-  try {
-    // Atualiza os textos
-    document.querySelector('a[href*="Sobre"] span').textContent = t.sobre;
-    document.querySelector('a[href*="Contato"] span').textContent = t.contato;
-    document.querySelector('.social-text').textContent = t.siga;
-    
-    // Notificações
-    const notifSpans = document.querySelectorAll('.topbar-icon span');
-    if (notifSpans[0]) notifSpans[0].textContent = t.notificacoes;
-    
-    // Ajuda
-    if (notifSpans[1]) notifSpans[1].textContent = t.ajuda;
-    
-    // Placeholder da busca
-    const searchInput = document.querySelector("#searchproduto2");
-    if (searchInput) searchInput.placeholder = t.searchPlaceholder;
-
-    // Atualiza o texto do seletor de idioma
-    const langSelector = document.querySelector("#selected-lang");
-    if (langSelector) {
-      langSelector.textContent = lang === "pt" ? "Português (BR)" : "English (US)";
-    }
-
-    // Atualiza os checkmarks
-    document.querySelectorAll('.lang-option').forEach(option => {
-      option.classList.remove('active');
-    });
-    
-    const activeOption = document.querySelector(`.lang-option[data-lang="${lang}"]`);
-    if (activeOption) activeOption.classList.add('active');
-
-    // Salva no localStorage
-    localStorage.setItem("lang", lang);
-    
-    console.log('Traduções aplicadas com sucesso!');
-  } catch (error) {
-    console.error('Erro ao aplicar traduções:', error);
-  }
-}
-
-// ===== SISTEMA DE SELEÇÃO DE IDIOMA =====
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdown = document.querySelector(".dropdown-lang");
-  const langSelector = document.querySelector(".lang-selector");
-
-  // Carregar idioma salvo no localStorage
-  const savedLang = localStorage.getItem("lang") || "pt";
-  console.log('Idioma salvo:', savedLang);
-  applyTranslations(savedLang);
-
-  // Toggle abrir/fechar dropdown
-  if (langSelector) {
-    langSelector.addEventListener("click", (e) => {
+  if (settingsIcon && settingsMenu) {
+    settingsIcon.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      dropdown.classList.toggle("active");
+      settingsMenu.classList.toggle("show");
+    });
+
+    // Fecha se clicar fora
+    document.addEventListener("click", (e) => {
+      if (!settingsMenu.contains(e.target) && e.target !== settingsIcon) {
+        settingsMenu.classList.remove("show");
+      }
     });
   }
-
-  // Clique em uma opção de idioma
-  document.querySelectorAll(".lang-option").forEach(option => {
-    option.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const lang = option.getAttribute("data-lang");
-      console.log('Idioma selecionado:', lang);
-      applyTranslations(lang);
-      dropdown.classList.remove("active");
-    });
-  });
-
-  // Fechar dropdown se clicar fora
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest('.dropdown-lang')) {
-      dropdown.classList.remove("active");
-    }
-  });
-
-  // Fechar com ESC
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      dropdown.classList.remove("active");
-    }
-  });
 });
-
-// Debug
-console.log('Dropdown system loaded');
-// ===== DEBUG INICIAL =====
-console.log('=== INICIANDO DEBUG DO DROPDOWN ===');
-
-// Verificar se elementos existem
-const dropdown = document.querySelector(".dropdown-lang");
-const langSelector = document.querySelector(".lang-selector");
-const langOptions = document.querySelectorAll(".lang-option");
-
-console.log('Dropdown encontrado:', dropdown);
-console.log('Lang selector encontrado:', langSelector);
-console.log('Opções de idioma encontradas:', langOptions.length);
-
-if (!dropdown) console.error('❌ Dropdown não encontrado!');
-if (!langSelector) console.error('❌ Lang selector não encontrado!');
-if (langOptions.length === 0) console.error('❌ Nenhuma opção de idioma encontrada!');
-
-// ===== SISTEMA SIMPLIFICADO DE TRADUÇÃO =====
-document.addEventListener("DOMContentLoaded", function() {
-  console.log('DOM carregado - Iniciando sistema de idioma...');
-  
-  // 1. TESTE MANUAL - Force a função applyTranslations
-  window.debugTranslate = function(lang) {
-    console.log('Debug: Aplicando tradução para', lang);
-    const langSelector = document.querySelector("#selected-lang");
-    if (langSelector) {
-      langSelector.textContent = lang === "pt" ? "Português (BR)" : "English (US)";
-    }
-    
-    // Atualizar checkmarks
-    document.querySelectorAll('.lang-option').forEach(option => {
-      option.classList.remove('active');
-    });
-    
-    const activeOption = document.querySelector(`.lang-option[data-lang="${lang}"]`);
-    if (activeOption) activeOption.classList.add('active');
-  };
-
-  // 2. CLIQUE SIMPLES - Teste básico de clique
-  if (langSelector) {
-    langSelector.addEventListener('click', function(e) {
-      e.preventDefault();
-      console.log('✅ Clique no lang-selector detectado!');
-      dropdown.classList.toggle('active');
-    });
-  }
-
-  // 3. CLIQUE NAS OPÇÕES
-  langOptions.forEach(option => {
-    option.addEventListener('click', function(e) {
-      e.preventDefault();
-      const lang = this.getAttribute('data-lang');
-      console.log('✅ Clique na opção:', lang);
-      window.debugTranslate(lang);
-      dropdown.classList.remove('active');
-    });
-  });
-
-  // 4. TESTE VISUAL - Adicionar bordas coloridas para debug
-  if (dropdown) dropdown.style.border = '2px solid red';
-  if (langSelector) langSelector.style.border = '2px solid blue';
-  langOptions.forEach(opt => opt.style.border = '2px solid green');
-
-  console.log('Sistema de debug carregado. Use debugTranslate("en") no console para testar.');
-});
-
-// ===== FUNÇÃO DE TRADUÇÃO COMPLETA (ativa após teste) =====
-function applyTranslations(lang) {
-  console.log('Aplicando traduções completas para:', lang);
-  // ... (seu código de tradução aqui)
-}

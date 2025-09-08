@@ -18,6 +18,40 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+body {
+  background: var(--bg, #f5f5f5);
+  color: var(--text, #000);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Tema Claro */
+body[data-theme="claro"] {
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+/* Tema Escuro */
+body[data-theme="escuro"] {
+  --bg: #121212;
+  --text: #ffffff;
+}
+
+/* Exemplo de elementos que mudam */
+body[data-theme="claro"] #topbar {
+  background: #eaeaea;
+}
+body[data-theme="escuro"] #topbar {
+  background: #1e1e1e;
+}
+
+body[data-theme="claro"] .dropdown-content {
+  background: #fff;
+  color: #000;
+}
+body[data-theme="escuro"] .dropdown-content {
+  background: #222;
+  color: #fff;
+}
 .filtros {
   display: flex;
   align-items: center;
@@ -289,7 +323,86 @@ header {
   padding: 15px;
   z-index: 1000;
 }
+/* Estilo do botão */
+#settings-icon {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
 
+/* Menu dropdown */
+.dropdown-settings {
+  position: relative; /* importante para posicionar o menu abaixo */
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* aparece embaixo do botão */
+  right: 12px; /* alinha pela direita */
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+  padding: 6px 0;
+  z-index: 1000;
+  min-width: 160px;
+}
+/* Esconde os links mobile-only no PC */
+.mobile-only {
+  display: none;
+}
+
+/* Quando for celular, some a topbar e mostra os links dentro do menu */
+@media (max-width: 768px) {
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* Temas */
+body[data-theme="escuro"] {
+  background: #121212;
+  color: #fff;
+}
+body[data-theme="claro"] {
+  background: #fff;
+  color: #000;
+}
+
+/* Triângulo em cima */
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* altura do triângulo */
+  right: 5px; /* alinha perto do botão */
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent white transparent; /* triângulo branco */
+  filter: drop-shadow(0px -1px 1px rgba(0,0,0,0.1)); /* sombrazinha */
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: #f7f7f7;
+}
+
+/* Mostrar quando tiver a classe .show */
+.dropdown-content.show {
+  display: block;
+}
 /* Triângulo */
 .novidades-dropdown::before {
   content: "";
@@ -895,6 +1008,9 @@ footer {
   #topbar {
     gap:5px;
   }
+  #topbar-left {
+    display:none;
+  }
   #nibuy2 {
     font-size:22px;
   }
@@ -924,14 +1040,14 @@ footer {
 }
 @media (max-width:628px){
   .search-wrapper {
-    width:300px;
-    margin-left:40px;
+    width:280px;
+    margin-left:10px;
   }
   #login-icon {
     margin-left:70px;
   }
-  #settings-icon {
-    margin-left:90px;
+  .topbar-left {
+    display:none;
   }
   #cart-icon {
     margin-left:120px;
@@ -954,10 +1070,14 @@ footer {
 }
 @media (max-width:552px) {
   .search-wrapper  {
-    margin-left:20px;
+    margin-left:10px;
   }
   #nibuy {
     margin-left:0px;
+  }
+  #nibuy {
+    width:40px;
+    height:40px;
   }
   #nibuy img {
     height:10px;
@@ -969,18 +1089,22 @@ footer {
   #login-icon {
     margin-left: 20px;
   }
-  #topbar {
-    display:none;
-  }
+   
 }
 @media (max-width:512px) {
+   .search-wrapper {
+     width:265px;
+     margin-left:10px;
+   }
    #nibuy {
+    display:none;
+   }
+   header {
+    font-size:10px;
    }
    #nibuy2 {
-   }
-   .search-wrapper {
-     width:300px;
-     margin-left:0px;
+    font-size:25px;
+    display:show;
    }
   #topbar a {
     font-size:15px;
@@ -1003,12 +1127,6 @@ footer {
     margin-left:0px;
     gap:10px;
   }
- #nibuy {
-  display:none;
- }
- #nibuy2 {
-  display:none;
- }
   #topbar img {
     width:20px;
   }
@@ -1018,7 +1136,13 @@ footer {
     width:140px;
    }
    .search-wrapper {
-    width:300px;
+    width:265px;
+   }
+   #nibuy2 {
+    font-size:20px;
+   }
+   #settings-icon {
+    font-size:25px;
    }
 }
 @media (max-width:450px) {

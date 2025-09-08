@@ -56,8 +56,19 @@
             <img src="icons/lupa branca.svg" alt="lupa">
       </button>
   </div>
-  <div id="settings-icon" style="font-size: 24px;">⋮</div>
+
+  <div class="dropdown-settings">
+  <button id="settings-icon">⋮</button>
+  <div class="dropdown-content" id="settings-menu">
+    <!-- Links que só aparecem no celular -->
+    <a href="https://eduj007.github.io/Seja-vendedor/" class="mobile-only">Seja Vendedor</a>
+    <a href="https://eduj007.github.io/Trabalhe-Conosco/" class="mobile-only">Trabalhe Conosco</a>
+    <a href="https://eduj007.github.io/Quem-somos/" class="mobile-only">Quem Somos</a>
+  </div>
 </div>
+
+
+      </div>
 </div>
 
 </header>
@@ -6414,6 +6425,23 @@
       novidadesDropdown.style.display = "none";
     }
   });
+});
+
+</script>
+
+<script>
+      document.getElementById("settings-icon").addEventListener("click", function() {
+  document.getElementById("settings-menu").classList.toggle("show");
+});
+
+// Fecha o dropdown se clicar fora
+window.addEventListener("click", function(e) {
+  if (!e.target.matches("#settings-icon")) {
+    const menu = document.getElementById("settings-menu");
+    if (menu.classList.contains("show")) {
+      menu.classList.remove("show");
+    }
+  }
 });
 
 </script>
