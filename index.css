@@ -1049,6 +1049,13 @@ footer {
   .topbar-left {
     display:none;
   }
+  .topbar-right {
+    margin-left: auto;   /* empurra o bloco inteiro pra direita */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 1px; /* dá o respiro da borda */
+  }
   #cart-icon {
     margin-left:120px;
   }
