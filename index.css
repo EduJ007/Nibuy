@@ -580,7 +580,9 @@ body[data-theme="claro"] {
   padding: 15px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
-
+.card-produto:hover {
+  transform: scale(1.01);
+}
 .card-produto img {
   width: 100%;
   border-radius: 10px;
@@ -662,7 +664,12 @@ body[data-theme="claro"] {
   width:700px;
 }
 .item-resultado {
-  width:500px;
+  width:590px;
+}
+.item-resultado:hover {
+  transform:scale(1.01);
+  background:rgb(190, 187, 187);
+  border-radius:15px;
 }
 .resultado-item:hover {
   background-color: #f1f1f1;
