@@ -1152,6 +1152,11 @@ footer {
     width:20px;
   }
 }
+@media (max-width:464px) {
+  #nibuy2 {
+    font-size:20px;
+  }
+}
 @media (max-width:458px) {
    .produto {
     width:140px;
