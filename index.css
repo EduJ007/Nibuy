@@ -1188,7 +1188,7 @@ main {
     width:140px;
    }
    .search-wrapper {
-    width:280px;
+    width:300px;
    }
    #nibuy2 {
     display:none;
@@ -1212,6 +1212,7 @@ main {
   .produto a {
     font-size:18px;
   }
+
    #login-icon {
     margin-left:0px;
     font-size:20px;
@@ -1225,6 +1226,7 @@ main {
     width:40px;
     height:40px;
    }
+
 }
 @media (max-width:430px) {
   .produto {
