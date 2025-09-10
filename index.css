@@ -731,7 +731,7 @@ main {
   flex: 1;
   margin-top: 400px;
   background: #ffffff;
-  max-width: 1700px;
+  max-width: 1800px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 20px;
@@ -794,7 +794,7 @@ main {
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 220px;
     height:auto;
     border: 1px solid #ddd;
     padding: 10px;
@@ -812,8 +812,8 @@ main {
     transition: 0.3s ease-in-out;
 }
 .produto img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 20px;
     border: 2px solid  black;
 }
