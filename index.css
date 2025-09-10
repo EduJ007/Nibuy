@@ -904,16 +904,36 @@ main {
   border: 2px solid var(--cor-primaria);
   pointer-events: none;
 }
-footer {
-    padding: 20px;
-    background-color: var(--cor-secundaria);
-    color: white;
-    font-size: 22px;
-    text-align: center;
-    margin-top:50px;
-    width: 100%;
-    box-sizing: border-box;
+#footer {
+  background: #1e2a36; /* tom mais moderno */
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 50px;
 }
+
+#footer h4 {
+  margin-bottom: 10px;
+}
+
+#footer a {
+  color: #bbb;          /* links discretos */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#footer a:hover {
+  color: #fff;          /* destaque no hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  color: #aaa;
+}
+
 #listaProdutos {
     display: flex;
     flex-wrap: wrap;
