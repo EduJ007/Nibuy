@@ -1114,7 +1114,7 @@ footer {
 }
 @media (max-width:512px) {
    .search-wrapper {
-     width:265px;
+     width:280px;
      margin-left:10px;
    }
    #nibuy {
@@ -1152,9 +1152,14 @@ footer {
     width:20px;
   }
 }
-@media (max-width:464px) {
+@media (max-width:476px) {
   #nibuy2 {
     font-size:20px;
+  }
+}
+@media (max-width:464px) {
+  #nibuy2 {
+    font-size:15px;
   }
 }
 @media (max-width:458px) {
@@ -1162,7 +1167,7 @@ footer {
     width:140px;
    }
    .search-wrapper {
-    width:270px;
+    width:280px;
    }
    #nibuy2 {
     display:none;
