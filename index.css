@@ -1203,12 +1203,6 @@ main {
   }
 }
 @media (max-width:442px) {
-  #cart-icon {
-    margin-left:80px;
-    font-size:25px;
-    width:40px;
-    height:40px;
-  }
   #topbar a {
     font-size:13px;
   }
@@ -1217,13 +1211,6 @@ main {
   }
   .produto a {
     font-size:18px;
-  }
-  #settings-icon {
-    margin-left:90px;
-    font-size:20px;
-    width:40px;
-    height:40px;
-    padding:10px;
   }
    #login-icon {
     margin-left:0px;
