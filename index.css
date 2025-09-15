@@ -24,34 +24,6 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Tema Claro */
-body[data-theme="claro"] {
-  --bg: #ffffff;
-  --text: #000000;
-}
-
-/* Tema Escuro */
-body[data-theme="escuro"] {
-  --bg: #121212;
-  --text: #ffffff;
-}
-
-/* Exemplo de elementos que mudam */
-body[data-theme="claro"] #topbar {
-  background: #eaeaea;
-}
-body[data-theme="escuro"] #topbar {
-  background: #1e1e1e;
-}
-
-body[data-theme="claro"] .dropdown-content {
-  background: #fff;
-  color: #000;
-}
-body[data-theme="escuro"] .dropdown-content {
-  background: #222;
-  color: #fff;
-}
 .filtros {
   display: flex;
   align-items: center;
@@ -66,35 +38,6 @@ body[data-theme="escuro"] .dropdown-content {
   font-weight: bold;
   color: #000;
 }
-/* ===== DROPDOWN DE IDIOMA ===== */
-.dropdown-lang {
-  position: relative;
-  display: inline-block;
-}
-
-.lang-selector {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 10px;
-  transition: background-color 0.3s;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.lang-selector span {
-  font-size: 12px;
-}
-
-.lang-selector:hover {
-  filter: grayscale(100%) brightness(70%);
-}
-
 .dropdown-arrow {
   transition: transform 0.3s;
   font-size: 10px;
@@ -154,7 +97,6 @@ header {
   align-items: center;
   gap: 8px; /* espaço só entre "Siga a gente" e os ícones */
 }
-
 .social-icons {
   display: flex;
   align-items: center;
@@ -352,28 +294,6 @@ header {
   z-index: 1000;
   min-width: 160px;
 }
-/* Esconde os links mobile-only no PC */
-.mobile-only {
-  display: none;
-}
-
-/* Quando for celular, some a topbar e mostra os links dentro do menu */
-@media (max-width: 768px) {
-
-  .mobile-only {
-    display: block;
-  }
-}
-
-/* Temas */
-body[data-theme="escuro"] {
-  background: #121212;
-  color: #fff;
-}
-body[data-theme="claro"] {
-  background: #fff;
-  color: #000;
-}
 
 /* Triângulo em cima */
 .dropdown-content::before {
@@ -546,6 +466,7 @@ body[data-theme="claro"] {
   text-align: center;
   padding: 40px 20px;
   justify-content:center;
+  margin-bottom:50px;
 }
 #destaques h2 {
   font-size: 30px;
@@ -737,12 +658,15 @@ a {
 main {
   flex: 1;
   margin-top: 400px;
-  background: #ffffff;
-  max-width: 1800px;
+  max-width:1800px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+  background:#f1f5ff;
+}
+#partedosprodutos {
+   padding:20px;
+   border-radius:15px;
 }
 #selectsearch {
   display: flex;
@@ -754,18 +678,7 @@ main {
   margin: 50px auto;
   padding: 5px;
 }
-.qtd-avaliacoes::after {
-  content: " Avaliações"; /* aparece sozinho */
-  font-size: 13px;
-  color: #666;
-}
 
-.qtd-avaliacoes {
-  font-size: 14px;
-  font-weight: bold;
-  color: #222; /* o número ganha destaque */
-  margin-top:10px;
-}
 /* Os dois primeiros lado a lado */
 #categoriaFiltro,
 #searchProduto {
@@ -798,11 +711,11 @@ main {
     flex: 1;
 }
 .produto {
-    border-radius: 20px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height:auto;
+    width: 250px;
+    height:515px;
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
@@ -810,7 +723,6 @@ main {
     transition: transform 0.3s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    border: 2px solid  black;
 }
 .produto:hover {
     background:white;
@@ -819,10 +731,10 @@ main {
     transition: 0.3s ease-in-out;
 }
 .produto img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 20px;
-    border: 2px solid  black;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
 }
 .produto h3 {
    font-size: 22px;
@@ -831,7 +743,7 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* número de linhas que quer mostrar */
+    -webkit-line-clamp: 2; /* número de linhas que quer mostrar */
     -webkit-box-orient: vertical;
 }
 .produto p {

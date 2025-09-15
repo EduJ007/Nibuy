@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnBuscar = document.getElementById("btnBuscar");
   const produtos = Array.from(document.querySelectorAll(".produto"));
   const paginationContainer = document.querySelector(".pagination");
-  const produtosPorPagina = 24;
+  const produtosPorPagina = 25;
   let paginaAtual = 1;
 
   // pega a "categoria" real do produto (primeira classe além de 'produto')
