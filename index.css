@@ -460,7 +460,65 @@ header {
 #settings-icon:hover {
   background-color:rgba(161, 153, 153, 0.205);
 }
+.categorias {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position:relative;
+}
 
+.categorias h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.lista-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.categoria img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px; /* deixa redondo */
+  border: 2px solid #eee;
+  transition: transform 0.3s, border 0.3s;
+}
+
+.categoria img:hover {
+  transform: scale(1.1);
+  border: 2px solid #ff6600;
+}
+
+.categoria span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.veja-mais {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: blue;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration:underline;
+  font-size:12px;
+}
+.veja-mais:hover {
+  transform:scale(1.05);
+}
 /* Teste */
 #destaques {
   text-align: center;
@@ -711,55 +769,63 @@ main {
     flex: 1;
 }
 .produto {
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height:515px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    background: white;
-    transition: transform 0.3s;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+  width: 220px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
+
 .produto:hover {
-    background:white;
-    transform: scale(1.05);
-    border-radius: 15px;
-    transition: 0.3s ease-in-out;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
+
 .produto img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-    border: 2px solid black;
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius:15px;
 }
+
 .produto h3 {
-   font-size: 22px;
-    margin: 10px 0;
-    color: black;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* número de linhas que quer mostrar */
-    -webkit-box-orient: vertical;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  height: 40px;
+  overflow: hidden;
 }
-.produto p {
-    font-size: 24px;
-    font-weight: bold;
-    color: blue;
-}
+
 .produto h4 {
-  margin-bottom: 15px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  justify-content: center;
-  font-size: 20px; /* Base */
-  color: black;
-  margin-top:10px;
+  color: #ff9800;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.produto p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #E53935;
+}
+
+.produto a {
+  display: block;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #ff5722;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+.produto a:hover {
+  background: #e64a19;
 }
 
 .produto h4 svg {
@@ -771,59 +837,29 @@ main {
   color: black;
 
 }
-
-.produto a {
-    display: inline-block;
-    background: var(--cor-primaria);
-    color:  white;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.produto a:hover {
-    color:#ff5722;
-}
-.pagination {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  width: 100%;
+.ver-mais-container {
+  text-align: center;
+  margin: 30px 0;
+  margin-top:50px;
 }
 
-.pagination a {
+.btn-ver-mais {
   display: inline-block;
-  padding: 10px 15px;
-  text-decoration: none;
-  background-color: white;
-  color: var(--cor-texto);
-  border: 2px solid var(--cor-secundaria);
-  border-radius: 10px;
+  padding: 15px 40px;
   font-size: 18px;
   font-weight: bold;
-  transition: 0.3s ease-in-out;
-  min-width: 44px;
-  text-align: center;
+  color: #fff;
+  background: #ff5722;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.2s;
+  width:500px;
 }
 
-.pagination a:hover {
-  background-color: var(--cor-hover);
-  color: white;
-  transform: scale(1.05);
-
+.btn-ver-mais:hover {
+  background: #e64a19;
 }
 
-/* Página atual */
-.pagination .ativo {
-  background-color: var(--cor-primaria);
-  color: white;
-  border: 2px solid var(--cor-primaria);
-  pointer-events: none;
-}
 #footer {
   background: #1e2a36; /* tom mais moderno */
   color: #fff;
