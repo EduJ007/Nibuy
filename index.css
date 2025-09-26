@@ -387,7 +387,7 @@ header {
 .logo-nibuy {
   display: flex;
   align-items: center;
-  gap: 100px; /* espaço entre logo e texto */
+  gap: 10px; /* espaço entre logo e texto */
 }
 
 #nibuy {
@@ -399,7 +399,7 @@ header {
 #nibuy2 {
   font-size: 26px;
   font-weight: 600;
-  margin: 0;
+  margin-left: 5px;
   color: white;
   cursor: pointer;
 }
@@ -502,8 +502,8 @@ header {
 
 .categoria span {
   font-size: 13px;
-  font-weight: 500;
-  color: #333;
+  font-weight: 500px;
+  color: black;
 }
 
 .categoria:hover img {
@@ -930,10 +930,15 @@ main {
 }
 
 #footer {
-  background: #1e2a36; /* tom mais moderno */
+  position: relative;       /* ou fixed, se quiser ele sempre grudado */
+  bottom: 0;
+  left: 0;
+  width: 100vw;             /* ocupa toda a largura da viewport */
+  background: #1e2a36;
   color: #fff;
   padding: 40px 20px;
   margin-top: 50px;
+  box-sizing: border-box;
 }
 
 #footer h4 {
@@ -965,4 +970,14 @@ main {
     gap: 35px;
     justify-content: center;
     padding-top: 30px;
+}
+@media (max-width:442px) {
+  #topbar {
+    font-size:5px;
+  }
+}
+@media (max-width:1388px) {
+  main {
+    max-width:1300px;
+  }
 }
