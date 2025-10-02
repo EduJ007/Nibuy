@@ -11,21 +11,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body {
   display: flex;
   flex-direction: column;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', Arial, sans-serif; /* fonte moderna e clean */
-  background-color: #EAEAEA; /* cinza médio, mais sofisticado que #F5F5F5 */
-  color: #222;
-  line-height: 1.6;
-  font-weight: 500px; /* deixa a fonte mais encorpada */
+  min-height: 100vh;
+  background-color:#f2f3f5;;
 }
 .filtros {
   display: flex;
@@ -68,7 +58,6 @@ body {
 p, a, h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
 }
-
 header {
   border-radius: 15px;
   margin-bottom: 50px;
@@ -546,6 +535,7 @@ header {
 }
 
 /* Container do carrossel */
+/* Container do carrossel */
 .carrossel-container {
   display: flex;
   align-items: center;
@@ -562,17 +552,32 @@ header {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scrollbar-width: none;
   padding: 15px 0;
-}
-
-.carrossel::-webkit-scrollbar {
-  display: none;
-}
-
-/* Snap para encaixar */
-.carrossel {
   scroll-snap-type: x mandatory;
+
+  /* ⚡ habilita a barra no Firefox */
+  scrollbar-width: thin; 
+  scrollbar-color: #2575fc #f1f1f1;
+}
+
+/* Barra no Chrome/Edge */
+.carrossel::-webkit-scrollbar {
+  height: 8px; /* altura da barra */
+}
+
+.carrossel::-webkit-scrollbar-track {
+  background: #f1f1f1; /* fundo da barra */
+  border-radius: 10px;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+  background: #2575fc; /* azul Nibuy */
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.carrossel::-webkit-scrollbar-thumb:hover {
+  background: #1a4ed8; /* azul mais escuro no hover */
 }
 
 /* Cards de produtos */
@@ -792,6 +797,7 @@ main {
 #partedosprodutos {
    padding:20px;
    border-radius:15px;
+   margin-bottom:100px;
 }
 #selectsearch {
   display: flex;
@@ -928,42 +934,6 @@ main {
 .btn-ver-mais:hover {
   background: #e64a19;
 }
-
-#footer {
-  position: relative;       /* ou fixed, se quiser ele sempre grudado */
-  bottom: 0;
-  left: 0;
-  width: 100vw;             /* ocupa toda a largura da viewport */
-  background: #1e2a36;
-  color: #fff;
-  padding: 40px 20px;
-  margin-top: 50px;
-  box-sizing: border-box;
-}
-
-#footer h4 {
-  margin-bottom: 10px;
-}
-
-#footer a {
-  color: #bbb;          /* links discretos */
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-#footer a:hover {
-  color: #fff;          /* destaque no hover */
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  border-top: 1px solid #333;
-  padding-top: 10px;
-  color: #aaa;
-}
-
 #listaProdutos {
     display: flex;
     flex-wrap: wrap;
@@ -976,8 +946,15 @@ main {
     font-size:5px;
   }
 }
-@media (max-width:1388px) {
-  main {
-    max-width:1300px;
+@media (max-width:1420px) {
+  #anterior, #proximo {
+    display:none;
   }
+  .carrossel {
+
+  }
+  .carrossel::-webkit-scrollbar {
+  display: block;
 }
+}
+
