@@ -16,6 +16,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color:#f2f3f5;;
+  font-weight:600px;  
 }
 .filtros {
   display: flex;
@@ -457,9 +458,10 @@ header {
 
 .categorias h2 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 600px;
   margin-bottom: 20px;
   color: #444;
+  font-family: 'Inter', 'Poppins', sans-serif;
 }
 
 .lista-categorias {
@@ -790,14 +792,13 @@ main {
   flex: 1;
   margin-top: 400px;
   max-width:1800px;
-  margin: 50px auto;
+  margin: 0px auto;
   padding: 20px;
   border-radius: 20px;
 }
 #partedosprodutos {
    padding:20px;
    border-radius:15px;
-   margin-bottom:100px;
 }
 #selectsearch {
   display: flex;
