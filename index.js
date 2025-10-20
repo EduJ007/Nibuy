@@ -67,7 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    h4.innerHTML = `${estrelas.join('')} <span style="margin-left:4px;">${nota.toFixed(1)}</span>`;
+   const vendidosSpan = h4.querySelector('.vendidos');
+const vendidos = vendidosSpan ? parseInt(vendidosSpan.textContent) : 0;
+
+h4.innerHTML = `
+  ${estrelas.join('')}
+  <span style="margin-left:4px; font-weight:bold;">${nota.toFixed(1)}</span>
+  <span class="info-extra"> ${vendidos.toLocaleString('pt-BR')} vendidos</span>
+`;
+
   });
 
   function aplicarFiltros() {
@@ -307,7 +315,7 @@ function mostrarResultados(termo) {
             text-overflow: ellipsis;
             font-size: 14px;
         ">${nomeProd}</strong>
-        <small style="color:#333; font-size:15px;">${nota} | ${preco}</small>
+        <small style="color:#333; font-size:15px;">${nota}  ${preco}</small>
     </div>
 `;
             item.addEventListener('click', () => {

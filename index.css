@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   background-color:#f2f3f5;;
   font-weight:600px;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .filtros {
   display: flex;
@@ -527,7 +528,7 @@ header {
   text-align: center;
   padding: 50px 20px;
   margin: 50px auto;
-  max-width: 1400px;
+  max-width: 1800px;
 }
 
 #destaques h2 {
@@ -535,6 +536,7 @@ header {
   font-weight: 600;
   margin-bottom: 30px;
   color: #222;
+  margin-top:50px;
 }
 
 /* Container do carrossel */
@@ -877,19 +879,11 @@ main {
   overflow: hidden;
   margin-bottom:10px;
 }
-
-.produto h4 {
-  color: black;
-  font-size: 14px;
-  margin: 5px 0;
-}
-
 .produto p {
   font-size: 16px;
   font-weight: bold;
   color: blue;
 }
-
 .produto a {
   display: block;
   margin-top: 8px;
@@ -903,16 +897,6 @@ main {
 }
 .produto a:hover {
   background: #e64a19;
-}
-
-.produto h4 svg {
-  width: 1em !important;  /* Força seguir o tamanho do texto */
-  height: 1em !important;
-}
-.produto h4 i {
- font-size: 16px;
-  color: black;
-
 }
 .ver-mais-container {
   text-align: center;
@@ -943,6 +927,43 @@ main {
     justify-content: center;
     padding-top: 30px;
 }
+.info-extra {
+  display: block;         /* ou inline, se quiser ao lado */
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;        /* se for abaixo da nota */
+}
+.produto h4 {
+  font-size: 14px;
+  color: black;
+  margin: 6px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Estilo das estrelas SVG */
+.produto h4 svg {
+  width: 16px;
+  height: 16px;
+  fill: gold; /* amarelinho estrela */
+  vertical-align: middle;
+}
+
+/* Número da nota */
+.produto h4 .nota {
+  font-weight: bold;
+  color: black;
+}
+
+/* Número de vendidos formatado pelo JS */
+.produto h4 .info-extra {
+  color: #555;
+  font-size: 13px;
+}
+
 @media (max-width:442px) {
   #topbar {
     font-size:5px;
