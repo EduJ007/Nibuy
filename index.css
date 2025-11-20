@@ -69,59 +69,6 @@ header {
   width: 100%;
   z-index: 1000;
 }
-.social-nibuy {
-  display: flex;
-  align-items: center;
-  gap: 0px;
-  font-size: 16px;
-  font-weight: 500;
-  border-right: none;
-  margin-right: 0;
-  gap: 0; 
-}
-.social-nibuy {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* espaço só entre "Siga a gente" e os ícones */
-}
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: none; /* controla espaço ENTRE os ícones */
-}
-
-.social-icons img {
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
-}
-
-.social-nibuy a {
-  border-right: none;  /* remove do último */
-  margin-right: 0;     /* tira espaço extra */
-  margin: 0;
-  padding: 0;
-}
-.social-nibuy a:last-child {
-  border-right: none;
-  margin-right: 0;
-}
-.social-nibuy img {
-  width: 25px;
-  height: 25px;
-  transition: transform 0.2s ease, filter 0.2s ease;
-  cursor: pointer;
-  border-right: none;
-  margin-right: 0;
-  margin: 0;
-  padding: 0;
-}
-.social-nibuy {
-  display: flex;
-  align-items: center;
-  gap: 0; /* zera espaço automático */
-}
-
 #topbar {
     display: flex;
   justify-content: space-between; /* separa esquerda e direita */
@@ -132,13 +79,6 @@ header {
 }
 .topbar-icon span {
   font-size:12px;
-}
-/* Remove bordas dos ícones */
-.social-nibuy a {
-  border-right: none !important;
-  margin-right: 0;
-  padding-right: 0;
-  margin-left:0;
 }
 /* Lado esquerdo */
 .topbar-left {
@@ -220,24 +160,73 @@ header {
   color: black;
 }
 
-/* Social icons */
+.topbar-left,
+.social-nibuy,
+.social-nibuy span,
+.social-icons,
+.social-icons a,
+.social-icons img {
+    display: flex;
+    align-items: center;
+}
+
+/* Correção e Melhoria da Seção "Siga-nos" */
+/* -- NOVO ESTILO PARA O SIGA-NOS (index.css) -- */
+
+/* ---------------------------------------------------------------------- */
+/* 2. BARRA DIVISÓRIA (SÓ À ESQUERDA DO "SIGA-NOS")                       */
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* 1. ESTILO DO BLOCO "SIGA-NOS" E TEXTO                                 */
+/* ---------------------------------------------------------------------- */
+
+/* Esta regra força o texto "Siga-nos:" a ter o mesmo peso de fonte dos outros links. */
 .social-nibuy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 1px solid rgba(255,255,255,0.4);
+    padding-left: 15px;
+    height: 100%; /* ESSENCIAL */
+}
+
+.social-nibuy span {
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 2. CONTROLE DO TAMANHO DAS IMAGENS (AGORA SEM AFETAR A FONTE!)        */
+/* ---------------------------------------------------------------------- */
+
+.social-icons {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.social-nibuy span {
- color:white;
-}   
+.social-icons a {
+    /* ZERA QUALQUER CHANCE DE HERDAR BORDAS DO topbar-left a */
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0 12px !important; /* Mantém o espaçamento entre os ícones */
+}
+/* Regra CRUCIAL: Agora focamos o tamanho na tag IMG */
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  filter: none;
+}
 
-.social-nibuy img {
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
+
+/* Efeito de Hover (passar o mouse) */
+.social-icons a:hover img {
+  opacity: 0.8; /* Escurece um pouco a imagem no hover */
 }
-.social-nibuy img:hover {
-  filter: grayscale(100%) brightness(70%);
-}
+
+
 /* Dropdown de novidades */
 .novidades-dropdown {
   display: none;
